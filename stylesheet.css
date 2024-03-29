@@ -1,0 +1,1764 @@
+
+html {
+  font-family: allerta, serif;
+}
+
+
+/* ASSIST SIZE INDICATION */
+.responsive-design-assist {
+  position: absolute;
+}
+.mobile {display: inherit;}
+.tablet {display: none;}
+.desktop {display: none;}
+
+
+/* Style variables */
+body {
+  --body_background: white;
+
+  --action-bar_button_color: grey;
+
+  --lock-overlay_background: grey;
+  --lock-overlay_opacity: 0.7;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: black;
+  --modal_modal-cancel_border-color: black;
+  --modal_modal-cancel_background_hover: black;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: black;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: grey;
+  --modal_modal-accept_border-color: grey;
+  --modal_modal-accept_background_hover: grey;
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover: grey;
+
+
+  --saving-spinner_background: black;
+  --saving-spinner_color: white;
+
+  --new-task_color: grey;
+  --new-cat_background: grey;
+  --new-cat_color: grey;
+  --new-cat_hover: silver;
+
+  --flow-highlight-background: pink;
+
+  --categorySelected-background: grey;
+  --categorySelected-color: white;
+
+  --categoryHeader-color: red;
+  
+}
+
+/* Reset default behaviour */
+button {
+  background: none;
+  border: none;
+}
+
+.saving-spinner_parent {
+  position: absolute;
+}
+.saving-spinner {
+  background: var(--saving-spinner_background);
+  position: sticky;
+  top: 3em;
+  left: 1em;
+  width: fit-content;
+  color: var(--saving-spinner_color);
+  padding: 1em;
+ 
+  display: none;
+}
+.retrieving-data-spinner {
+  background: grey;
+  position: absolute;
+  top: 5em;
+  left: 4em;
+ 
+  color: white;
+  padding: 1em;
+ 
+  display: none;
+}
+
+
+
+.lockOverlay {
+  background: var(--lock-overlay_background);
+  opacity: var(--lock-overlay_opacity);
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: aqua;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: deeppink;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #AE57FF;
+  border: 6px solid #AE57FF;
+}
+/* End SCROLLBAR */
+
+
+
+
+html,
+body {
+  margin: 0;
+  cursor: default;
+
+  font-size: 10px;
+  font-weight: bold;
+  /* font-family: allerta, serif; */
+  letter-spacing: 1px;
+  word-wrap: break-word;
+  /* zoom: 0.7; */
+  background: var(--body_background);
+
+}
+
+
+td,
+th {
+  padding: 0;
+  border: 2px solid;
+}
+
+.logo-header__sun-gym,
+.logo-header__the-visual-dome {
+  display: none;
+}
+ 
+input,
+textarea,
+input:active {
+  border-style: none;
+  font-weight: bold;
+}
+
+
+.action-bar {
+  display: flex;
+  font-size: 8px;
+  width: fit-content;
+  margin: 0 auto 5px;
+}
+
+.action-bar_button,
+.action-bar_item {
+  font-size: 10px;
+  padding: 4px 6px 6px 6px;
+  margin: 10px 0.5em 0.5em;
+  color: var(--action-bar_button_color);
+  font-family: allerta, serif;
+}
+
+
+#signature {
+  /* image-rendering: pixelated; */
+  height: 32px;
+  padding: 0px 0px 0px 0px;
+  margin: 6px 0px 0px 16px;
+}
+
+
+.modal {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  /* position: sticky; */
+  top: 200px;
+/*  left: 36vw; */
+  /* margin: 0 auto; */
+  /* transform: translateX(-50%); */
+
+  background: white;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal .modal_label {
+  width: 400px;
+}
+.modal .modal_cancel {
+  background: var(--modal_modal-cancel_background);
+  color: var(--modal_modal-cancel_color);
+  border-color: var(--modal_modal-cancel_border-color);
+}
+
+.modal .modal_cancel:hover {
+  background: var(--modal_modal-cancel_background_hover);
+  color: var(--modal_modal-cancel_color_hover);
+  border-color: var(--modal_modal-cancel_border-color_hover);
+}
+
+.modal .modal_accept {
+  background: var(--modal_modal-accept_background);
+  color: var(--modal_modal-accept_color);
+  border-color: var(--modal_modal-accept_border-color);
+
+  width: 50%;
+  height: 3em;
+}
+.modal .modal_accept:hover {
+  background: var(--modal_modal-accept_background_hover);
+  color: var(--modal_modal-accept_color_hover);
+  border-color: var(--modal_modal-accept_border-color_hover);
+}
+
+.model_settings_set-actionbar-location {
+  height: 3em;
+}
+
+/* edit task modal - Start */
+.inputForChangingTaskTitle {
+  height: 5em;
+}
+
+.binModalHeader {
+  min-width: 428px;
+}
+
+.binTaskTitle {
+  word-break: break-all;
+}
+
+
+.categoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2px;
+  margin: 2px 1px 0 2px;
+}
+
+.flow {
+  border: none;
+  margin: 1em;
+  margin: 0px 2px 2em 1px;
+  text-align: center;
+  /* zoom: 0.8; */
+  /* float: left; */
+}
+.flow.highlight1 {
+  background: var(--flow-highlight-background);
+}
+
+
+
+
+
+
+
+
+
+
+
+.createNewTaskGrid {
+  width: 210px;
+  width: 209px;
+}
+.create-new-task {
+  width: 190px;
+
+}
+
+.belongsTo {
+  display: inherit;
+  max-width: 130px;
+  font-size: 1.1em;
+}
+
+.newTaskCategoryGrid {
+  border: 2px solid var(--categorySelected-background);
+  border-width: 1px 2px 1px 2px ;
+  display: grid;
+  /* column-gap: 1rem; */
+  /* column-count: 2; */
+  grid-template-columns: 1fr 18px
+}
+
+.createNewTask_CategoryName {
+  word-wrap: break-word;
+  border: 2px solid black;
+  border-width: 1px 0px 1px 0px ;
+  line-height: 12px;
+}
+
+.defaulCategory {
+  grid-column: 1 / 3;
+}
+
+.createNewTask_CatDeleteBtn {
+  align-items: center;
+  display: inherit;
+  border: 2px solid transparent;
+  border-width: 1px 0px 1px 2px;
+  padding: 0 0 0px 1px;
+}
+
+
+
+.newTaskTitleInputParent {
+  margin: 16px 0px 16px 0px;
+  background-color: #4BA6FF;
+  padding: 0px 2px 0px 2px;
+}
+.newTaskTitleInputLabel {
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2px 0px 2px 0px;
+  color: white;
+  /* background-color: pink; */
+}
+.newTaskTitleTextArea {
+  height: 32px;
+  width: calc(100% - 4px);
+  padding: 6px 2px 0px 2px;
+  margin: 0px 0px 0px 0px;
+  outline: none;
+  font-size: 1em;
+  text-align: center;
+  color: var(--new-cat_color);
+  color: #4BA6FF;
+}
+
+.newTaskTitleTextArea::placeholder {
+  color: #4BA6FF;
+}
+
+.new-task_submit {
+  height: 40px;
+  width: 100%;
+  font-size: 1.42em;
+  background-color: #4BA6FF;
+  color: white;
+}
+
+.default-order-new-task_parent {
+  margin: 16px 0px 16px 0px;
+  display: flex;
+}
+.default-order-new-task_parent button {
+  width: 50%;
+  border: 2px solid #AE57FF;
+}
+
+.default-order-new-task-first,
+.default-order-new-task.selected {
+  background: #AE57FF;
+  color: white;
+}
+.default-order-new-task-last,
+.default-order-new-task.not-selected {
+  background: white;
+  color: #AE57FF;
+}
+
+.new-cat_parent {
+  font-size: 1.1em;
+  /* border: 2px solid black; */
+  background: var(--new-cat_background);
+}
+.new-cat_parent:hover {
+  background: var(--new-cat_hover);
+}
+.new-cat_label {
+  color: white;
+  padding: 2px 0px 2px 0px;
+}
+.new-cat_input {
+  height: 20px;
+  width: calc(100% - 8px);
+  padding: 6px 2px 0px 2px;
+  margin: 0px 0px 2px 0px;
+  outline: none;
+  font-size: 1em;
+  text-align: center;
+  color: var(--new-cat_color);
+}
+.new-cat_input::placeholder {
+  color: var(--new-cat_color);
+}
+
+
+.defaultOrderNewTask {
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* A category with tasks parent */
+.masterTask {
+  margin: 0px auto 0px;
+}
+
+/* A category header table */
+.categoryHeaderTable {
+  word-wrap: break-word;
+  margin: 0 0px 0 0px;
+  width: 213px;
+  margin: -2px;
+}
+
+/* A category header */
+.categoryHeader {
+  border-width: 2px;
+  height: 32px;
+  word-wrap: break-word;
+  color: var(--categoryHeader-color);
+}
+.extraforselectedcategoryheader {
+  background: var(--categorySelected-background);
+  color: white;
+  border-color: var(--categorySelected-background);
+}
+.notselectedcategoryheader {
+  color: deeppink;
+  border-color: deeppink;
+}
+
+.arrowLeftRight {
+  color: deeppink;
+  border: 2px solid deeppink; 
+  font-size: 14px;
+  padding: 0px 0px 2px 0px;
+  width: 20px;
+}
+.arrowLeftRight:hover {
+  color: white;
+  background: deeppink;
+}
+
+
+/* a task */
+.taskTable {
+  border-spacing: 2px;
+  margin: 10px auto;
+}
+.task-table-tr1 {}
+.task-table-tr2 {}
+.task-table-tr3 {}
+
+/* Used for up&down btn's on tasks */
+.spanMoveTaskDownBtn {
+  /* zoom: 1.5; */
+  min-width: 20px;
+  padding: 0px 0 4px 0px;
+  display: block;
+  transform: rotate(90deg);
+}
+
+.spanMoveTaskUpBtn {
+  min-width: 20px;
+  display: block;
+  padding: 0 0px 4px 2px;
+  transform: rotate(90deg);
+}
+
+.taskTitle {
+  max-width: 200px;
+  min-width: 200px;
+}
+.emptyTaskTitle {
+  /* some height to make it stand out more */
+  height: 3em;
+}
+
+.taskEditCat {
+  max-width: 130px;
+}
+
+
+/* edit task moda - End */
+
+footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5em;
+  border: 2px solid;
+}
+footer .top {
+  display: flex;
+}
+footer .bottom {
+  
+}
+footer .counterTasks {
+  color: #AE57FF;
+}
+
+footer div {
+  margin: 0 auto;
+  padding-top: 8px;
+}
+
+footer .createdBy {
+}
+
+footer a {
+  padding: 0.5em;
+  border: 2px solid;
+  margin-left: 1em;
+  text-decoration: none;
+}
+.settings-button {
+  border: none;
+  background: none;
+  font-size: 2em;
+}
+
+.css-theme-btn {
+  border: 1px solid;
+  /*margin: 2px;*/
+}
+
+.css-theme-btn__active {
+  font-weight: bold;  
+}
+
+
+.model_settings_set-actionbar-on-top_selected,
+.model_settings_set-actionbar-on-bottom_selected {
+  background: grey;
+  border-color: grey;
+  color: white;
+}
+.model_settings_set-actionbar-on-top_not-selected,
+.model_settings_set-actionbar-on-bottom_not-selected {
+  background: white;
+  border-color: black;
+  color: black;
+}
+
+
+.model_settings_show-header_selected {
+  background: mediumslateblue;
+  border-color: mediumslateblue;
+  color: white;
+}
+.model_settings_show-header_not-selected {
+  border-color: silver;
+}
+
+
+
+
+@media only screen and (min-device-width: 600px) {
+  .mobile {display: none;}
+  .tablet {display: inherit;}
+  .desktop {display: none;}
+
+  .subHeader-inner {
+    display: inherit;
+  }
+  body {
+    font-size: 10px;
+  }
+  .categoryContainer {
+  
+  }
+  .flow {
+    /* margin: 0px 2px 2em 2px; */
+  }
+  
+  footer {
+    display: inherit;
+  }
+
+}
+
+
+
+@media only screen and (min-device-width: 1000px) {
+  .mobile {display: none;}
+  .tablet {display: none;}
+  .desktop {display: inherit;}
+
+  body {
+    font-size: 12px;
+  }
+  .createNewTask_CategoryName {
+    line-height: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Spirit Animal - Start */
+
+.body__spirit-animal {
+  --body_background: white;
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: deeppink;
+  --modal_modal-accept_border-color: deeppink;
+  --modal_modal-accept_background_hover: deeppink;
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover: deeppink;
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: deeppink;
+  --categorySelected-color: white;
+
+  --new-cat_background: deeppink;
+  --new-cat_color: deeppink;
+  --new-cat_hover: deeppink;
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+/* End Spirit Animal */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sun Gym - Start */
+/* #sun-gym */
+
+.body__sun-gym {
+  --body_background: white;
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: deeppink;
+  --modal_modal-accept_border-color: deeppink;
+  --modal_modal-accept_background_hover: deeppink;
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover: deeppink;
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: deeppink;
+  --categorySelected-color: white;
+
+  --new-cat_background: deeppink;
+  --new-cat_color: deeppink;
+  --new-cat_hover: deeppink;
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+.body__sun-gym td,
+th {
+}
+
+.body__sun-gym .logo-header td {
+}
+.body__sun-gym .logo-header__sun-gym {
+  display: inherit;
+}
+
+
+.body__sun-gym .logo-header__sun-gym-inner {
+  width: 100%;
+  margin: 0 auto;
+}
+.body__sun-gym .logo-header__sun-gym-inner td {
+  border: none;
+}
+
+
+.body__sun-gym .logo-header__sun-gym-inner .td-line1,
+.body__sun-gym .logo-header__sun-gym-inner .td-line2,
+.body__sun-gym .logo-header__sun-gym-inner .td-line3,
+.body__sun-gym .logo-header__sun-gym-inner .td-line4 {
+  width: 36vw;
+}
+
+
+.body__sun-gym .line1,
+.body__sun-gym .line3 {
+  height: 16px;
+  width: 99%;
+  padding: 0px 0 0 0;
+  margin: 20px 0 10px 0;
+  background-color: #4BA6FF;}
+
+.body__sun-gym .line2,
+.body__sun-gym .line4 {
+  height: 8px;
+  width: 99%;
+  padding: 0px 0 0 0;
+  margin: 10px 0 20px 0;
+  background-color: #4BA6FF;}
+
+.body__sun-gym .logo-header__sun-gym-image {
+ /* background: red; */
+ text-align: center;
+ width: 100%;
+ font-style: italic;
+}
+
+.body__sun-gym .logo-header__sun-gym-image .sun {
+  font-size: 5em;
+  color: lightblue;
+}
+
+.body__sun-gym .logo-header__sun-gym-image .gym {
+  font-size: 5em;
+  color: #4BA6FF;
+}
+
+
+
+
+
+.body__sun-gym .action-bar {
+  border: none;
+  color: #AE57FF;
+}
+.body__sun-gym .action-bar_inner {
+  margin: 0 auto;
+}
+.body__sun-gym .action-bar h3 {
+  /* border: 3px solid red; */
+}
+
+.body__sun-gym .action-bar_button {}
+
+.body__sun-gym .binModalHeader {}
+
+.body__sun-gym .binTaskTitle {}
+
+
+
+.body__sun-gym .flow {
+  border-color: red;
+}
+
+/* A category with tasks parent */
+.body__sun-gym .masterTask {
+  color: #4BA6FF;
+}
+
+
+/* A category header */
+.body__sun-gym .categoryHeader {
+ /* color: hotpink;
+  border-color: hotpink;
+color: var(--categoryHeader-color);
+*/
+  
+}
+.toggle-category {
+  width: 76px;
+  border-color: deeppink;
+  color: deeppink;
+}
+.editCategory {
+  border-color: deeppink;
+  color: deeppink;
+}
+
+.body__sun-gym .newCatTitleInput {
+  
+}
+.body__sun-gym .newCatTitleInput::placeholder {
+}
+
+.categoryHeader input {
+  color: 'hotpink';
+  background: 'red';
+}
+
+.input::placeholder {
+  color: 'hotpink';
+  background: 'red';
+}
+
+/* a task */
+.body__sun-gym .taskTable {}
+
+.create-new-task {
+  color: #4BA6FF;
+}
+.body__sun-gym .belongsTo {
+  border: none;
+}
+
+
+.body__sun-gym #newTaskCategoryGrid {
+  color: hotpink;
+}
+
+
+.body__sun-gym .createNewTask_Tr {}
+
+
+.body__sun-gym .createNewTask_CategoryName:hover {
+  color: white;
+  background: deeppink;
+}
+
+.body__sun-gym .createNewTask_CatDeleteBtn {
+  color: deeppink;
+  border-color: deeppink;
+}
+
+.body__sun-gym .createNewTask_CatDeleteBtn:hover {
+  background: deeppink;
+  color: white;
+}
+
+.body__sun-gym input,
+.body__sun-gym textarea,
+.body__sun-gym input:active {
+  /* background: white; */
+  /* color: black; */
+}
+
+.body__sun-gym ::placeholder {}
+
+
+.body__sun-gym #createNewCategory {
+  /* color: LightBlue; */
+
+}
+
+.body__sun-gym .new-cat_parent:hover {
+  /* background: red; */
+  /* color: white; */
+  /* border-color: LightBlue; */
+}
+
+
+.body__sun-gym #newCategoryInput {
+  /* text-align: center; */
+  /* color: lightblue; */
+  /* border-color: transparent; */
+}
+
+.body__sun-gym #newCategoryInput::placeholder {
+  /* color: lightblue; */
+
+}
+
+.body__sun-gym .newTaskTitle {
+  /* color: thistle; */
+  /* color: pink; */
+  color: white;
+}
+
+.body__sun-gym #newTaskTitle {
+  color: cornflowerblue;
+  border-color: blue;
+  font-weight: bold;
+}
+
+.body__sun-gym #newTaskTitle::placeholder {
+  color: white;
+}
+.defaultOrderNewTask {
+  background: cornflowerblue;
+  border-color: cornflowerblue;
+  color: white;
+}
+
+
+
+/* Used for up&down btn's on tasks */
+.body__sun-gym #taskUp,
+.body__sun-gym #taskDown {
+  border-color: lightseagreen;
+  border-color: #A0DFD6;
+}
+.body__sun-gym #taskUp:hover,
+.body__sun-gym #taskDown:hover {
+  background: lightseagreen;
+  background: #A0DFD6;
+  color: white;
+}
+
+.body__sun-gym .spanMoveTaskDownBtn,
+.body__sun-gym .spanMoveTaskUpBtn {
+  color: lightseagreen;
+  color: #A0DFD6;
+  /* background: red; */
+  
+}
+
+.body__sun-gym .spanMoveTaskDownBtn:hover,
+.body__sun-gym .spanMoveTaskUpBtn:hover {
+  color: white;
+}
+.body__sun-gym .taskTitle {
+  color: lightblue;
+  color: cornflowerblue;
+  border: none;
+}
+.task-checkbox-container-checked {
+  background: mediumslateblue;
+  border-color: mediumslateblue;
+  color: white;
+}
+.task-checkbox-container-unchecked {
+  border-color: silver;
+}
+.body__sun-gym .taskEditCat {}
+
+
+.model_edit-category_set-cat-order,
+.model_edit-task_set-task-order  {
+  height: 3em;
+}
+.model_edit-category_set-cat-first_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-first_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid red;
+}
+
+.model_edit-category_set-cat-last_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-last_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+
+
+
+
+.model_edit-task_set-task-first_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-first_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-last_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-last_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+
+
+.body__sun-gym .modal {
+  border-color: #AE57FF;
+  background: white;
+  color: #AE57FF;
+}
+
+.body__sun-gym .modal_warning {
+  border: none;
+  background: white;
+  color: #AE57FF;
+}
+
+
+/* edit task modal */
+
+.body__sun-gym footer {
+  border-color: transparent;
+}
+
+.body__sun-gym footer div {}
+
+.body__sun-gym footer .createdBy {}
+
+.body__sun-gym footer a {
+  /* border-color: red; */
+}
+
+
+
+.body__sun-gym .css-theme-btn {
+  border-color: red;
+}
+
+
+
+
+/* End Sun Gym */
+
+
+
+
+
+
+
+
+
+
+
+.body__pastel {
+  background: #fef1e1;
+}
+.body__pastel .action-bar {
+  border-radius: 40px;
+  border-color: red;
+  border-color: transparent;
+  background: pink;
+  background: transparent;
+}
+.body__pastel .action-bar_inner {
+  color: red;
+}
+
+.body__pastel .createNewTask {
+  border: 2px solid darkorchid;
+  background: #CA96E5;
+  border-radius: 20px;
+}
+
+.body__pastel .newTaskCategoryGrid {
+  border: none;
+}
+.body__pastel .createNewTask_CategoryName {
+  background: none;
+  border-top: darkorchid;
+}
+.body__pastel .notselectedcategoryheader {
+  border-width: 3px 0px 0px 0px;
+  border-color: darkorchid;
+  border-style: dotted;
+}
+.body__pastel .extraforselectedcategoryheader {
+
+}
+.body__pastel .createNewTask_CatDeleteBtn {
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Vapowave - Start */
+
+.body__vaporwave {
+  --body_background: white;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+
+
+  
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+
+.vaporwave {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body__corbusier - Start */
+
+
+.body__corbusier {
+  --color_body_background: green;
+}
+
+.body__corbusier td,
+th {}
+
+.body__corbusier .logo-header__sun-gym {
+  display: none;
+}
+
+.body__corbusier .subHeader {
+  border-color: #AE57FF;
+  color: #AE57FF;
+}
+
+/* A category with tasks parent */
+.body__corbusier .masterTask {
+  color: #4BA6FF;
+}
+
+
+/* A category header */
+.body__corbusier .categoryHeader {
+  color: hotpink;
+}
+
+.body__corbusier .newCatTitleInput::placeholder {
+  color: red;
+}
+
+.categoryHeader input {
+  color: 'hotpink';
+  background: 'red';
+}
+
+.input::placeholder {
+  color: 'hotpink';
+  background: 'red';
+}
+
+/* a task */
+
+.body__corbusier #newTaskCategoryGrid {
+  color: hotpink;
+}
+
+.body__corbusier .createNewTask_CategoryName {
+  color: hotpink;
+  border-color: LightBlue;
+}
+
+.body__corbusier .createNewTask_CategoryName:hover {
+  color: black;
+  background: hotpink;
+}
+
+.body__corbusier .createNewTask_CatDeleteBtn {}
+
+.body__corbusier .createNewTask_CatDeleteBtn:hover {
+  background: hotpink;
+  color: black;
+  border-color: hotpink;
+}
+
+.body__corbusier input,
+.body__corbusier textarea,
+.body__corbusier input:active {
+  background: white;
+  color: black;
+}
+
+.body__corbusier ::placeholder {}
+
+.body__corbusier #createNewCategory {
+  color: LightBlue;
+}
+
+.body__corbusier #createNewCategory:hover {
+  background: LightBlue;
+  color: black;
+  border-color: LightBlue;
+}
+
+
+.body__corbusier #newCategoryInput {
+  color: aqua;
+  border-color: transparent;
+}
+
+.body__corbusier #newCategoryInput::placeholder {
+  color: aqua;
+}
+
+.body__corbusier .newTaskTitle {
+  color: white;
+}
+
+.body__corbusier #newTaskTitle {
+  color: cornflowerblue;
+  border-color: blue;
+}
+
+.body__corbusier #newTaskTitle::placeholder {
+  color: white;
+}
+
+.body__corbusier #errSelectTitle {}
+
+/* Used for up&down btn's on tasks */
+.body__corbusier .spanMoveTaskDownBtn {}
+
+.body__corbusier .spanMoveTaskUpBtn {}
+
+.body__corbusier .taskTitle {
+  color: lightblue;
+  color: cornflowerblue;
+}
+
+.body__corbusier .taskEditCat {}
+
+.body__corbusier #lockOverlay {
+  background: black;
+  opacity: 0.4;
+}
+
+
+
+
+
+/* edit task modal */
+
+.body__corbusier footer {
+  border-color: 2px solid red;
+}
+
+.body__corbusier footer div {}
+
+.body__corbusier footer .createdBy {}
+
+.body__corbusier footer a {
+  border-color: transparent;
+}
+
+/* End body__corbusier */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body__oppenheimer - Start */
+.body__oppenheimer {
+  --color_body_background: black;
+}
+
+.body__oppenheimer td,
+th {}
+
+.body__oppenheimer .logo-header__sun-gym {
+  display: none;
+}
+
+
+.body__oppenheimer .flow {}
+
+/* A category with tasks parent */
+.body__oppenheimer .masterTask {
+  color: #4BA6FF;
+}
+
+
+/* A category header */
+.body__oppenheimer .categoryHeader {
+  color: hotpink;
+}
+
+.body__oppenheimer .newCatTitleInput::placeholder {
+  color: red;
+}
+
+.categoryHeader input {
+  color: 'hotpink';
+  background: 'red';
+}
+
+.input::placeholder {
+  color: 'hotpink';
+  background: 'red';
+}
+
+/* a task */
+.body__oppenheimer .taskTable {}
+
+
+.body__oppenheimer .belongsTo {}
+
+
+.body__oppenheimer #newTaskCategoryGrid {
+  color: hotpink;
+}
+
+
+.body__oppenheimer .createNewTask_Tr {}
+
+.body__oppenheimer .createNewTask_CategoryName {
+  color: hotpink;
+  border-color: LightBlue;
+}
+
+.body__oppenheimer .createNewTask_CategoryName:hover {
+  color: black;
+  background: hotpink;
+}
+
+.body__oppenheimer .createNewTask_CatDeleteBtn {}
+
+.body__oppenheimer .createNewTask_CatDeleteBtn:hover {
+  background: hotpink;
+  color: black;
+  border-color: hotpink;
+}
+
+.body__oppenheimer input,
+.body__oppenheimer textarea,
+.body__oppenheimer input:active {
+  background: white;
+  color: black;
+}
+
+.body__oppenheimer ::placeholder {}
+
+
+.body__oppenheimer #createNewCategory {
+  color: LightBlue;
+}
+
+.body__oppenheimer #createNewCategory:hover {
+  background: LightBlue;
+  color: black;
+  border-color: LightBlue;
+}
+
+
+.body__oppenheimer #newCategoryInput {
+  color: aqua;
+  border-color: transparent;
+}
+
+.body__oppenheimer #newCategoryInput::placeholder {
+  color: aqua;
+}
+
+.body__oppenheimer .newTaskTitle {
+  color: white;
+}
+
+.body__oppenheimer #newTaskTitle {
+  color: cornflowerblue;
+  border-color: blue;
+}
+
+.body__oppenheimer #newTaskTitle::placeholder {
+  color: white;
+}
+
+
+.body__oppenheimer #errSelectTitle {}
+
+/* Used for up&down btn's on tasks */
+.body__oppenheimer .spanMoveTaskDownBtn {}
+
+.body__oppenheimer .spanMoveTaskUpBtn {}
+
+.body__oppenheimer .taskTitle {
+  color: lightblue;
+  color: cornflowerblue;
+}
+
+.body__oppenheimer .taskEditCat {}
+
+.body__oppenheimer #lockOverlay {
+  background: aqua;
+  opacity: 0.4;
+}
+
+
+
+
+
+/* edit task modal */
+
+.body__oppenheimer footer {
+  border-color: 2px solid red;
+}
+
+.body__oppenheimer footer div {}
+
+.body__oppenheimer footer .createdBy {}
+
+.body__oppenheimer footer a {
+  border-color: transparent;
+}
+
+.body__oppenheimer .css-theme-btn {
+  border-color: white;
+  background: black;
+  color: white;
+}
+
+/* End body__oppenheimer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Visual Dome - Start */
+/* #the-visual-dome */
+
+
+@font-face {
+  font-family: orpheus-pro-400normal;
+  src: url("./assets/fonts/400normal.woff2"), format("woff2"),
+   url("./assets/fonts/400normal.woff") format("woff"), 
+   url("./assets/fonts/400normal.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: adobe-garamond-pro;
+  src: url(https://use.typekit.net/af/2011b6/00000000000000003b9b00c1/27/l?subset_id=2&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/2011b6/00000000000000003b9b00c1/27/d?subset_id=2&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/2011b6/00000000000000003b9b00c1/27/a?subset_id=2&fvd=n4&v=3) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+
+
+.body__the-visual-dome {
+  --body_background: aquamarine;
+
+  --lock-overlay_background: gold;
+  --lock-overlay_opacity: 0.4;
+  
+  font-family: orpheus-pro-400normal;
+
+}
+
+
+.body__the-visual-dome .logo-header__the-visual-dome {
+  display: inherit;
+  text-align: center;
+  font-family: orpheus-pro-400normal;
+  font-weight: 100;
+  padding: 0em;
+}
+.body__the-visual-dome .logo-header__the-visual-dome p {
+  font-size: 3em;
+  margin: 0em;
+}
+
+
+.body__the-visual-dome .logo-header__the-visual-dome2 {
+  display: inherit;
+  text-align: center;
+  font-family: orpheus-pro-400normal;
+}
+
+
+
+
+/* The Visual Dome - End */
