@@ -5,9 +5,7 @@
 <head>
    <!--
   <meta http-equiv="refresh" content="2">
--->
-
-
+  -->
   <meta charset=utf-8>
   <title>Sun Gym</title>
 
