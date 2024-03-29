@@ -225,22 +225,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer class="">
       <div class="top">
         <div class="createdBy">Created and hosted by
