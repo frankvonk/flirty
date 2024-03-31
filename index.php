@@ -173,13 +173,11 @@
         </div>
          
       
-
         <div class="newTaskTitleInputParent">
           <div class="newTaskTitleInputLabel">Title:</div>
           <textarea class="newTaskTitleTextArea" 
             type='text'
             id="newTaskTitleTextArea"
-            onfocus="this.value=''"
             placeholder="Write title here"></textarea>
         </div>
 

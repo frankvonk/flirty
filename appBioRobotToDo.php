@@ -525,9 +525,9 @@ function updateLocalStorage(dbBioRobot) {
     method: 'POST', // or GET
     success: function(msg) {
       // alert(msg);
-      if (savingSpinner)
+      if (savingSpinner) {
         savingSpinner.style.display = 'none'
-
+      }
     }
   });
 
@@ -1275,6 +1275,7 @@ function submitTask() {
   }
   renderTasks();
   newTaskTitleTextArea.focus();
+  newTaskTitleTextArea.value = "";
 }
 
 
