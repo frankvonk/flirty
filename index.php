@@ -36,9 +36,15 @@
 
   <div id="saving-spinner_parent" class="saving-spinner_parent">
     <p id="saving-spinner" class="saving-spinner" >Saving</p>
-
   </div>
-  <p id="retrieving-data-spinner" class="retrieving-data-spinner">Getting your precious data for you!</p>
+
+  <div id="retrieving-data-spinner"
+    class="retrieving-data-spinner"
+  >
+    <p>
+      Getting your precious data for you!
+    </p>
+  </div>
 
 
 

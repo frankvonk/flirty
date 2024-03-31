@@ -74,16 +74,18 @@ button {
  
   display: none;
 }
+
 .retrieving-data-spinner {
-  background: grey;
   position: absolute;
   top: 5em;
-  left: 4em;
- 
+  width: 100%;
+}
+.retrieving-data-spinner p {
+  width: fit-content;
+  background: grey;
+  margin: 0 auto;
   color: white;
-  padding: 1em;
- 
-  display: none;
+  padding: 1em; 
 }
 
 
