@@ -1469,6 +1469,8 @@ function renderTask(displayContainer, task) {
   taskTable.className = 'taskTable';
   taskTable.setAttribute('id', task.uid);
 
+
+  // Title of task
   const taskTableTr1 = document.createElement('tr');
   taskTableTr1.className = "task-table-tr1";
 
@@ -1485,7 +1487,35 @@ function renderTask(displayContainer, task) {
   taskTableTr1.appendChild(taskTableTd1);
   taskTable.appendChild(taskTableTr1);
 
+  // Link of task
+  if (task.linkLabel && task.linkURL) {
 
+    let trLink = document.createElement('tr');
+    let tdLink = document.createElement('td');
+
+    trLink.className = "task-table-tr-link";
+
+    let tdLinkAnchor = document.createElement('a');
+    tdLinkAnchor.className = 'taskLink';
+    tdLinkAnchor.target = '_blank';
+    tdLink.setAttribute('colspan', '6');
+
+    let linkURL = task.linkURL;
+    // Check if linkURL starts with 'http://' or 'https://'
+    if (!linkURL.startsWith('http://') && !linkURL.startsWith('https://')) {
+      // If not, prepend 'http://'
+      linkURL = 'http://' + linkURL;
+    }
+
+    const tn = document.createTextNode(task.linkLabel)
+    tdLinkAnchor.appendChild(tn);
+    tdLinkAnchor.href = linkURL;
+    tdLink.appendChild(tdLinkAnchor);
+    trLink.appendChild(tdLink);
+    taskTable.appendChild(trLink);
+  }
+
+  // Delete task
   const taskTableTr2 = document.createElement('tr');
   taskTableTr2.className = "task-table-tr2";
   taskTable.appendChild(taskTableTr2);
@@ -1502,6 +1532,7 @@ function renderTask(displayContainer, task) {
   taskTableTd5.addEventListener('click', () => deleteTask(task.uid, false));
   taskTableTr2.appendChild(taskTableTd5);
 
+  // Checkbox for task
   const taskTableTd8 = document.createElement('td');
 
   const spanCheckBox = document.createElement('span');
@@ -2436,6 +2467,7 @@ function editTask(task) {
  
 
 
+  // Edit task title
   // ROW
   tr = newTr();
   // CELL
@@ -2449,7 +2481,7 @@ function editTask(task) {
   td.className = '';
   td.colSpan = 2;
 
-  const input = document.createElement('textarea');
+  let input = document.createElement('textarea');
   input.id = 'inputForChangingTaskTitle';
   input.className = 'inputForChangingTaskTitle';
   input.value = task.title;
@@ -2459,7 +2491,64 @@ function editTask(task) {
   content.push(tr);
 
 
+  // Add link in task
 
+  // link label
+  // ROW
+  tr = newTr();
+  // CELL
+  td = newTd('Link label');
+  td.className = ' ';
+  td.style.textAlign = 'right'
+  td.colSpan = 2;
+  tr.appendChild(td);
+  // CELL
+  td = newTd();
+  td.className = '';
+  td.colSpan = 2;
+
+  input = document.createElement('input');
+  input.id = 'inputForTaskLinkLabel';
+  input.className = 'inputForTaskLinkLabel';
+  if (task.linkLabel) {
+    input.value = task.linkLabel;
+  }
+  input.placeholder = "Add label for link";
+  td.appendChild(input)
+  tr.appendChild(td);
+  content.push(tr);
+
+  // link url
+  // ROW
+  tr = newTr();
+  // CELL
+  td = newTd('Link URL');
+  td.className = ' ';
+  td.style.textAlign = 'right'
+  td.colSpan = 2;
+  tr.appendChild(td);
+  // CELL
+  td = newTd();
+  td.className = '';
+  td.colSpan = 2;
+
+  input = document.createElement('input');
+  input.id = 'inputForTaskLinkURL';
+  input.className = 'inputForTaskLinkURL';
+  if (task.linkURL) {
+    input.value = task.linkURL;
+  }
+  input.placeholder = "Add URL for link";
+  td.appendChild(input)
+  tr.appendChild(td);
+  content.push(tr);
+
+
+
+
+
+
+  // Change category
   // ROW
   tr = newTr();
   // CELL
@@ -2500,6 +2589,14 @@ function editTask(task) {
     }
     const inputForChangingTaskTitle = document.getElementById('inputForChangingTaskTitle')
     task.title = inputForChangingTaskTitle.value;
+    const inputForTaskLinkLabel = document.getElementById('inputForTaskLinkLabel')
+    if (inputForTaskLinkLabel && inputForTaskLinkLabel.value) {
+      task.linkLabel = inputForTaskLinkLabel.value;
+    }
+    const inputForTaskLinkURL = document.getElementById('inputForTaskLinkURL')
+    if (inputForTaskLinkURL && inputForTaskLinkURL.value) {
+      task.linkURL = inputForTaskLinkURL.value;
+    }
     executeEditTask(task);
     hideGeneralModal();
   
