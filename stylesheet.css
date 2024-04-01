@@ -502,6 +502,10 @@ input:active {
   height: 3em;
 }
 
+.task-table-tr-link td {
+  border: none;
+}
+
 .taskEditCat {
   max-width: 130px;
 }
