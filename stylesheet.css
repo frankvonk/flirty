@@ -697,60 +697,6 @@ footer a {
 
 
 
-/* Spirit Animal - Start */
-
-.body__spirit-animal {
-  --body_background: white;
-
-  --action-bar_button_color: #AE57FF;
-
-  --lock-overlay_background: aqua;
-  --lock-overlay_opacity: 0.4;
-
-  --modal_modal-cancel_background: white;
-  --modal_modal-cancel_color: teal;
-  --modal_modal-cancel_border-color: teal;
-  --modal_modal-cancel_background_hover: teal;
-  --modal_modal-cancel_color_hover: white;
-  --modal_modal-cancel_border-color_hover: teal;
-
-  --modal_modal-accept_background: white;
-  --modal_modal-accept_color: deeppink;
-  --modal_modal-accept_border-color: deeppink;
-  --modal_modal-accept_background_hover: deeppink;
-  --modal_modal-accept_color_hover: white;
-  --modal_modal-accept_border-color_hover: deeppink;
-
-  --saving-spinner_background: #AE57FF;
-  --saving-spinner_background: mediumslateblue;
-  --saving-spinner_color: white;
-
-  --categorySelected-background: deeppink;
-  --categorySelected-color: white;
-
-  --new-cat_background: deeppink;
-  --new-cat_color: deeppink;
-  --new-cat_hover: deeppink;
-
-
-
-  filter: saturate(1.4);
-  /* background: white; */
-  --categoryHeader-color: blue;
-}
-
-/* End Spirit Animal */
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -898,10 +844,6 @@ th {
 .body__sun-gym .binTaskTitle {}
 
 
-
-.body__sun-gym .flow {
-  border-color: red;
-}
 
 /* A category with tasks parent */
 .body__sun-gym .masterTask {
@@ -1155,16 +1097,33 @@ color: var(--categoryHeader-color);
   /* border-color: red; */
 }
 
-
-
 .body__sun-gym .css-theme-btn {
   border-color: red;
 }
 
 
-
-
 /* End Sun Gym */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1252,8 +1211,6 @@ color: var(--categoryHeader-color);
 
 
 
-  
-
 
   filter: saturate(1.4);
   /* background: white; */
@@ -1264,6 +1221,81 @@ color: var(--categoryHeader-color);
 .vaporwave {
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Spirit Animal - Start */
+
+.body__spirit-animal {
+  --body_background: white;
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: deeppink;
+  --modal_modal-accept_border-color: deeppink;
+  --modal_modal-accept_background_hover: deeppink;
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover: deeppink;
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: deeppink;
+  --categorySelected-color: white;
+
+  --new-cat_background: deeppink;
+  --new-cat_color: deeppink;
+  --new-cat_hover: deeppink;
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+/* End Spirit Animal */
 
 
 
@@ -1379,7 +1411,8 @@ th {}
   color: black;
 }
 
-.body__corbusier ::placeholder {}
+.body__corbusier ::placeholder {
+}
 
 .body__corbusier #createNewCategory {
   color: LightBlue;

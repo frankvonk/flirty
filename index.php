@@ -12,6 +12,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/favicon7.ico" />
   <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
   <link href='stylesheet.css' rel='stylesheet'>
+  <link href='stylesheet_the-white-lotus.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="./config.js"></script>
@@ -25,7 +26,10 @@
 <body id='body'>
   <div class="lockOverlay" id="lockOverlay"></div>
 
-<!-- <div id=listtitles>put titles here</div> -->
+<!-- This is where title will be displayed -->
+<div id=listtitles></div>
+
+
 
   <div class="responsive-design-assist_parent" style="display:none">
     <p class="responsive-design-assist mobile">MOBILE</p>
@@ -244,42 +248,46 @@
       </div>
       <div class="bottom">
         <p>Select a Styling Theme</p>
-        <button class="css-theme-btn css-theme-btn__corbusier" id="css-theme-btn__corbusier"
-          onclick="changeCSSTheme('corbusier')">
-          Corbusier
-        </button>
-        <button class="css-theme-btn css-theme-btn__spirit-animal" id="css-theme-btn__spirit-animal"
-          onclick="changeCSSTheme('spirit-animal')">
-          Spirit Animal
-        </button>
         <button class="css-theme-btn css-theme-btn__sun-gym" id="css-theme-btn__sun-gym"
           onclick="changeCSSTheme('sun-gym')">
           SUN GYM
         </button>
-        <button class="css-theme-btn css-theme-btn__the-visual-dome" id="css-theme-btn__the-visual-dome"
+        <button class="css-theme-btn css-theme-btn__corbusier" id="css-theme-btn__corbusier"
+          onclick="changeCSSTheme('corbusier')">
+          Corbusier
+        </button>
+        <button class="css-theme-btn css-theme-btn__the-white-lotus" id="css-theme-btn__the-white-lotus"
+          onclick="changeCSSTheme('the-white-lotus')">
+          The White Lotus 🪷
+        </button>        <!-- <button class="css-theme-btn css-theme-btn__spirit-animal" id="css-theme-btn__spirit-animal"
+          onclick="changeCSSTheme('spirit-animal')">
+          Spirit Animal
+        </button> -->
+     
+        <!-- <button class="css-theme-btn css-theme-btn__the-visual-dome" id="css-theme-btn__the-visual-dome"
           onclick="changeCSSTheme('the-visual-dome')">
           The Visual Dome
-        </button>
-        <button class="css-theme-btn css-theme-btn__oppenheimer" id="css-theme-btn__oppenheimer"
+        </button> -->
+        <!-- <button class="css-theme-btn css-theme-btn__oppenheimer" id="css-theme-btn__oppenheimer"
           onclick="changeCSSTheme('oppenheimer')">
           Oppenheimer
-        </button>
-        <button class="css-theme-btn css-theme-btn__mac-os" id="css-theme-btn__mac-os"
+        </button> -->
+        <!-- <button class="css-theme-btn css-theme-btn__mac-os" id="css-theme-btn__mac-os"
           onclick="changeCSSTheme('mac-os')">
           Mac OS
-        </button>
-        <button class="css-theme-btn css-theme-btn__lebowski" id="css-theme-btn__lebowski"
+        </button> -->
+        <!-- <button class="css-theme-btn css-theme-btn__lebowski" id="css-theme-btn__lebowski"
           onclick="changeCSSTheme('lebowski')">
           Lebowski
-        </button>
+        </button> -->
         <button class="css-theme-btn css-theme-btn__wireframe" id="css-theme-btn__wireframe"
           onclick="changeCSSTheme('wireframe')">
           Wireframe
         </button>
-        <button class="css-theme-btn css-theme-btn__bender" id="css-theme-btn__bender"
+        <!-- <button class="css-theme-btn css-theme-btn__bender" id="css-theme-btn__bender"
           onclick="changeCSSTheme('bender')">
           Bender
-        </button>
+        </button> -->
         <button class="css-theme-btn css-theme-btn__vaporwave" id="css-theme-btn__vaporwave"
           onclick="changeCSSTheme('vaporwave')">
           Vaporwave
@@ -288,10 +296,10 @@
           onclick="changeCSSTheme('synthax')">
           Synthax
         </button>   
-        <button class="css-theme-btn css-theme-btn__pastel" id="css-theme-btn__paster"
+        <!-- <button class="css-theme-btn css-theme-btn__pastel" id="css-theme-btn__paster"
           onclick="changeCSSTheme('pastel')">
           Pastel
-        </button>
+        </button> -->
       </div>
     </footer>
 

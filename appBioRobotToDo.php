@@ -1437,6 +1437,9 @@ function renderTasks() {
           // let par =document.createElement('p')
           // par.innerHTML = arrTasksWithThisCategory[i].title;
           // place.appendChild(par)
+          // This is in index, uncomment to see the list
+          //<!-- <div id=listtitles>put titles here</div> -->
+
 
 
           renderTask(displayContainer, arrTasksWithThisCategory[i]);

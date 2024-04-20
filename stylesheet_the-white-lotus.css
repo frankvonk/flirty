@@ -1,0 +1,259 @@
+
+
+/* The White Lotus - Start */
+
+.body__the-white-lotus {
+--lotus-canvas-white: #ebdac0;
+
+  --body_background: var(--lotus-canvas-white);
+  --body_background: var(--lotus-canvas-white);
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: deeppink;
+  --modal_modal-accept_border-color: deeppink;
+  --modal_modal-accept_background_hover: deeppink;
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover: deeppink;
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: deeppink;
+  --categorySelected-color: white;
+
+  --new-cat_background: deeppink;
+  --new-cat_color: deeppink;
+  --new-cat_hover: deeppink;
+
+  --flow-highlight-background: #53141b;
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+
+
+.body__the-white-lotus .action-bar {
+  background: #474b30;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.body__the-white-lotus .action-bar_inner {
+}
+.body__the-white-lotus .action-bar h3 {
+}
+
+.body__the-white-lotus .action-bar_button {
+  color: var(--lotus-white);
+
+}
+
+.body__the-white-lotus .binModalHeader {}
+
+.body__the-white-lotus .binTaskTitle {}
+
+
+
+.body__the-white-lotus .flow {
+  margin: 3em;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+} 
+
+
+/* A category with tasks parent */
+.body__the-white-lotus .masterTask {
+}
+
+
+/* A category header */
+.body__the-white-lotus .categoryHeader {
+
+  border: none;
+}
+.body__the-white-lotus .categoryHeader.notselectedcategoryheader {
+  color: #555c38;
+}
+
+
+
+
+.toggle-category {
+}
+.editCategory {
+}
+
+.body__the-white-lotus .newCatTitleInput {
+  
+}
+.body__the-white-lotus .newCatTitleInput::placeholder {
+}
+
+.categoryHeader input {
+}
+
+.input::placeholder {
+}
+
+/* a task */
+.body__the-white-lotus .taskTable {
+}
+
+.create-new-task {
+}
+.body__the-white-lotus .belongsTo {
+}
+
+
+.body__the-white-lotus #newTaskCategoryGrid {
+}
+
+
+.body__the-white-lotus .createNewTask_Tr {}
+
+
+.body__the-white-lotus .createNewTask_CategoryName:hover {
+}
+
+.body__the-white-lotus .createNewTask_CatDeleteBtn {
+}
+
+.body__the-white-lotus .createNewTask_CatDeleteBtn:hover {
+}
+
+.body__the-white-lotus input,
+.body__the-white-lotus textarea,
+.body__the-white-lotus input:active {
+}
+
+.body__the-white-lotus ::placeholder {}
+
+
+.body__the-white-lotus #createNewCategory {
+}
+
+.body__the-white-lotus .new-cat_parent:hover {
+}
+
+
+.body__the-white-lotus #newCategoryInput {
+}
+
+.body__the-white-lotus #newCategoryInput::placeholder {
+}
+
+.body__the-white-lotus .newTaskTitle {
+}
+
+.body__the-white-lotus #newTaskTitle {
+}
+
+.body__the-white-lotus #newTaskTitle::placeholder {
+}
+.defaultOrderNewTask {
+}
+
+
+
+/* Used for up&down btn's on tasks */
+.body__the-white-lotus #taskUp,
+.body__the-white-lotus #taskDown {
+}
+.body__the-white-lotus #taskUp:hover,
+.body__the-white-lotus #taskDown:hover {
+}
+
+.body__the-white-lotus .spanMoveTaskDownBtn,
+.body__the-white-lotus .spanMoveTaskUpBtn {
+}
+
+.body__the-white-lotus .spanMoveTaskDownBtn:hover,
+.body__the-white-lotus .spanMoveTaskUpBtn:hover {
+}
+.body__the-white-lotus .taskTitle {
+}
+.task-checkbox-container-checked {
+}
+.task-checkbox-container-unchecked {
+}
+.body__the-white-lotus .taskEditCat {}
+
+
+.model_edit-category_set-cat-order,
+.model_edit-task_set-task-order  {
+}
+.model_edit-category_set-cat-first_not-selected {
+}
+
+.model_edit-category_set-cat-first_selected {
+}
+
+.model_edit-category_set-cat-last_not-selected {
+}
+
+.model_edit-category_set-cat-last_selected {
+}
+
+
+
+
+.model_edit-task_set-task-first_not-selected {
+}
+
+.model_edit-task_set-task-first_selected {
+}
+
+.model_edit-task_set-task-last_not-selected {
+}
+
+.model_edit-task_set-task-last_selected {
+}
+
+
+
+.body__the-white-lotus .modal {
+}
+
+.body__the-white-lotus .modal_warning {
+}
+
+
+/* edit task modal */
+
+.body__the-white-lotus footer {
+}
+
+.body__the-white-lotus footer div {}
+
+.body__the-white-lotus footer .createdBy {}
+
+.body__the-white-lotus footer a {
+}
+
+.body__the-white-lotus .css-theme-btn {
+}
+
+/* End - The White Lotus */
+
+
+
+
+
+
+
