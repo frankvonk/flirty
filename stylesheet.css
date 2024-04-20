@@ -179,7 +179,7 @@ input:active {
 }
 
 
-#signature {
+.signature {
   /* image-rendering: pixelated; */
   height: 32px;
   padding: 0px 0px 0px 0px;
@@ -310,6 +310,10 @@ input:active {
   line-height: 12px;
 }
 
+.createNewTask_CategoryName.defaulCategory {
+  padding-bottom: 1px;
+}
+
 .defaulCategory {
   grid-column: 1 / 3;
 }
@@ -405,7 +409,12 @@ input:active {
 .new-cat_input::placeholder {
   color: var(--new-cat_color);
 }
-
+.new-cat_submit {
+  height: 40px;
+  font-size: 1.42em;
+  background: var(--new-cat_background);
+  color: white;
+}
 
 .defaultOrderNewTask {
   width: 50%;
@@ -1149,30 +1158,9 @@ color: var(--categoryHeader-color);
   color: red;
 }
 
-.body__pastel .createNewTask {
-  border: 2px solid darkorchid;
-  background: #CA96E5;
-  border-radius: 20px;
-}
 
-.body__pastel .newTaskCategoryGrid {
-  border: none;
-}
-.body__pastel .createNewTask_CategoryName {
-  background: none;
-  border-top: darkorchid;
-}
-.body__pastel .notselectedcategoryheader {
-  border-width: 3px 0px 0px 0px;
-  border-color: darkorchid;
-  border-style: dotted;
-}
-.body__pastel .extraforselectedcategoryheader {
 
-}
-.body__pastel .createNewTask_CatDeleteBtn {
-  border: none;
-}
+
 
 
 
@@ -1396,13 +1384,6 @@ th {}
   background: hotpink;
 }
 
-.body__corbusier .createNewTask_CatDeleteBtn {}
-
-.body__corbusier .createNewTask_CatDeleteBtn:hover {
-  background: hotpink;
-  color: black;
-  border-color: hotpink;
-}
 
 .body__corbusier input,
 .body__corbusier textarea,
@@ -1615,14 +1596,6 @@ th {}
 .body__oppenheimer .createNewTask_CategoryName:hover {
   color: black;
   background: hotpink;
-}
-
-.body__oppenheimer .createNewTask_CatDeleteBtn {}
-
-.body__oppenheimer .createNewTask_CatDeleteBtn:hover {
-  background: hotpink;
-  color: black;
-  border-color: hotpink;
 }
 
 .body__oppenheimer input,

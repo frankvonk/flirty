@@ -189,12 +189,13 @@
             type='text'
             id="newTaskTitleTextArea"
             placeholder="Write title here"></textarea>
+          <button class="new-task_submit" id="submit">
+            Submit
+          </button>
         </div>
 
       
-        <button class="new-task_submit" id="submit">
-          Submit
-        </button>
+      
       
     
         <div class="default-order-new-task_parent">
@@ -211,8 +212,6 @@
         >
           <div 
             class="new-cat_label"
-            onclick="createNewCategory()"
-            id="createNewCategory"
           >
             Create new Category
           </div>
@@ -221,6 +220,12 @@
               id="newCategoryInput"
               maxlength="40"
               placeholder="...">
+          <button class="new-cat_submit" 
+            onclick="createNewCategory()"
+            id="createNewCategory"
+          >
+            Submit
+          </button>  
         </div>
 
       </div>
@@ -313,6 +318,7 @@
 
 </body>
 <script src="signature_canvas.js"></script>
+<script src="signature_canvas_the-white-lotus.js"></script>
 
 <!-- <script src="checknewpathFRANK_____react-background-animation/three.r134.min.js"></script>
 <script src="./react-background-animation/vanta.dots.min.js"></script>

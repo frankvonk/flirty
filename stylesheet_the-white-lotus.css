@@ -3,7 +3,9 @@
 /* The White Lotus - Start */
 
 .body__the-white-lotus {
---lotus-canvas-white: #ebdac0;
+  --lotus-canvas-white: #ebdac0;
+  --lotus-white: #ebdac0;
+
 
   --body_background: var(--lotus-canvas-white);
   --body_background: var(--lotus-canvas-white);
@@ -52,6 +54,7 @@
   background: #474b30;
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 4px;
   justify-content: center;
 }
 .body__the-white-lotus .action-bar_inner {
@@ -60,8 +63,10 @@
 }
 
 .body__the-white-lotus .action-bar_button {
-  color: var(--lotus-white);
-
+  color: var(--lotus-canvas-white);
+}
+.counterTasks {
+  color: var(--lotus-canvas-white);
 }
 
 .body__the-white-lotus .binModalHeader {}
@@ -71,7 +76,6 @@
 
 
 .body__the-white-lotus .flow {
-  margin: 3em;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 } 
@@ -132,9 +136,13 @@
 }
 
 .body__the-white-lotus .createNewTask_CatDeleteBtn {
+  color: deeppink;
+  border-color: deeppink;
 }
 
 .body__the-white-lotus .createNewTask_CatDeleteBtn:hover {
+  background: deeppink;
+  color: white;
 }
 
 .body__the-white-lotus input,
@@ -249,11 +257,43 @@
 .body__the-white-lotus .css-theme-btn {
 }
 
-/* End - The White Lotus */
 
 
 
 
 
 
+
+
+
+
+
+
+@media only screen and (min-device-width: 600px) {
+  
+  
+.body__the-white-lotus .flow {
+  margin: 2em;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+} 
+
+
+}
+
+
+
+@media only screen and (min-device-width: 1000px) {
+ 
+  
+
+  .body__the-white-lotus .flow {
+    margin: 3em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+  } 
+  
+
+
+}
 

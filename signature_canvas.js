@@ -27,6 +27,8 @@ const fnLogo = () => {
       c.strokeStyle = "#AE57FF"
     } else if (bodyElement[0].classList.contains('body__the-visual-dome') ) {
       c.strokeStyle = "hotpink";
+    } else if (bodyElement[0].classList.contains('body__the-white-lotus') ) {
+      c.strokeStyle = "#ebdac0";
     }
 
     c.lineCap = "round";
