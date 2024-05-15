@@ -854,8 +854,6 @@ function displayListOfTasksInBin() {
     td.className = '';
     tr.appendChild(td);
     arrTasksInBin.push(tr);
-    // EMPTY ROW FOR PADDING
-    // arrTasksInBin.push(emptyRow());
   })
   return arrTasksInBin
 }
@@ -970,8 +968,6 @@ function displayListOfTasksInHistory() {
     td.className = '';
     tr.appendChild(td);
     arrTasksInHistory.push(tr);
-    // EMPTY ROW FOR PADDING
-    // arrTasksInBin.push(emptyRow());
   })
   return arrTasksInHistory
 }
@@ -1160,13 +1156,6 @@ function deleteCategory(categoryToDeleteId) {
         td = newTd(task.title);
         td.className = '';
         td.colSpan = 3;
-        tr.appendChild(td);
-        content.push(tr)
-
-        // Empty row
-        tr = newTr();
-        td = newTd('');
-        td.className = 'empty-row';
         tr.appendChild(td);
         content.push(tr)
       }
@@ -2666,13 +2655,6 @@ function removeElementsByClass(className) {
   }
 }
 
-function emptyRow() {
-  let tr = newTr();
-  let td = newTd();
-  td.className = 'empty-row';
-  tr.appendChild(td)
-  return tr;
-};
 function newTr() {
   return document.createElement('tr');
 };
