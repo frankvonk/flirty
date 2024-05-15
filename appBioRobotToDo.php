@@ -2586,20 +2586,8 @@ function editTask(task) {
     newSettingsForTask = {};
   }
   const onAccept = () => {
-    if(newSettingsForTask.title === undefined) {
-      // console.log('no title -------')
-      
-    }
     const inputForChangingTaskTitle = document.getElementById('inputForChangingTaskTitle')
     task.title = inputForChangingTaskTitle.value;
-    const inputForTaskLinkLabel = document.getElementById('inputForTaskLinkLabel')
-    if (inputForTaskLinkLabel && inputForTaskLinkLabel.value) {
-      task.linkLabel = inputForTaskLinkLabel.value;
-    }
-    const inputForTaskLinkURL = document.getElementById('inputForTaskLinkURL')
-    if (inputForTaskLinkURL && inputForTaskLinkURL.value) {
-      task.linkURL = inputForTaskLinkURL.value;
-    }
     executeEditTask(task);
     hideGeneralModal();
   
@@ -2701,6 +2689,13 @@ function executeEditTask(task) {
   // const currentCategory = dbBioRobot.categories.find(cat => cat.id === task.category);
 
   // console.log('new settings:', newSettingsForTask)
+ 
+  const inputForTaskLinkLabel = document.getElementById('inputForTaskLinkLabel')
+  const inputForTaskLinkURL = document.getElementById('inputForTaskLinkURL')
+  if (inputForTaskLinkURL && inputForTaskLinkURL.value) {
+    task.linkLabel = inputForTaskLinkLabel.value || "Link";
+    task.linkURL = inputForTaskLinkURL.value;
+  }
   if (newSettingsForTask.newTaskTitleTextArea) {
       task.title = newSettingsForTask.newTaskTitleTextArea;
   }
