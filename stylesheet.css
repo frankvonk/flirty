@@ -1037,7 +1037,7 @@ color: var(--categoryHeader-color);
 .model_edit-category_set-cat-first_selected {
   background: #AE57FF;
   color: white;
-  border: 2px solid red;
+  border: 2px solid #AE57FF;
 }
 
 .model_edit-category_set-cat-last_not-selected {
