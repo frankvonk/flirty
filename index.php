@@ -11,6 +11,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/favicon7.ico" />
   <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
   <link href='stylesheet.css' rel='stylesheet'>
+  <link href='stylesheet_black.css' rel='stylesheet'>
   <link href='stylesheet_the-white-lotus.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -256,6 +257,10 @@
           onclick="changeCSSTheme('sun-gym')">
           SUN GYM
         </button>
+        <button class="css-theme-btn css-theme-btn__black" id="css-theme-btn__black"
+          onclick="changeCSSTheme('black')">
+          Black
+        </button>
         <button class="css-theme-btn css-theme-btn__corbusier" id="css-theme-btn__corbusier"
           onclick="changeCSSTheme('corbusier')">
           Corbusier
@@ -287,7 +292,7 @@
         <button class="css-theme-btn css-theme-btn__wireframe" id="css-theme-btn__wireframe"
           onclick="changeCSSTheme('wireframe')">
           Wireframe
-        </button>
+        </button>    
         <!-- <button class="css-theme-btn css-theme-btn__bender" id="css-theme-btn__bender"
           onclick="changeCSSTheme('bender')">
           Bender

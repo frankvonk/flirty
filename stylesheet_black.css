@@ -1,0 +1,345 @@
+
+.body__black {
+  --body_background: black;
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: black;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: black;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: black;
+  --modal_modal-accept_color: deeppink;
+  --modal_modal-accept_border-color: deeppink;
+  --modal_modal-accept_background_hover: deeppink;
+  --modal_modal-accept_color_hover: black;
+  --modal_modal-accept_border-color_hover: deeppink;
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: deeppink;
+  --categorySelected-color: black;
+
+  --flow-highlight-background: #444;
+
+  --new-cat_background: deeppink;
+  --new-cat_color: deeppink;
+  --new-cat_hover: deeppink;
+
+  /* --task-title_border-color: green; */
+
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+
+
+
+
+.body__black .action-bar {
+  border: none;
+  color: #AE57FF;
+}
+.body__black .action-bar_inner {
+  margin: 0 auto;
+}
+.body__black .action-bar h3 {
+  /* border: 3px solid red; */
+}
+
+
+.body__black .action-bar_button {}
+
+.body__black .binModalHeader {}
+
+.body__black .binTaskTitle {}
+
+
+
+
+/* A category with tasks parent */
+.body__black .masterTask {
+  color: #4BA6FF;
+}
+
+
+.newTaskTitleInputLabel {
+  color: black;
+}
+.new-task_submit {
+  color: black;
+}
+.new-cat_label {
+  color: black;
+}
+.new-cat_submit {
+  color: black;
+}
+/* A category header */
+.body__black .categoryHeader {
+ /* color: hotpink;
+  border-color: hotpink;
+color: var(--categoryHeader-color);
+*/
+  
+}
+.toggle-category {
+  width: 76px;
+  border-color: deeppink;
+  color: deeppink;
+}
+.editCategory {
+  border-color: deeppink;
+  color: deeppink;
+}
+
+.body__black .newCatTitleInput {
+  
+}
+.body__black .newCatTitleInput::placeholder {
+}
+
+.categoryHeader input {
+  color: 'hotpink';
+  background: 'red';
+}
+
+.input::placeholder {
+  color: 'hotpink';
+  background: 'red';
+}
+
+/* a task */
+.body__black .taskTable {}
+
+.create-new-task {
+  color: #4BA6FF;
+}
+.body__black .belongsTo {
+  border: none;
+}
+
+
+.body__black #newTaskCategoryGrid {
+  color: hotpink;
+}
+
+
+.body__black .createNewTask_Tr {}
+
+
+.body__black .createNewTask_CategoryName:hover {
+  color: black;
+  background: deeppink;
+}
+
+.body__black .createNewTask_CatDeleteBtn {
+  color: deeppink;
+  border-color: deeppink;
+}
+
+.body__black .createNewTask_CatDeleteBtn:hover {
+  background: deeppink;
+  color: white;
+}
+
+.body__black input,
+.body__black textarea,
+.body__black input:active {
+  background: black;
+  color: red;
+}
+
+.body__black ::placeholder {}
+
+
+.body__black #createNewCategory {
+  /* color: LightBlue; */
+
+}
+
+.body__black .new-cat_parent:hover {
+  /* background: red; */
+  /* color: white; */
+  /* border-color: LightBlue; */
+}
+
+
+.body__black #newCategoryInput {
+  /* text-align: center; */
+  /* color: lightblue; */
+  /* border-color: transparent; */
+}
+
+.body__black #newCategoryInput::placeholder {
+  /* color: lightblue; */
+
+}
+
+.body__black .newTaskTitle {
+  /* color: thistle; */
+  /* color: pink; */
+  color: white;
+}
+
+.body__black #newTaskTitle {
+  color: cornflowerblue;
+  border-color: blue;
+  font-weight: bold;
+}
+
+.body__black #newTaskTitle::placeholder {
+  color: white;
+}
+.body__black .default-order-new-task-first,
+.body__black .default-order-new-task.selected {
+  background: #AE57FF;
+  color: black;
+}
+.body__black .default-order-new-task-last,
+.body__black .default-order-new-task.not-selected {
+  background: black;
+  color: #AE57FF;
+}
+
+
+
+
+/* Used for up&down btn's on tasks */
+.body__black #taskUp,
+.body__black #taskDown {
+  border-color: lightseagreen;
+  border-color: #A0DFD6;
+}
+.body__black #taskUp:hover,
+.body__black #taskDown:hover {
+  background: lightseagreen;
+  background: #A0DFD6;
+  color: white;
+}
+
+.body__black .spanMoveTaskDownBtn,
+.body__black .spanMoveTaskUpBtn {
+  color: lightseagreen;
+  color: #A0DFD6;
+  /* background: red; */
+  
+}
+
+.body__black .spanMoveTaskDownBtn:hover,
+.body__black .spanMoveTaskUpBtn:hover {
+  color: white;
+}
+.body__black .taskTitle {
+  color: lightblue;
+  color: cornflowerblue;
+  border: none;
+}
+.task-checkbox-container-checked {
+  background: mediumslateblue;
+  border-color: mediumslateblue;
+  color: white;
+}
+.task-checkbox-container-unchecked {
+  border-color: silver;
+}
+.body__black .taskEditCat {}
+
+
+.model_edit-category_set-cat-order,
+.model_edit-task_set-task-order  {
+  height: 3em;
+}
+.model_edit-category_set-cat-first_not-selected {
+  background: black;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-first_selected {
+  background: #AE57FF;
+  color: black;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-last_not-selected {
+  background: black;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-last_selected {
+  background: #AE57FF;
+  color: black;
+  border: 2px solid #AE57FF;
+}
+
+
+
+
+
+.model_edit-task_set-task-first_not-selected {
+  background: black;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-first_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-last_not-selected {
+  background: black;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-last_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+
+
+.body__black .modal {
+  border-color: #AE57FF;
+  background: black;
+  color: #AE57FF;
+}
+
+.body__black .modal_warning {
+  border: none;
+  background: black;
+  color: #AE57FF;
+}
+
+
+/* edit task modal */
+
+.body__black footer {
+  border-color: transparent;
+}
+
+.body__black footer div {}
+
+.body__black footer .createdBy {}
+
+.body__black footer a {
+  /* border-color: red; */
+}
+
+.body__black .css-theme-btn {
+  border-color: red;
+  color: red;
+}
