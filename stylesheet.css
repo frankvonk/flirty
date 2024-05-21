@@ -1,8 +1,4 @@
 
-html {
-  font-family: allerta, serif;
-}
-
 
 /* ASSIST SIZE INDICATION */
 .responsive-design-assist {
@@ -13,8 +9,12 @@ html {
 .desktop {display: none;}
 
 
-/* Style variables */
+
 body {
+  font-family: allerta, serif;
+
+
+/* Style variables */
   --body_background: white;
 
   --action-bar_button_color: grey;
@@ -49,7 +49,7 @@ body {
 
   --categorySelected-background: grey;
   --categorySelected-color: white;
-  
+
   --categoryHeader-color: red;
 
   --task-title_border-color: black;
@@ -136,7 +136,6 @@ body {
 
   font-size: 10px;
   font-weight: bold;
-  /* font-family: allerta, serif; */
   letter-spacing: 1px;
   word-wrap: break-word;
   /* zoom: 0.7; */
@@ -309,7 +308,8 @@ input:active {
   word-wrap: break-word;
   border: 2px solid black;
   border-width: 1px 0px 1px 0px ;
-  line-height: 12px;
+  /* line-height: 16px; */
+  padding-bottom: 1px;
 }
 
 .createNewTask_CategoryName.defaulCategory {
@@ -632,7 +632,7 @@ footer a {
     font-size: 12px;
   }
   .createNewTask_CategoryName {
-    line-height: 16px;
+    /* line-height: 16px; */
   }
 }
 
