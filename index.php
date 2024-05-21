@@ -14,6 +14,7 @@
   <link href='stylesheet_the-white-lotus.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="./config.js"></script>
 
 </head>
 
