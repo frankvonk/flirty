@@ -1,4 +1,3 @@
-<!-- afrekenen.php -->
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +14,6 @@
   <link href='stylesheet_the-white-lotus.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="./config.js"></script>
 
 </head>
 
@@ -318,7 +316,6 @@
 
 </body>
 <script src="signature_canvas.js"></script>
-<script src="signature_canvas_the-white-lotus.js"></script>
 
 <!-- <script src="checknewpathFRANK_____react-background-animation/three.r134.min.js"></script>
 <script src="./react-background-animation/vanta.dots.min.js"></script>
