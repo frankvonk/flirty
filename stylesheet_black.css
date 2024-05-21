@@ -4,7 +4,7 @@
 
   --action-bar_button_color: #AE57FF;
 
-  --lock-overlay_background: aqua;
+  --lock-overlay_background: blue;
   --lock-overlay_opacity: 0.4;
 
   --modal_modal-cancel_background: black;
@@ -75,16 +75,16 @@
 }
 
 
-.newTaskTitleInputLabel {
+.body__black .newTaskTitleInputLabel {
   color: black;
 }
-.new-task_submit {
+.body__black .new-task_submit {
   color: black;
 }
-.new-cat_label {
+.body__black .new-cat_label {
   color: black;
 }
-.new-cat_submit {
+.body__black .new-cat_submit {
   color: black;
 }
 /* A category header */
@@ -95,12 +95,12 @@ color: var(--categoryHeader-color);
 */
   
 }
-.toggle-category {
+.body__black .toggle-category {
   width: 76px;
   border-color: deeppink;
   color: deeppink;
 }
-.editCategory {
+.body__black .editCategory {
   border-color: deeppink;
   color: deeppink;
 }
@@ -111,12 +111,12 @@ color: var(--categoryHeader-color);
 .body__black .newCatTitleInput::placeholder {
 }
 
-.categoryHeader input {
+.body__black .categoryHeader input {
   color: 'hotpink';
   background: 'red';
 }
 
-.input::placeholder {
+.body__black .input::placeholder {
   color: 'hotpink';
   background: 'red';
 }
@@ -124,7 +124,7 @@ color: var(--categoryHeader-color);
 /* a task */
 .body__black .taskTable {}
 
-.create-new-task {
+.body__black .create-new-task {
   color: #4BA6FF;
 }
 .body__black .belongsTo {
@@ -247,38 +247,38 @@ color: var(--categoryHeader-color);
   color: cornflowerblue;
   border: none;
 }
-.task-checkbox-container-checked {
+.body__black .task-checkbox-container-checked {
   background: mediumslateblue;
   border-color: mediumslateblue;
   color: white;
 }
-.task-checkbox-container-unchecked {
+.body__black .task-checkbox-container-unchecked {
   border-color: silver;
 }
 .body__black .taskEditCat {}
 
 
-.model_edit-category_set-cat-order,
-.model_edit-task_set-task-order  {
+.body__black .model_edit-category_set-cat-order,
+.body__black .model_edit-task_set-task-order  {
   height: 3em;
 }
-.model_edit-category_set-cat-first_not-selected {
+.body__black .model_edit-category_set-cat-first_not-selected {
   background: black;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-category_set-cat-first_selected {
+.body__black .model_edit-category_set-cat-first_selected {
   background: #AE57FF;
   color: black;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-category_set-cat-last_not-selected {
+.body__black .model_edit-category_set-cat-last_not-selected {
   background: black;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-category_set-cat-last_selected {
+.body__black .model_edit-category_set-cat-last_selected {
   background: #AE57FF;
   color: black;
   border: 2px solid #AE57FF;
@@ -288,28 +288,41 @@ color: var(--categoryHeader-color);
 
 
 
-.model_edit-task_set-task-first_not-selected {
+.body__black .model_edit-task_set-task-first_not-selected {
   background: black;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-task_set-task-first_selected {
+.body__black .model_edit-task_set-task-first_selected {
   background: #AE57FF;
   color: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-task_set-task-last_not-selected {
+.body__black .model_edit-task_set-task-last_not-selected {
   background: black;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-task_set-task-last_selected {
+.body__black .model_edit-task_set-task-last_selected {
   background: #AE57FF;
   color: white;
   border: 2px solid #AE57FF;
 }
 
+
+.body__black .model_settings_set-actionbar-on-top_selected,
+.body__black .model_settings_set-actionbar-on-bottom_selected {
+  background: blue;
+  border-color: blue;
+  color: black;
+}
+.body__black .model_settings_set-actionbar-on-top_not-selected,
+.body__black .model_settings_set-actionbar-on-bottom_not-selected {
+  background: black;
+  border-color: blue;
+  color: blue;
+}
 
 
 .body__black .modal {
