@@ -51,6 +51,8 @@ body {
   --categorySelected-color: white;
 
   --categoryHeader-color: red;
+
+  --task-title_border-color: black;
   
 }
 
@@ -505,6 +507,7 @@ input:active {
 .taskTitle {
   max-width: 200px;
   min-width: 200px;
+  border-color: var(--task-title_border-color);
 }
 .emptyTaskTitle {
   /* some height to make it stand out more */
@@ -762,6 +765,9 @@ footer a {
   --new-cat_background: deeppink;
   --new-cat_color: deeppink;
   --new-cat_hover: deeppink;
+
+  /* --task-title_border-color: green; */
+
 
 
 
