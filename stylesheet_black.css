@@ -22,8 +22,8 @@
   --modal_modal-accept_border-color_hover: deeppink;
 
   --saving-spinner_background: #AE57FF;
-  --saving-spinner_background: mediumslateblue;
-  --saving-spinner_color: white;
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_color: black;
 
   --categorySelected-background: deeppink;
   --categorySelected-color: black;
@@ -248,12 +248,12 @@ color: var(--categoryHeader-color);
   border: none;
 }
 .body__black .task-checkbox-container-checked {
-  background: mediumslateblue;
-  border-color: mediumslateblue;
+  background: #AE57FF;
+  border-color: #AE57FF;
   color: white;
 }
 .body__black .task-checkbox-container-unchecked {
-  border-color: silver;
+  border-color: #AE57FF;
 }
 .body__black .taskEditCat {}
 
