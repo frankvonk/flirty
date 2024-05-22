@@ -85,14 +85,27 @@
   border-radius: 8px;
 } 
 
+.body__the-white-lotus .newTaskCategoryGrid {
+  background-color: #474b30;
+}
+.body__the-white-lotus .extraforselectedcategoryheader {
+  color: #474b30;
+}
+
+
+
+
 
 /* A category with tasks parent */
 .body__the-white-lotus .masterTask {
+  background-color: #474b30;
 }
 
 
 /* A category header */
-
+.body__the-white-lotus .categoryHeader {
+  background-color: darkseagreen;
+}
 .body__the-white-lotus .categoryHeader .notselectedcategoryheader {
   color: #555c38;
 }
@@ -183,6 +196,9 @@
   background: rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 } 
+.body__the-white-lotus .categoryHeaderTable {
+  margin: 0;
+}
 
 
 }
