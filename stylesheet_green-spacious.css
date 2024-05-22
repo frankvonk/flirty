@@ -1,0 +1,219 @@
+
+
+.body__green-spacious {
+  --lotus-canvas-white: #ebdac0;
+  --lotus-white: #ebdac0;
+
+
+  --body_background: var(--lotus-canvas-white);
+  --body_background: var(--lotus-canvas-white);
+
+  --primary-color: indianred;
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: var(--primary-color);
+  --modal_modal-accept_border-color: var(--primary-color);
+  --modal_modal-accept_background_hover: var(--primary-color);
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover:  var(--primary-color);
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: var(--primary-color);
+  --categorySelected-color: white;
+
+  --new-cat_background: var(--primary-color);
+  --new-cat_color: var(--primary-color);
+  --new-cat_hover: var(--primary-color);
+
+  --flow-highlight-background: #53141b;
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+
+  /* --task-title_border-color: green; */
+
+}
+
+
+
+.body__green-spacious .action-bar {
+  background: #474b30;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  justify-content: center;
+}
+.body__green-spacious .action-bar_inner {
+}
+.body__green-spacious .action-bar h3 {
+}
+
+.body__green-spacious .action-bar_button {
+  color: var(--lotus-canvas-white);
+}
+.counterTasks {
+  color: var(--lotus-canvas-white);
+}
+
+.body__green-spacious .binModalHeader {}
+
+.body__green-spacious .binTaskTitle {}
+
+
+
+.body__green-spacious .flow {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+} 
+
+.body__green-spacious .newTaskCategoryGrid {
+  background-color: #474b30;
+}
+.body__green-spacious .extraforselectedcategoryheader {
+  color: #474b30;
+}
+
+
+
+
+
+/* A category with tasks parent */
+.body__green-spacious .masterTask {
+  background-color: #474b30;
+}
+
+
+/* A category header */
+.body__green-spacious .categoryHeader {
+  background-color: darkseagreen;
+}
+.body__green-spacious .categoryHeader .notselectedcategoryheader {
+  color: #555c38;
+}
+.body__green-spacious .notselectedcategoryheader {
+  color: indianred;
+  border-color: indianred;
+}
+
+.body__green-spacious .createNewTask_CatDeleteBtn {
+  color: indianred;
+  border-color: indianred;
+}
+
+.body__green-spacious .createNewTask_CatDeleteBtn:hover {
+  background: indianred;
+  color: white;
+}
+
+
+
+
+.body__green-spacious .arrowLeftRight,
+.body__green-spacious .toggle-category,
+.body__green-spacious .editCategory {
+  color: indianred;
+  border-color: indianred;
+}
+.body__green-spacious .arrowLeftRight:hover,
+.body__green-spacious .toggle-category:hover,
+  .body__green-spacious .editCategory:hover {
+  color: #ebdac0;
+  background: indianred;
+}
+
+
+.body__green-spacious .taskTable {
+  margin-top: 2em;
+  background-color: darkseagreen;
+}
+
+.body__green-spacious .task_delete,
+.body__green-spacious .task_down,
+.body__green-spacious .task_up,
+.body__green-spacious .task_edit {
+  border-color: transparent;
+}
+.body__green-spacious .task_delete:hover,
+.body__green-spacious .task_down:hover,
+.body__green-spacious .task_up:hover,
+.body__green-spacious .task_edit:hover {
+  border-color: black;
+}
+
+
+
+.body__green-spacious .spanMoveTaskDownBtn:hover,
+.body__green-spacious .spanMoveTaskUpBtn:hover {
+}
+.body__green-spacious .taskTitle {
+  border-color: transparent;
+}
+.body__green-spacious .task-checkbox-container-checked {
+  border-color: transparent;
+  background: indianred;
+}
+.body__green-spacious .task-checkbox-container-unchecked {
+  border-color: transparent;
+}
+.body__green-spacious .taskEditCat {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-device-width: 600px) {
+  
+  
+.body__green-spacious .flow {
+  margin: 2em;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+} 
+.body__green-spacious .categoryHeaderTable {
+  margin: 0;
+}
+
+
+}
+
+
+
+@media only screen and (min-device-width: 1000px) {
+ 
+  
+
+  .body__green-spacious .flow {
+    margin: 3em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+  } 
+  
+
+
+}
+

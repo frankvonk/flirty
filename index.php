@@ -13,6 +13,7 @@
   <link href='stylesheet.css' rel='stylesheet'>
   <link href='stylesheet_black.css' rel='stylesheet'>
   <link href='stylesheet_the-white-lotus.css' rel='stylesheet'>
+  <link href='stylesheet_green-spacious.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="./config.js"></script>
@@ -270,7 +271,12 @@
         <button class="css-theme-btn css-theme-btn__the-white-lotus" id="css-theme-btn__the-white-lotus"
           onclick="changeCSSTheme('the-white-lotus')">
           The White Lotus 🪷
-        </button>        <!-- <button class="css-theme-btn css-theme-btn__spirit-animal" id="css-theme-btn__spirit-animal"
+        </button>
+        <button class="css-theme-btn css-theme-btn__green-spacious" id="css-theme-btn__green-spacious"
+          onclick="changeCSSTheme('green-spacious')">
+          Green Spacious
+        </button>       
+        <!-- <button class="css-theme-btn css-theme-btn__spirit-animal" id="css-theme-btn__spirit-animal"
           onclick="changeCSSTheme('spirit-animal')">
           Spirit Animal
         </button> -->
