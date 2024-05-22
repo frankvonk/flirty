@@ -1555,15 +1555,15 @@ function renderTask(displayContainer, task) {
 
   switch(localStorage['THEME']) {
     case "black":
-      // ctx.strokeStyle = task.checked ? 'white' : 'silver';
       ctx.strokeStyle = task.checked ? 'black' : '#AE57FF';
       break;  
     case "sun-gym":
-      // ctx.strokeStyle = task.checked ? 'white' : 'silver';
       ctx.strokeStyle = task.checked ? 'white' : 'silver';
       break;
     case "the-white-lotus":
-      // ctx.strokeStyle = task.checked ? 'white' : 'silver';
+      ctx.strokeStyle = task.checked ? '#ebdac0' : 'rgb(36,47,39)';
+      break;
+    case "green-spacious":
       ctx.strokeStyle = task.checked ? 'darkseagreen' : 'indianred';
       break;
     default:
