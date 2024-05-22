@@ -1516,6 +1516,7 @@ function renderTask(displayContainer, task) {
   let td;
 
   const taskTableTd5 = document.createElement('td');
+  taskTableTd5.className = 'task_delete';
   const taskTableTn5 = document.createTextNode('Delete');
   taskTableTd5.appendChild(taskTableTn5);
 
@@ -1556,10 +1557,14 @@ function renderTask(displayContainer, task) {
     case "black":
       // ctx.strokeStyle = task.checked ? 'white' : 'silver';
       ctx.strokeStyle = task.checked ? 'black' : '#AE57FF';
-      break;
+      break;  
     case "sun-gym":
       // ctx.strokeStyle = task.checked ? 'white' : 'silver';
       ctx.strokeStyle = task.checked ? 'white' : 'silver';
+      break;
+    case "the-white-lotus":
+      // ctx.strokeStyle = task.checked ? 'white' : 'silver';
+      ctx.strokeStyle = task.checked ? 'darkseagreen' : 'indianred';
       break;
     default:
       ctx.strokeStyle = task.checked ? 'silver' : 'silver';
@@ -1585,7 +1590,7 @@ function renderTask(displayContainer, task) {
 
   // Move Task Up
   const taskTableTd6 = document.createElement('td');
-  taskTableTd6.className = '';
+  taskTableTd6.className = 'task_up';
   taskTableTd6.setAttribute('id', 'taskUp');
 
   let spanMoveTaskUpBtn = document.createElement('span');
@@ -1598,7 +1603,7 @@ function renderTask(displayContainer, task) {
   taskTableTr2.appendChild(taskTableTd6);
 
   td = newTd('Done')
-  td.className = '';
+  td.className = 'task_down';
   td.setAttribute('rowspan', '2');
   td.onclick = () => markTaskAsDone(task.uid);
   if (task.title == "empty")
@@ -1614,7 +1619,7 @@ function renderTask(displayContainer, task) {
 
 
   td = newTd('Edit')
-  td.classList = ''
+  td.classList = 'task_edit'
   td.id = 'taskEditUidIs' + task.uid;
   td.onclick = () => editTask(task);
   tr.appendChild(td);
@@ -1623,7 +1628,7 @@ function renderTask(displayContainer, task) {
 
   // Move Task Down
   td = document.createElement('td');
-  td.className = '';
+  td.className = 'task_down';
   td.setAttribute('id', 'taskDown');
   // const taskTableTn7 = document.createTextNode('▼')
   spanMoveTaskDownBtn = document.createElement('span');
