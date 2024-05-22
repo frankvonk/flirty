@@ -74,6 +74,7 @@ button {
   width: fit-content;
   color: var(--saving-spinner_color);
   padding: 1em;
+  z-index: 5;
  
   display: none;
 }

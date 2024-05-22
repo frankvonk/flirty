@@ -35,9 +35,8 @@
   --modal_modal-accept_color_hover: var(--lotus-canvas-white);
   --modal_modal-accept_border-color_hover:  var(--secondary-color-light);
 
-  --saving-spinner_background: #AE57FF;
-  --saving-spinner_background: mediumslateblue;
-  --saving-spinner_color: white;
+  --saving-spinner_background: var(--secondary-color);
+  --saving-spinner_color: var(--lotus-canvas-white);
 
   --categorySelected-background: var(--primary-color);
   --categorySelected-color: white;

@@ -12,7 +12,8 @@
   <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
   <link href='stylesheet.css' rel='stylesheet'>
   <link href='stylesheet_black.css' rel='stylesheet'>
-  <link href='stylesheet_the-white-lotus.css' rel='stylesheet'>
+  <!-- <link href='stylesheet_the-white-lotus.css?ver=3' rel='stylesheet'> -->
+  <link href='stylesheet_the-white-lotus.css?ver=3' rel='stylesheet'>
   <link href='stylesheet_green-spacious.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
