@@ -563,9 +563,6 @@ input:active {
   border-spacing: 2px;
   margin: 10px auto;
 }
-.task-table-tr1 {}
-.task-table-tr2 {}
-.task-table-tr3 {}
 
 /* Used for up&down btn's on tasks */
 .spanMoveTaskDownBtn {
@@ -620,9 +617,6 @@ footer {
 footer .top {
   display: flex;
 }
-footer .bottom {
-  
-}
 footer .counterTasks {
   color: #AE57FF;
 }
@@ -630,9 +624,6 @@ footer .counterTasks {
 footer div {
   margin: 0 auto;
   padding-top: 8px;
-}
-
-footer .createdBy {
 }
 
 footer a {
@@ -674,12 +665,6 @@ footer a {
   body {
     font-size: 10px;
   }
-  .categoryContainer {
-  
-  }
-  .flow {
-    /* margin: 0px 2px 2em 2px; */
-  }
   
   footer {
     display: inherit;
@@ -696,9 +681,6 @@ footer a {
 
   body {
     font-size: 12px;
-  }
-  .createNewTask_CategoryName {
-    /* line-height: 16px; */
   }
 }
 

@@ -22,8 +22,14 @@
   --color-white: white;
   --color-black: black;
 
-  --color-text: black;
-  --color-text-inverted: white;
+  --color-text: white;
+  --color-text-inverted: black;
+
+  --color-accept: teal;
+  --color-accept-light: black;
+
+  --color-cancel: var(--color-brand);
+  --color-cancel-light: black;
 
   --body_background: black;
 
@@ -32,19 +38,7 @@
   --lock-overlay_background: blue;
   --lock-overlay_opacity: 0.4;
 
-  --modal_modal-cancel_background: black;
-  --modal_modal-cancel_color: teal;
-  --modal_modal-cancel_border-color: teal;
-  --modal_modal-cancel_background_hover: teal;
-  --modal_modal-cancel_color_hover: black;
-  --modal_modal-cancel_border-color_hover: teal;
 
-  --modal_modal-accept_background: black;
-  --modal_modal-accept_color: deeppink;
-  --modal_modal-accept_border-color: deeppink;
-  --modal_modal-accept_background_hover: deeppink;
-  --modal_modal-accept_color_hover: black;
-  --modal_modal-accept_border-color_hover: deeppink;
 
   --saving-spinner_background: #AE57FF;
   --saving-spinner_background: #AE57FF;
@@ -205,8 +199,6 @@
 .body__black .task-checkbox-container-unchecked {
   border-color: #AE57FF;
 }
-.body__black .taskEditCat {}
-
 
 .body__black .model_edit-category_set-cat-order,
 .body__black .model_edit-task_set-task-order  {
