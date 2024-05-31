@@ -1053,6 +1053,7 @@ function createNewCategory() {
     const newCategory = {
       id,
       description: newCategoryInput.value,
+      displayContent: true,
     }
     dbBioRobot.categories.unshift(newCategory);
     renderCategoryButtons();
