@@ -48,6 +48,11 @@
   --flow-highlight-background: #53141b;
 
 
+  --footer-css-theme-btn-background: var(--lotus-canvas-white);
+  --footer-css-theme-btn-opacity: 0.5;
+
+
+
   filter: saturate(1.4);
   /* background: white; */
   --categoryHeader-color: blue;

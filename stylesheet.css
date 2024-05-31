@@ -54,6 +54,9 @@ body {
   --categoryHeader-color: red;
 
   --task-title_border-color: black;
+
+  --footer-css-theme-btn-background: transparent;
+  --footer-css-theme-btn-opacity: 1;
   
 }
 
@@ -564,6 +567,9 @@ footer a {
 .css-theme-btn {
   border: 1px solid;
   /*margin: 2px;*/
+  height: 3em;
+  opacity: var(--footer-css-theme-btn-opacity);
+  background: var(--footer-css-theme-btn-background)
 }
 
 .css-theme-btn__active {
