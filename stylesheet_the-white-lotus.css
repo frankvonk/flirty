@@ -130,10 +130,6 @@
   padding-bottom: 4px;
   justify-content: center;
 }
-.body__the-white-lotus .action-bar_inner {
-}
-.body__the-white-lotus .action-bar h3 {
-}
 
 .body__the-white-lotus .action-bar_button {
   color: var(--lotus-canvas-white);
@@ -141,10 +137,6 @@
 .counterTasks {
   color: var(--lotus-canvas-white);
 }
-
-.body__the-white-lotus .binModalHeader {}
-
-.body__the-white-lotus .binTaskTitle {}
 
 
 

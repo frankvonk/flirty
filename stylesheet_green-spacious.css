@@ -44,10 +44,8 @@
 
 
   filter: saturate(1.4);
-  /* background: white; */
   --categoryHeader-color: blue;
 
-  /* --task-title_border-color: green; */
 
 }
 
@@ -60,10 +58,6 @@
   padding-bottom: 4px;
   justify-content: center;
 }
-.body__green-spacious .action-bar_inner {
-}
-.body__green-spacious .action-bar h3 {
-}
 
 .body__green-spacious .action-bar_button {
   color: var(--lotus-canvas-white);
@@ -71,11 +65,6 @@
 .counterTasks {
   color: var(--lotus-canvas-white);
 }
-
-.body__green-spacious .binModalHeader {}
-
-.body__green-spacious .binTaskTitle {}
-
 
 
 .body__green-spacious .flow {
@@ -89,7 +78,6 @@
 .body__green-spacious .extraforselectedcategoryheader {
   color: #474b30;
 }
-
 
 
 

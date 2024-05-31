@@ -34,7 +34,6 @@
   --new-cat_color: deeppink;
   --new-cat_hover: deeppink;
 
-  /* --task-title_border-color: green; */
 
 
 
@@ -44,11 +43,6 @@
   --categoryHeader-color: blue;
 }
 
-.body__sun-gym td,
-th {
-}
-
-
 
 .body__sun-gym .action-bar {
   border: none;
@@ -57,16 +51,6 @@ th {
 .body__sun-gym .action-bar_inner {
   margin: 0 auto;
 }
-.body__sun-gym .action-bar h3 {
-  /* border: 3px solid red; */
-}
-
-.body__sun-gym .action-bar_button {}
-
-.body__sun-gym .binModalHeader {}
-
-.body__sun-gym .binTaskTitle {}
-
 
 
 /* A category with tasks parent */
@@ -76,13 +60,6 @@ th {
 
 
 /* A category header */
-.body__sun-gym .categoryHeader {
- /* color: hotpink;
-  border-color: hotpink;
-color: var(--categoryHeader-color);
-*/
-  
-}
 .toggle-category {
   width: 76px;
   border-color: deeppink;
@@ -91,12 +68,6 @@ color: var(--categoryHeader-color);
 .editCategory {
   border-color: deeppink;
   color: deeppink;
-}
-
-.body__sun-gym .newCatTitleInput {
-  
-}
-.body__sun-gym .newCatTitleInput::placeholder {
 }
 
 .categoryHeader input {
@@ -110,7 +81,6 @@ color: var(--categoryHeader-color);
 }
 
 /* a task */
-.body__sun-gym .taskTable {}
 
 .create-new-task {
   color: #4BA6FF;
@@ -121,8 +91,6 @@ color: var(--categoryHeader-color);
   color: hotpink;
 }
 
-
-.body__sun-gym .createNewTask_Tr {}
 
 
 .body__sun-gym .createNewTask_CategoryName:hover {
@@ -140,38 +108,6 @@ color: var(--categoryHeader-color);
   color: white;
 }
 
-.body__sun-gym input,
-.body__sun-gym textarea,
-.body__sun-gym input:active {
-  /* background: white; */
-  /* color: black; */
-}
-
-.body__sun-gym ::placeholder {}
-
-
-.body__sun-gym #createNewCategory {
-  /* color: LightBlue; */
-
-}
-
-.body__sun-gym .new-cat_parent:hover {
-  /* background: red; */
-  /* color: white; */
-  /* border-color: LightBlue; */
-}
-
-
-.body__sun-gym #newCategoryInput {
-  /* text-align: center; */
-  /* color: lightblue; */
-  /* border-color: transparent; */
-}
-
-.body__sun-gym #newCategoryInput::placeholder {
-  /* color: lightblue; */
-
-}
 
 .defaultOrderNewTask {
   background: cornflowerblue;
@@ -289,18 +225,9 @@ color: var(--categoryHeader-color);
 }
 
 
-/* edit task modal */
 
 .body__sun-gym footer {
   border-color: transparent;
-}
-
-.body__sun-gym footer div {}
-
-.body__sun-gym footer .createdBy {}
-
-.body__sun-gym footer a {
-  /* border-color: red; */
 }
 
 .body__sun-gym .css-theme-btn {
