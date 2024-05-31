@@ -212,8 +212,6 @@
 }
 .body__the-white-lotus .newTaskTitleInputLabel {
   color: var(--lotus-canvas-white);
-   /* background-color: var(--lotus-canvas-white); */
-  /* background-color: var(--primary-color-light); */
   opacity: 0.9;
 }
 .body__the-white-lotus .newTaskTitleTextArea {

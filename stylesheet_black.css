@@ -118,12 +118,6 @@ color: var(--categoryHeader-color);
   color: deeppink;
 }
 
-.body__black .newCatTitleInput {
-  
-}
-.body__black .newCatTitleInput::placeholder {
-}
-
 .body__black .categoryHeader input {
   color: 'hotpink';
   background: 'red';
@@ -146,7 +140,6 @@ color: var(--categoryHeader-color);
 }
 
 
-.body__black .createNewTask_Tr {}
 
 
 .body__black .createNewTask_CategoryName:hover {
@@ -171,47 +164,10 @@ color: var(--categoryHeader-color);
   color: red;
 }
 
-.body__black ::placeholder {}
 
 
-.body__black #createNewCategory {
-  /* color: LightBlue; */
-
-}
-
-.body__black .new-cat_parent:hover {
-  /* background: red; */
-  /* color: white; */
-  /* border-color: LightBlue; */
-}
 
 
-.body__black #newCategoryInput {
-  /* text-align: center; */
-  /* color: lightblue; */
-  /* border-color: transparent; */
-}
-
-.body__black #newCategoryInput::placeholder {
-  /* color: lightblue; */
-
-}
-
-.body__black .newTaskTitle {
-  /* color: thistle; */
-  /* color: pink; */
-  color: white;
-}
-
-.body__black #newTaskTitle {
-  color: cornflowerblue;
-  border-color: blue;
-  font-weight: bold;
-}
-
-.body__black #newTaskTitle::placeholder {
-  color: white;
-}
 .body__black .default-order-new-task-first,
 .body__black .default-order-new-task.selected {
   background: #AE57FF;

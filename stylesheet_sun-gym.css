@@ -173,21 +173,6 @@ color: var(--categoryHeader-color);
 
 }
 
-.body__sun-gym .newTaskTitle {
-  /* color: thistle; */
-  /* color: pink; */
-  color: white;
-}
-
-.body__sun-gym #newTaskTitle {
-  color: cornflowerblue;
-  border-color: blue;
-  font-weight: bold;
-}
-
-.body__sun-gym #newTaskTitle::placeholder {
-  color: white;
-}
 .defaultOrderNewTask {
   background: cornflowerblue;
   border-color: cornflowerblue;
