@@ -3,17 +3,29 @@
 /* The White Lotus - Start */
 
 .body__the-white-lotus {
+  --color-brand: rgb(95,33,42);;
+  --color-primary: rgb(95,33,42);
+  --color-primary-light: rgb(117,68,69);
+  --color-secondary: rgb(36,47,39);;
+  --color-secondary-light: rgb(108, 131, 108);
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-text: black;
+  --color-text-inverted: #ebdac0;
+
+  --color-accept: var(--color-secondary);
+  --color-accept-light: var(--color-secondary-light);
+  --color-cancel: var(--color-primary);
+  --color-cancel-light: var(--color-primary-light);
+
+
   --lotus-canvas-white: #ebdac0;
-  --lotus-white: #ebdac0;
 
 
   --body_background: var(--lotus-canvas-white);
-  --body_background: var(--lotus-canvas-white);
 
-  --primary-color: rgb(95,33,42);
-  --primary-color-light: rgb(117,68,69);
-  --secondary-color: rgb(36,47,39);
-  --secondary-color-light: rgb(108, 131, 108);
 
 
   --action-bar_button_color: #AE57FF;
@@ -21,29 +33,34 @@
   --lock-overlay_background: aqua;
   --lock-overlay_opacity: 0.4;
 
-  --modal_modal-cancel_background: var(--primary-color);
-  --modal_modal-cancel_color: var(--lotus-canvas-white);
-  --modal_modal-cancel_border-color: var(--primary-color);
-  --modal_modal-cancel_background_hover: var(--primary-color-light);
-  --modal_modal-cancel_color_hover: var(--lotus-canvas-white);
-  --modal_modal-cancel_border-color_hover: var(--primary-color-light);
 
-  --modal_modal-accept_background: var(--secondary-color);
-  --modal_modal-accept_color: var(--lotus-canvas-white);
-  --modal_modal-accept_border-color: var(--secondary-color);
-  --modal_modal-accept_background_hover: var(--secondary-color-light);
-  --modal_modal-accept_color_hover: var(--lotus-canvas-white);
-  --modal_modal-accept_border-color_hover:  var(--secondary-color-light);
 
-  --saving-spinner_background: var(--secondary-color);
+  --modal_modal-cancel_background: var(--color-cancel);
+  --modal_modal-cancel_color: var(--color-text-inverted);
+  --modal_modal-cancel_background_hover: var(--color-cancel-light);
+  --modal_modal-cancel_border-color_hover: var(--color-cancel-light);
+
+  --modal_modal-accept_background: var(--color-accept);
+  --modal_modal-accept_color: var(--color-text-inverted);
+  --modal_modal-accept_background_hover: var(--color-accept-light);
+  --modal_modal-accept_border-color_hover: var(--color-accept-light);
+
+
+
+  
+  --saving-spinner_background: var(--color-secondary);
   --saving-spinner_color: var(--lotus-canvas-white);
 
-  --categorySelected-background: var(--primary-color);
+
+  --new-task-category-border: var(--color-primary);
+
+
+  --categorySelected-background: var(--color-primary);
   --categorySelected-color: white;
 
-  --new-cat_background: var(--primary-color);
-  --new-cat_color: var(--primary-color);
-  --new-cat_hover: var(--primary-color);
+  --new-cat_background: var(--color-primary);
+  --new-cat_color: var(--color-primary);
+  --new-cat_hover: var(--color-primary);
 
   --flow-highlight-background: #53141b;
 
@@ -64,37 +81,35 @@
 
 
 .body__the-white-lotus .modal {
-  background-color: var(--primary-color-light);
   background-color: var(--lotus-canvas-white);
 }
 .body__the-white-lotus .modal input,
 .body__the-white-lotus .modal textarea,
 .body__the-white-lotus .modal input:active {
-  background-color: var(--primary-color-light);
   background-color: var(--lotus-canvas-white);
 }
 
 
 .body__the-white-lotus .model_edit-category_set-cat-first_not-selected {
-  background: var(--primary-color-light);
-  border-color: var(--primary-color);
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
 }
 
 .body__the-white-lotus .model_edit-category_set-cat-first_selected {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--lotus-canvas-white);
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 .body__the-white-lotus .model_edit-category_set-cat-last_not-selected {
-  background: var(--primary-color-light);
-  border-color: var(--primary-color);
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
 }
 
 .body__the-white-lotus .model_edit-category_set-cat-last_selected {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--lotus-canvas-white);
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 
@@ -104,14 +119,14 @@
 .body__the-white-lotus .model_edit-task_set-task-first_not-selected,
 .body__the-white-lotus .model_edit-task_set-task-last_not-selected {
   background: var(--lotus-canvas-white);
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 .body__the-white-lotus .model_edit-task_set-task-first_selected,
 .body__the-white-lotus .model_edit-task_set-task-last_selected {
-  background: var(--primary-color-light);
+  background: var(--color-primary-light);
   color: var(--lotus-canvas-white);
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 
@@ -123,7 +138,6 @@
 
 
 .body__the-white-lotus .action-bar {
-  background: #474b30;
   background: rgb(95,33,42);
   width: 100%;
   margin: 0 auto;
@@ -141,13 +155,12 @@
 
 
 .body__the-white-lotus .flow {
-  background: rgba(255, 255, 255, 0.5);
-  background-color: transparent;
+  background: transparent;
   border-radius: 8px;
 } 
 
 .body__the-white-lotus .newTaskCategoryGrid {
-  background: var(--primary-color-light);
+  background: var(--color-primary-light);
   opacity: 0.9;
 }
 
@@ -157,50 +170,30 @@
 
 
 /* A category with tasks parent */
-.body__the-white-lotus .masterTask {
-  /* background-color: #474b30; */
-}
-
 
 /* A category header */
 .body__the-white-lotus .categoryHeader {
-  background-color: darkseagreen;
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
 }
 .body__the-white-lotus .notselectedcategoryheader {
-  color: indianred;
-  color: black;
-  color: var(--primary-color);
   color: var(--lotus-canvas-white);
-  border-color: indianred;
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 .body__the-white-lotus .extraforselectedcategoryheader {
-  color: #474b30;
-  color: var(--primary-color);
-  /* color: var(--lotus-canvas-white); */
+  color: var(--color-primary);
   background-color: var(--lotus-canvas-white);
 }
 
 
-.body__the-white-lotus .createNewTask_CatDeleteBtn {
-  color: indianred;
-  color: var(--primary-color);
-  /* color: var(--lotus-canvas-white); */
-  border-color: indianred;
-  border-color: var(--primary-color);
-
-}
 
 .body__the-white-lotus .createNewTask_CatDeleteBtn:hover {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: white;
 }
 
 
 .body__the-white-lotus .newTaskTitleInputParent {
-  background-color: transparent;
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
 }
 .body__the-white-lotus .newTaskTitleInputLabel {
   color: var(--lotus-canvas-white);
@@ -208,45 +201,42 @@
 }
 .body__the-white-lotus .newTaskTitleTextArea {
   background-color: var(--lotus-canvas-white);
-  color: var(--primary-color);
-
- 
-
+  color: var(--color-primary);
 }
 
 .body__the-white-lotus .newTaskTitleTextArea::placeholder {
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 
 .body__the-white-lotus .new-task_submit {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   opacity: 1;
   color: var(--lotus-canvas-white);
 }
 
 .body__the-white-lotus .default-order-new-task_parent button {
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 .body__the-white-lotus .default-order-new-task-first,
 .body__the-white-lotus .default-order-new-task.selected {
   background: var(--lotus-canvas-white);
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 .body__the-white-lotus .default-order-new-task-last,
 .body__the-white-lotus .default-order-new-task.not-selected {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--lotus-canvas-white);
 }
 
 .body__the-white-lotus .new-cat_parent {
   background-color: transparent;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--color-primary);
 
 }
 .body__the-white-lotus .new-cat_label {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary);
   opacity: 0.9;
   color: var(--lotus-canvas-white);
 }
@@ -257,7 +247,6 @@
 }
 
 .body__the-white-lotus .new-cat_submit {
-  /* background-color: var(--primary-color); */
   color: var(--lotus-canvas-white);
 }
 
@@ -272,8 +261,7 @@
 .body__the-white-lotus .arrowLeftRight,
 .body__the-white-lotus .toggle-category,
 .body__the-white-lotus .editCategory {
-  color: indianred;
-  color: var(--primary-color);
+  color: var(--color-primary);
   border-color: var(--lotus-canvas-white);
   background-color: var(--lotus-canvas-white);
   opacity: 0.5;
@@ -282,14 +270,12 @@
 .body__the-white-lotus .toggle-category:hover,
   .body__the-white-lotus .editCategory:hover {
   color: #ebdac0;
-  background: var(--primary-color);
+  background: var(--color-primary);
 }
 
 
 .body__the-white-lotus .taskTable {
   margin-top: 2em;
-  /* background-color: var(--secondary-color); */
-
   border-radius: 1em;
 }
 
@@ -298,11 +284,8 @@
 .body__the-white-lotus .task_up,
 .body__the-white-lotus .task_edit {
   border-color: transparent;
-  background-color: var(--secondary-color-light);
-
   background-color: var(--lotus-canvas-white);
   opacity: 0.5;
-
 }
 .body__the-white-lotus .task_delete:hover,
 .body__the-white-lotus .task_down:hover,
@@ -310,7 +293,7 @@
 .body__the-white-lotus .task_edit:hover {
   border-color: var(--lotus-canvas-white);
   color: var(--lotus-canvas-white);
-  background-color: var(--secondary-color);
+  background-color: var(--color-secondary);
 }
 
 
@@ -320,15 +303,15 @@
 }
 .body__the-white-lotus .taskTitle {
   border-color: transparent;
-  background-color: var(--secondary-color);
-
-  color: red;
-  color: var(--secondary-color-light);
+  background-color: var(--color-secondary);
   color: var(--lotus-canvas-white);
+}
+.body__the-white-lotus .emptyTaskTitle {
+  background: transparent;
 }
 .body__the-white-lotus .task-checkbox-container-checked {
   border-color: transparent;
-  background: var(--primary-color);
+  background: var(--color-primary);
 }
 .body__the-white-lotus .task-checkbox-container-unchecked {
   border-color: transparent;
@@ -339,7 +322,6 @@
   opacity: 1;
 }
 
-.body__the-white-lotus .taskEditCat {}
 
 .body__the-white-lotus footer {
   border: none;
@@ -363,18 +345,18 @@
 
 /* Track */
 .body__the-white-lotus::-webkit-scrollbar-track {
-  background: var(--secondary-color-light);
+  background: var(--color-secondary-light);
 }
 
 /* Handle */
 .body__the-white-lotus::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
+  background: var(--color-secondary);
 }
 
 /* Handle on hover */
 .body__the-white-lotus::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 /* End SCROLLBAR */
 
@@ -385,36 +367,14 @@
 
 
 
-
-
 @media only screen and (min-device-width: 600px) {
   
-  
-.body__the-white-lotus .flow {
-  margin: 0.8em;
-  /* background: rgba(255, 255, 255, 0.5); */
-  /* border-radius: 8px; */
-} 
-.body__the-white-lotus .categoryHeaderTable {
-  margin: 0;
-}
-
-
-}
-
-
-
-@media only screen and (min-device-width: 1000px) {
- 
-  
-
   .body__the-white-lotus .flow {
-    /* margin: 3em; */
-    /* background: rgba(255, 255, 255, 0.5); */
-    /* border-radius: 8px; */
+    margin: 0.8em;
   } 
-  
-
+  .body__the-white-lotus .categoryHeaderTable {
+    margin: 0;
+  }
 
 }
 

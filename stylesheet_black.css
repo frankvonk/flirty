@@ -13,6 +13,18 @@
 
 
 
+  --color-brand: deeppink;
+  --color-primary: #4BA6FF;
+  --color-primary-light: lightblue;
+  --color-secondary: #AE57FF;
+  --color-secondary-light: pink;
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-text: black;
+  --color-text-inverted: white;
+
   --body_background: black;
 
   --action-bar_button_color: #AE57FF;
@@ -47,6 +59,7 @@
   --new-cat_color: deeppink;
   --new-cat_hover: deeppink;
 
+  --new-task-category-border: var(--color-brand);
 
 
 
@@ -127,10 +140,6 @@
   background: deeppink;
 }
 
-.body__black .createNewTask_CatDeleteBtn {
-  color: deeppink;
-  border-color: deeppink;
-}
 
 .body__black .createNewTask_CatDeleteBtn:hover {
   background: deeppink;
@@ -276,7 +285,6 @@
   color: #AE57FF;
 }
 
-/* edit task modal */
 
 .body__black footer {
   border-color: transparent;

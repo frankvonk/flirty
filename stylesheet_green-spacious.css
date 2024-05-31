@@ -100,10 +100,6 @@
   border-color: indianred;
 }
 
-.body__green-spacious .createNewTask_CatDeleteBtn {
-  color: indianred;
-  border-color: indianred;
-}
 
 .body__green-spacious .createNewTask_CatDeleteBtn:hover {
   background: indianred;

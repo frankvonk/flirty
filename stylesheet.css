@@ -16,30 +16,54 @@ body {
   font-weight: bold;
 
 /* Style variables */
+  --color-brand: blue;
+  --color-primary: green;
+  --color-primary-light: lightgreen;
+  --color-secondary: red;
+  --color-secondary-light: pink;
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-text: black;
+  --color-text-inverted: white;
+
+  --color-accept: var(--color-primary);
+  --color-accept-light: var(--color-primary-light);
+
+  --color-cancel: var(--color-secondary);
+  --color-cancel-light: var(--color-secondary-light);
+
+
+
   --body_background: white;
 
-  --action-bar_button_color: grey;
+  --action-bar_button_color: var(--color-text);
 
   --lock-overlay_background: grey;
   --lock-overlay_opacity: 0.7;
 
-  --modal_modal-cancel_background: white;
-  --modal_modal-cancel_color: black;
-  --modal_modal-cancel_border-color: black;
-  --modal_modal-cancel_background_hover: black;
-  --modal_modal-cancel_color_hover: white;
-  --modal_modal-cancel_border-color_hover: black;
+  --modal_modal-cancel_background: var(--color-cancel-light);
+  --modal_modal-cancel_color: var(--color-cancel);
+  --modal_modal-cancel_border-color: var(--color-cancel);
+  --modal_modal-cancel_background_hover: var(--color-cancel);
+  --modal_modal-cancel_color_hover: var(--color-text-inverted);
+  --modal_modal-cancel_border-color_hover: var(--color-cancel);
 
-  --modal_modal-accept_background: white;
-  --modal_modal-accept_color: grey;
-  --modal_modal-accept_border-color: grey;
-  --modal_modal-accept_background_hover: grey;
-  --modal_modal-accept_color_hover: white;
-  --modal_modal-accept_border-color_hover: grey;
+  --modal_modal-accept_background: var(--color-accept-light);
+  --modal_modal-accept_color: var(--color-accept);
+  --modal_modal-accept_border-color: var(--color-accept);
+  --modal_modal-accept_background_hover: var(--color-accept);
+  --modal_modal-accept_color_hover: var(--color-text-inverted);
+  --modal_modal-accept_border-color_hover: var(--color-accept);
 
 
   --saving-spinner_background: black;
   --saving-spinner_color: white;
+
+
+  --new-task-category-border: black;
+
 
   --new-task_color: grey;
   --new-cat_background: grey;
@@ -48,10 +72,22 @@ body {
 
   --flow-highlight-background: pink;
 
-  --categorySelected-background: grey;
-  --categorySelected-color: white;
+  --category-header-title-background: deeppink;
+  --category-header-title-border: deeppink;
+  --category-header-title-color: deeppink;
+  --category-header-buttons-background: deeppink;
+  --category-header-buttons-border: deeppink;
+  --category-header-buttons-color: deeppink;
 
-  --categoryHeader-color: red;
+  --category-header-title-background-selected: deeppink;
+  --category-header-title-border-selected: deeppink;
+  --category-header-title-color-selected: deeppink;
+  --category-header-buttons-background-selected: deeppink;
+  --category-header-buttons-border-selected: deeppink;
+  --category-header-buttons-color-selected: deeppink;
+
+
+
 
   --task-title_border-color: black;
 
@@ -239,6 +275,25 @@ input:active {
   height: 3em;
 }
 
+
+.model_settings_set-actionbar-on-top_selected,
+.model_settings_set-actionbar-on-bottom_selected {
+  background: grey;
+  border-color: grey;
+  color: white;
+}
+.model_settings_set-actionbar-on-top_not-selected,
+.model_settings_set-actionbar-on-bottom_not-selected {
+  background: white;
+  border-color: black;
+  color: black;
+}
+
+
+
+
+
+
 /* edit task modal - Start */
 .inputForChangingTaskTitle {
   height: 5em;
@@ -251,6 +306,14 @@ input:active {
 .binTaskTitle {
   word-break: break-all;
 }
+/* edit task modal - End */
+
+
+
+
+
+
+
 
 
 .categoryContainer {
@@ -260,6 +323,13 @@ input:active {
   margin: 2px 1px 0 2px;
 }
 
+
+
+
+
+
+
+
 .flow {
   border: none;
   margin: 1em;
@@ -268,9 +338,20 @@ input:active {
   /* zoom: 0.8; */
   /* float: left; */
 }
+
 .flow.highlight1 {
   background: var(--flow-highlight-background);
 }
+
+.flow.highlight1 .categoryHeader {
+  background: var(--flow-highlight-background);
+}
+
+
+
+
+
+
 
 
 
@@ -292,7 +373,7 @@ input:active {
 }
 
 .newTaskCategoryGrid {
-  border: 2px solid var(--categorySelected-background);
+  border: 2px solid var(--new-task-category-border);
   border-width: 1px 2px 1px 2px ;
   display: grid;
   /* column-gap: 1rem; */
@@ -319,7 +400,9 @@ input:active {
 .createNewTask_CatDeleteBtn {
   align-items: center;
   display: inherit;
+  color: var(--color-brand);
   border: 2px solid transparent;
+  border-color: var(--new-task-category-border);
   border-width: 1px 0px 1px 2px;
   padding: 0 0 0px 1px;
 }
@@ -507,6 +590,7 @@ input:active {
 }
 .emptyTaskTitle {
   /* some height to make it stand out more */
+  background: transparent;
   height: 3em;
 }
 
@@ -519,7 +603,13 @@ input:active {
 }
 
 
-/* edit task moda - End */
+
+
+
+
+
+
+
 
 footer {
   width: 90%;
@@ -560,7 +650,6 @@ footer a {
 .css-theme-btn {
   border: 1px solid;
   /*margin: 2px;*/
-  height: 3em;
   opacity: var(--footer-css-theme-btn-opacity);
   background: var(--footer-css-theme-btn-background)
 }
@@ -569,19 +658,6 @@ footer a {
   font-weight: bold;  
 }
 
-
-.model_settings_set-actionbar-on-top_selected,
-.model_settings_set-actionbar-on-bottom_selected {
-  background: grey;
-  border-color: grey;
-  color: white;
-}
-.model_settings_set-actionbar-on-top_not-selected,
-.model_settings_set-actionbar-on-bottom_not-selected {
-  background: white;
-  border-color: black;
-  color: black;
-}
 
 
 

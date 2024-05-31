@@ -2,26 +2,31 @@
 
 
 .body__sun-gym {
-  --body_background: white;
+  --color-brand: deeppink;
+  --color-primary: #4BA6FF;
+  --color-primary-light: lightblue;
+  --color-secondary: #AE57FF;
+  --color-secondary-light: pink;
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-text: black;
+  --color-text-inverted: white;
+
+  --color-accept: deeppink;
+  --color-accept-light: white;
+  --color-cancel: teal;
+  --color-cancel-light: white;
+
 
   --action-bar_button_color: #AE57FF;
 
   --lock-overlay_background: aqua;
   --lock-overlay_opacity: 0.4;
 
-  --modal_modal-cancel_background: white;
-  --modal_modal-cancel_color: teal;
-  --modal_modal-cancel_border-color: teal;
-  --modal_modal-cancel_background_hover: teal;
-  --modal_modal-cancel_color_hover: white;
-  --modal_modal-cancel_border-color_hover: teal;
+  --new-task-category-border: var(--color-brand);
 
-  --modal_modal-accept_background: white;
-  --modal_modal-accept_color: deeppink;
-  --modal_modal-accept_border-color: deeppink;
-  --modal_modal-accept_background_hover: deeppink;
-  --modal_modal-accept_color_hover: white;
-  --modal_modal-accept_border-color_hover: deeppink;
 
   --saving-spinner_background: #AE57FF;
   --saving-spinner_background: mediumslateblue;
@@ -98,10 +103,6 @@
   background: deeppink;
 }
 
-.body__sun-gym .createNewTask_CatDeleteBtn {
-  color: deeppink;
-  border-color: deeppink;
-}
 
 .body__sun-gym .createNewTask_CatDeleteBtn:hover {
   background: deeppink;
