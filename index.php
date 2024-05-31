@@ -132,11 +132,7 @@
           <h3 class="create-new-task">Create new task</h3>
         -->
 
-        <!-- 
-          <tr>
-            <td class="belongsTo" colspan="2">Belongs to category:</td>
-          </tr>
-        -->
+   
 
         <div id="newTaskCategoryGrid"
           class="newTaskCategoryGrid">

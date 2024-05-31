@@ -291,12 +291,6 @@ input:active {
 
 }
 
-.belongsTo {
-  display: inherit;
-  max-width: 130px;
-  font-size: 1.1em;
-}
-
 .newTaskCategoryGrid {
   border: 2px solid var(--categorySelected-background);
   border-width: 1px 2px 1px 2px ;

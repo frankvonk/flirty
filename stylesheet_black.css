@@ -140,10 +140,6 @@ color: var(--categoryHeader-color);
 .body__black .create-new-task {
   color: #4BA6FF;
 }
-.body__black .belongsTo {
-  border: none;
-}
-
 
 .body__black #newTaskCategoryGrid {
   color: hotpink;
