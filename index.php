@@ -10,11 +10,13 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/favicon7.ico" />
   <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+
   <link href='stylesheet.css' rel='stylesheet'>
   <link href='stylesheet_black.css' rel='stylesheet'>
-  <!-- <link href='stylesheet_the-white-lotus.css?ver=3' rel='stylesheet'> -->
-  <link href='stylesheet_the-white-lotus.css?ver=3' rel='stylesheet'>
   <link href='stylesheet_green-spacious.css' rel='stylesheet'>
+  <link href='stylesheet_sun-gym.css' rel='stylesheet'>
+  <link href='stylesheet_the-white-lotus.css?ver=3' rel='stylesheet'>
+  
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="./config.js"></script>
@@ -219,18 +221,18 @@
           onclick="changeCSSTheme('black')">
           Black
         </button>
-        <button class="css-theme-btn css-theme-btn__corbusier" id="css-theme-btn__corbusier"
+        <!-- <button class="css-theme-btn css-theme-btn__corbusier" id="css-theme-btn__corbusier"
           onclick="changeCSSTheme('corbusier')">
           Corbusier
-        </button>
+        </button> -->
         <button class="css-theme-btn css-theme-btn__the-white-lotus" id="css-theme-btn__the-white-lotus"
           onclick="changeCSSTheme('the-white-lotus')">
           The White Lotus 🪷
         </button>
-        <button class="css-theme-btn css-theme-btn__green-spacious" id="css-theme-btn__green-spacious"
+        <!-- <button class="css-theme-btn css-theme-btn__green-spacious" id="css-theme-btn__green-spacious"
           onclick="changeCSSTheme('green-spacious')">
           Green Spacious
-        </button>       
+        </button>        -->
         <!-- <button class="css-theme-btn css-theme-btn__spirit-animal" id="css-theme-btn__spirit-animal"
           onclick="changeCSSTheme('spirit-animal')">
           Spirit Animal
@@ -260,14 +262,14 @@
           onclick="changeCSSTheme('bender')">
           Bender
         </button> -->
-        <button class="css-theme-btn css-theme-btn__vaporwave" id="css-theme-btn__vaporwave"
+        <!-- <button class="css-theme-btn css-theme-btn__vaporwave" id="css-theme-btn__vaporwave"
           onclick="changeCSSTheme('vaporwave')">
           Vaporwave
-        </button>
-        <button class="css-theme-btn css-theme-btn__synthax" id="css-theme-btn__synthax"
+        </button> -->
+        <!-- <button class="css-theme-btn css-theme-btn__synthax" id="css-theme-btn__synthax"
           onclick="changeCSSTheme('synthax')">
           Synthax
-        </button>   
+        </button>    -->
         <!-- <button class="css-theme-btn css-theme-btn__pastel" id="css-theme-btn__paster"
           onclick="changeCSSTheme('pastel')">
           Pastel

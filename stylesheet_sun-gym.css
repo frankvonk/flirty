@@ -1,0 +1,326 @@
+
+
+
+.body__sun-gym {
+  --body_background: white;
+
+  --action-bar_button_color: #AE57FF;
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_modal-cancel_background: white;
+  --modal_modal-cancel_color: teal;
+  --modal_modal-cancel_border-color: teal;
+  --modal_modal-cancel_background_hover: teal;
+  --modal_modal-cancel_color_hover: white;
+  --modal_modal-cancel_border-color_hover: teal;
+
+  --modal_modal-accept_background: white;
+  --modal_modal-accept_color: deeppink;
+  --modal_modal-accept_border-color: deeppink;
+  --modal_modal-accept_background_hover: deeppink;
+  --modal_modal-accept_color_hover: white;
+  --modal_modal-accept_border-color_hover: deeppink;
+
+  --saving-spinner_background: #AE57FF;
+  --saving-spinner_background: mediumslateblue;
+  --saving-spinner_color: white;
+
+  --categorySelected-background: deeppink;
+  --categorySelected-color: white;
+
+  --new-cat_background: deeppink;
+  --new-cat_color: deeppink;
+  --new-cat_hover: deeppink;
+
+  /* --task-title_border-color: green; */
+
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+}
+
+.body__sun-gym td,
+th {
+}
+
+
+
+.body__sun-gym .action-bar {
+  border: none;
+  color: #AE57FF;
+}
+.body__sun-gym .action-bar_inner {
+  margin: 0 auto;
+}
+.body__sun-gym .action-bar h3 {
+  /* border: 3px solid red; */
+}
+
+.body__sun-gym .action-bar_button {}
+
+.body__sun-gym .binModalHeader {}
+
+.body__sun-gym .binTaskTitle {}
+
+
+
+/* A category with tasks parent */
+.body__sun-gym .masterTask {
+  color: #4BA6FF;
+}
+
+
+/* A category header */
+.body__sun-gym .categoryHeader {
+ /* color: hotpink;
+  border-color: hotpink;
+color: var(--categoryHeader-color);
+*/
+  
+}
+.toggle-category {
+  width: 76px;
+  border-color: deeppink;
+  color: deeppink;
+}
+.editCategory {
+  border-color: deeppink;
+  color: deeppink;
+}
+
+.body__sun-gym .newCatTitleInput {
+  
+}
+.body__sun-gym .newCatTitleInput::placeholder {
+}
+
+.categoryHeader input {
+  color: 'hotpink';
+  background: 'red';
+}
+
+.input::placeholder {
+  color: 'hotpink';
+  background: 'red';
+}
+
+/* a task */
+.body__sun-gym .taskTable {}
+
+.create-new-task {
+  color: #4BA6FF;
+}
+.body__sun-gym .belongsTo {
+  border: none;
+}
+
+
+.body__sun-gym #newTaskCategoryGrid {
+  color: hotpink;
+}
+
+
+.body__sun-gym .createNewTask_Tr {}
+
+
+.body__sun-gym .createNewTask_CategoryName:hover {
+  color: white;
+  background: deeppink;
+}
+
+.body__sun-gym .createNewTask_CatDeleteBtn {
+  color: deeppink;
+  border-color: deeppink;
+}
+
+.body__sun-gym .createNewTask_CatDeleteBtn:hover {
+  background: deeppink;
+  color: white;
+}
+
+.body__sun-gym input,
+.body__sun-gym textarea,
+.body__sun-gym input:active {
+  /* background: white; */
+  /* color: black; */
+}
+
+.body__sun-gym ::placeholder {}
+
+
+.body__sun-gym #createNewCategory {
+  /* color: LightBlue; */
+
+}
+
+.body__sun-gym .new-cat_parent:hover {
+  /* background: red; */
+  /* color: white; */
+  /* border-color: LightBlue; */
+}
+
+
+.body__sun-gym #newCategoryInput {
+  /* text-align: center; */
+  /* color: lightblue; */
+  /* border-color: transparent; */
+}
+
+.body__sun-gym #newCategoryInput::placeholder {
+  /* color: lightblue; */
+
+}
+
+.body__sun-gym .newTaskTitle {
+  /* color: thistle; */
+  /* color: pink; */
+  color: white;
+}
+
+.body__sun-gym #newTaskTitle {
+  color: cornflowerblue;
+  border-color: blue;
+  font-weight: bold;
+}
+
+.body__sun-gym #newTaskTitle::placeholder {
+  color: white;
+}
+.defaultOrderNewTask {
+  background: cornflowerblue;
+  border-color: cornflowerblue;
+  color: white;
+}
+
+
+
+/* Used for up&down btn's on tasks */
+.body__sun-gym #taskUp,
+.body__sun-gym #taskDown {
+  border-color: lightseagreen;
+  border-color: #A0DFD6;
+}
+.body__sun-gym #taskUp:hover,
+.body__sun-gym #taskDown:hover {
+  background: lightseagreen;
+  background: #A0DFD6;
+  color: white;
+}
+
+.body__sun-gym .spanMoveTaskDownBtn,
+.body__sun-gym .spanMoveTaskUpBtn {
+  color: lightseagreen;
+  color: #A0DFD6;
+  /* background: red; */
+  
+}
+
+.body__sun-gym .spanMoveTaskDownBtn:hover,
+.body__sun-gym .spanMoveTaskUpBtn:hover {
+  color: white;
+}
+.body__sun-gym .taskTitle {
+  color: lightblue;
+  color: cornflowerblue;
+  border: none;
+}
+.task-checkbox-container-checked {
+  background: mediumslateblue;
+  border-color: mediumslateblue;
+  color: white;
+}
+.task-checkbox-container-unchecked {
+  border-color: silver;
+}
+.body__sun-gym .taskEditCat {}
+
+
+.model_edit-category_set-cat-order,
+.model_edit-task_set-task-order  {
+  height: 3em;
+}
+.model_edit-category_set-cat-first_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-first_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-last_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-category_set-cat-last_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+
+
+
+
+.model_edit-task_set-task-first_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-first_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-last_not-selected {
+  background: white;
+  border: 2px solid #AE57FF;
+}
+
+.model_edit-task_set-task-last_selected {
+  background: #AE57FF;
+  color: white;
+  border: 2px solid #AE57FF;
+}
+
+
+
+.body__sun-gym .modal {
+  border-color: #AE57FF;
+  background: white;
+  color: #AE57FF;
+}
+
+.body__sun-gym .modal_warning {
+  border: none;
+  background: white;
+  color: #AE57FF;
+}
+
+
+/* edit task modal */
+
+.body__sun-gym footer {
+  border-color: transparent;
+}
+
+.body__sun-gym footer div {}
+
+.body__sun-gym footer .createdBy {}
+
+.body__sun-gym footer a {
+  /* border-color: red; */
+}
+
+.body__sun-gym .css-theme-btn {
+  border-color: red;
+}
