@@ -64,52 +64,6 @@
   
 
 
-  <div id="headers-dumpster">
-
-    <div style="display: none;" class="logo-header">
-      <p>BioRobot</p>
-    </div>
-
-    <div id="logo-header__sun-gym" class="logo-header logo-header__sun-gym">
-      <table class="logo-header__sun-gym-inner">
-        <tr>
-          <td class="td-line1">
-            <div class="line1"></div>
-          </td>
-          <td rowspan="2">
-            <div class="logo-header__sun-gym-image">
-              <span class="sun">SUN</span>
-              <span class="gym">GYM</span>
-          </td>
-          <td class="td-line3">
-            <div class="line3"></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="line2"></div>
-          </td>
-          <td>
-            <div class="line4"></div>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="logo-header logo-header__the-visual-dome">
-      <p>The Visual Dome</p>
-    </div>
-    <!--
-    <div class="logo-header__the-visual-dome2">
-      <h1>The Visual Dome</h1>
-    </div>
-    -->
-    
-  </div>
-
-
-
-
     <div id="action-bar" class="action-bar">
       <!-- <h3 id="displayBioRobot" class="biorobot-title">
         Биоробот делать / BioRobot ToDo 
@@ -411,8 +365,6 @@
 // // els[els.length-1].style.width = '300vw'
 // }, 3000);
 
-let logo_header__sun_gym =document.getElementById('logo-header__sun-gym');
-logo_header__sun_gym.onclick = () => logo_header__sun_gym.remove()
 
 </script>
 </html>

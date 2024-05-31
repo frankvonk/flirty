@@ -2129,65 +2129,6 @@ const openSettingsMenu = () => {
   
 
 
-  // ROW
-  tr = newTr();
-  // CELL
-  tr.id = 'toggleShowHeader'
-  td = newTd('Show Header');
-  td.className = '';
-  td.colSpan = 2;
-  //td.style.textAlign = 'right'
-  tr.appendChild(td);
-  // CELL
-  const tdForCheckboxHighlight = document.createElement('td');
-  const spanCheckBox = document.createElement('span');
-  spanCheckBox.id = 'spanForCheckboxShowHeader';
-
-  tdForCheckboxHighlight.className = newSettingsForSettingsMenu.showHeader
-    ? 'model_settings_show-header_selected'
-    : 'model_settings_show-header_not-selected';
-
-
-  const canvasCheckBox = document.createElement('canvas');
-  canvasCheckBox.setAttribute('id', 'myCanvas');
-  canvasCheckBox.style.height = '20px';
-  canvasCheckBox.style.width = '28px';
-  canvasCheckBox.addEventListener('click', () => {
-    console.log('click!!!')
-
-    const spanForCheckboxShowHeader = document.getElementById('spanForCheckboxShowHeader')
-    if (newSettingsForSettingsMenu.showHeader) {
-      newSettingsForSettingsMenu.showHeader = false;
-      spanForCheckboxShowHeader.className = 'model_settings_show-header_not-selected';
-    } else {
-      newSettingsForSettingsMenu.showHeader = true;
-      spanForCheckboxShowHeader.className = 'model_settings_show-header_selected';
-    }
-  })
-
-  var ctx = canvasCheckBox.getContext("2d");
-
-  switch(localStorage['THEME']) {
-    case "sun-gym":
-      // ctx.strokeStyle = task.checked ? 'white' : 'silver';
-      ctx.strokeStyle = newSettingsForSettingsMenu.showHeader ? 'white' : 'silver';
-      break;
-    default:
-      ctx.strokeStyle = newSettingsForSettingsMenu.showHeader ? 'silver' : 'silver';
-  }
-
-  ctx.lineWidth = 25;
-  ctx.beginPath();
-  ctx.moveTo(20, 90);
-  ctx.lineTo(120, 130);
-  ctx.lineTo(290, 40);
-  ctx.stroke();
-  spanCheckBox.appendChild(canvasCheckBox);
-  tr.appendChild(spanCheckBox);
-  content.push(tr)
-  
-
-
 
   const onCancel = () => {
   }

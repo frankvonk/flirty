@@ -153,10 +153,6 @@ th {
   border: 2px solid;
 }
 
-.logo-header__sun-gym,
-.logo-header__the-visual-dome {
-  display: none;
-}
  
 input,
 textarea,
@@ -589,15 +585,6 @@ footer a {
 }
 
 
-.model_settings_show-header_selected {
-  background: mediumslateblue;
-  border-color: mediumslateblue;
-  color: white;
-}
-.model_settings_show-header_not-selected {
-  border-color: silver;
-}
-
 
 
 
@@ -783,65 +770,6 @@ footer a {
 .body__sun-gym td,
 th {
 }
-
-.body__sun-gym .logo-header td {
-}
-.body__sun-gym .logo-header__sun-gym {
-  display: inherit;
-}
-
-
-.body__sun-gym .logo-header__sun-gym-inner {
-  width: 100%;
-  margin: 0 auto;
-}
-.body__sun-gym .logo-header__sun-gym-inner td {
-  border: none;
-}
-
-
-.body__sun-gym .logo-header__sun-gym-inner .td-line1,
-.body__sun-gym .logo-header__sun-gym-inner .td-line2,
-.body__sun-gym .logo-header__sun-gym-inner .td-line3,
-.body__sun-gym .logo-header__sun-gym-inner .td-line4 {
-  width: 36vw;
-}
-
-
-.body__sun-gym .line1,
-.body__sun-gym .line3 {
-  height: 16px;
-  width: 99%;
-  padding: 0px 0 0 0;
-  margin: 20px 0 10px 0;
-  background-color: #4BA6FF;}
-
-.body__sun-gym .line2,
-.body__sun-gym .line4 {
-  height: 8px;
-  width: 99%;
-  padding: 0px 0 0 0;
-  margin: 10px 0 20px 0;
-  background-color: #4BA6FF;}
-
-.body__sun-gym .logo-header__sun-gym-image {
- /* background: red; */
- text-align: center;
- width: 100%;
- font-style: italic;
-}
-
-.body__sun-gym .logo-header__sun-gym-image .sun {
-  font-size: 5em;
-  color: lightblue;
-}
-
-.body__sun-gym .logo-header__sun-gym-image .gym {
-  font-size: 5em;
-  color: #4BA6FF;
-}
-
-
 
 
 
@@ -1344,9 +1272,6 @@ color: var(--categoryHeader-color);
 .body__corbusier td,
 th {}
 
-.body__corbusier .logo-header__sun-gym {
-  display: none;
-}
 
 .body__corbusier .subHeader {
   border-color: #AE57FF;
@@ -1552,9 +1477,6 @@ th {}
 .body__oppenheimer td,
 th {}
 
-.body__oppenheimer .logo-header__sun-gym {
-  display: none;
-}
 
 
 .body__oppenheimer .flow {}
@@ -1761,24 +1683,6 @@ th {}
 }
 
 
-.body__the-visual-dome .logo-header__the-visual-dome {
-  display: inherit;
-  text-align: center;
-  font-family: orpheus-pro-400normal;
-  font-weight: 100;
-  padding: 0em;
-}
-.body__the-visual-dome .logo-header__the-visual-dome p {
-  font-size: 3em;
-  margin: 0em;
-}
-
-
-.body__the-visual-dome .logo-header__the-visual-dome2 {
-  display: inherit;
-  text-align: center;
-  font-family: orpheus-pro-400normal;
-}
 
 
 
