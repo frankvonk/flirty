@@ -97,7 +97,7 @@ button {
 .lockOverlay {
   background: var(--lock-overlay_background);
   opacity: var(--lock-overlay_opacity);
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   top: 0;
   display: none;
