@@ -76,7 +76,7 @@ body {
   --category-header-title-background: var(--color-white);
   --category-header-title-border: var(--color-brand);
   --category-header-title-color: var(--color-brand);
-  --category-header-buttons-background: var(--color-brand);
+  --category-header-buttons-background: var(--color-white);
   --category-header-buttons-border: var(--color-brand);
   --category-header-buttons-color: var(--color-brand);
 
@@ -533,6 +533,10 @@ input:active {
   word-wrap: break-word;
   color: var(--category-header-title-color);
 }
+.categoryHeader:hover {
+  background: var(--category-header-title-background-selected);
+  color: var(--category-header-title-color-selected);
+}
 
 .extraforselectedcategoryheader {
   background: var(--category-header-title-background-selected);
@@ -543,8 +547,9 @@ input:active {
 .arrowLeftRight,
 .toggle-category,
 .editCategory {
+  background: var(--category-header-buttons-background);
   color: var(--category-header-buttons-color);
-  border: 2px solid var(--category-header-buttons-background); 
+  border: 2px solid var(--category-header-buttons-border); 
   font-size: 14px;
   padding: 0px 0px 2px 0px;
   width: 20px;
@@ -552,7 +557,7 @@ input:active {
 .arrowLeftRight:hover,
 .toggle-category:hover,
 .editCategory:hover {
-  color: white;
+  color: var(--category-header-buttons-color);
   background: var(--category-header-buttons-background);
 }
 

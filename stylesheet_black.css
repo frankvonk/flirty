@@ -44,6 +44,10 @@
   --saving-spinner_background: #AE57FF;
   --saving-spinner_color: black;
 
+  --category-header-title-background: black;
+  --category-header-title-color-selected: var(--color-text-inverted);
+
+
   --categorySelected-background: deeppink;
   --categorySelected-color: black;
 
@@ -100,13 +104,24 @@
 
 .body__black .toggle-category {
   width: 76px;
-  border-color: deeppink;
-  color: deeppink;
 }
+.body__black .arrowLeftRight,
+.body__black .toggle-category,
 .body__black .editCategory {
+  background: black;
   border-color: deeppink;
   color: deeppink;
 }
+.body__black .arrowLeftRight:hover,
+.body__black .toggle-category:hover,
+.body__black .editCategory:hover {
+  background: deeppink;
+  color: black;
+}
+
+
+
+
 
 .body__black .categoryHeader input {
   color: 'hotpink';
@@ -225,8 +240,6 @@
   color: black;
   border: 2px solid #AE57FF;
 }
-
-
 
 .body__black .model_edit-task_set-task-first_not-selected {
   background: black;
