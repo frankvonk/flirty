@@ -64,29 +64,29 @@
 
 
 /* A category header */
-.toggle-category {
+.body__sun-gym .toggle-category {
   width: 76px;
   border-color: deeppink;
   color: deeppink;
 }
-.editCategory {
+.body__sun-gym .editCategory {
   border-color: deeppink;
   color: deeppink;
 }
 
-.categoryHeader input {
+.body__sun-gym .categoryHeader input {
   color: 'hotpink';
   background: 'red';
 }
 
-.input::placeholder {
+.body__sun-gym .input::placeholder {
   color: 'hotpink';
   background: 'red';
 }
 
 /* a task */
 
-.create-new-task {
+.body__sun-gym .create-new-task {
   color: #4BA6FF;
 }
 
@@ -109,7 +109,7 @@
 }
 
 
-.defaultOrderNewTask {
+.body__sun-gym .defaultOrderNewTask {
   background: cornflowerblue;
   border-color: cornflowerblue;
   color: white;
@@ -147,38 +147,37 @@
   color: cornflowerblue;
   border: none;
 }
-.task-checkbox-container-checked {
+.body__sun-gym .task-checkbox-container-checked {
   background: mediumslateblue;
   border-color: mediumslateblue;
   color: white;
 }
-.task-checkbox-container-unchecked {
+.body__sun-gym .task-checkbox-container-unchecked {
   border-color: silver;
 }
-.body__sun-gym .taskEditCat {}
 
 
-.model_edit-category_set-cat-order,
-.model_edit-task_set-task-order  {
+.body__sun-gym .model_edit-category_set-cat-order,
+.body__sun-gym .model_edit-task_set-task-order  {
   height: 3em;
 }
-.model_edit-category_set-cat-first_not-selected {
+.body__sun-gym .model_edit-category_set-cat-first_not-selected {
   background: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-category_set-cat-first_selected {
+.body__sun-gym .model_edit-category_set-cat-first_selected {
   background: #AE57FF;
   color: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-category_set-cat-last_not-selected {
+.body__sun-gym .model_edit-category_set-cat-last_not-selected {
   background: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-category_set-cat-last_selected {
+.body__sun-gym .model_edit-category_set-cat-last_selected {
   background: #AE57FF;
   color: white;
   border: 2px solid #AE57FF;
@@ -188,23 +187,23 @@
 
 
 
-.model_edit-task_set-task-first_not-selected {
+.body__sun-gym .model_edit-task_set-task-first_not-selected {
   background: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-task_set-task-first_selected {
+.body__sun-gym .model_edit-task_set-task-first_selected {
   background: #AE57FF;
   color: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-task_set-task-last_not-selected {
+.body__sun-gym .model_edit-task_set-task-last_not-selected {
   background: white;
   border: 2px solid #AE57FF;
 }
 
-.model_edit-task_set-task-last_selected {
+.body__sun-gym .model_edit-task_set-task-last_selected {
   background: #AE57FF;
   color: white;
   border: 2px solid #AE57FF;

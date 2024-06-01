@@ -17,6 +17,7 @@ body {
 
 /* Style variables */
   --color-brand: blue;
+  --color-brand-light: lightblue;
   --color-primary: green;
   --color-primary-light: lightgreen;
   --color-secondary: red;
@@ -70,22 +71,18 @@ body {
   --new-cat_color: grey;
   --new-cat_hover: silver;
 
-  --flow-highlight-background: pink;
+  --flow-highlight-background: var(--color-primary-light);
 
-  --category-header-title-background: deeppink;
-  --category-header-title-border: deeppink;
-  --category-header-title-color: deeppink;
-  --category-header-buttons-background: deeppink;
-  --category-header-buttons-border: deeppink;
-  --category-header-buttons-color: deeppink;
+  --category-header-title-background: var(--color-white);
+  --category-header-title-border: var(--color-brand);
+  --category-header-title-color: var(--color-brand);
+  --category-header-buttons-background: var(--color-brand);
+  --category-header-buttons-border: var(--color-brand);
+  --category-header-buttons-color: var(--color-brand);
 
-  --category-header-title-background-selected: deeppink;
-  --category-header-title-border-selected: deeppink;
-  --category-header-title-color-selected: deeppink;
-  --category-header-buttons-background-selected: deeppink;
-  --category-header-buttons-border-selected: deeppink;
-  --category-header-buttons-color-selected: deeppink;
-
+  --category-header-title-background-selected: var(--color-brand);
+  --category-header-title-border-selected: var(--color-brand);
+  --category-header-title-color-selected: var(--color-text-inverted);
 
 
 
@@ -383,7 +380,7 @@ input:active {
 
 .createNewTask_CategoryName {
   word-wrap: break-word;
-  border: 2px solid black;
+  border: 2px solid var(--new-task-category-border);
   border-width: 1px 0px 1px 0px ;
   /* line-height: 16px; */
   padding-bottom: 1px;
@@ -530,32 +527,40 @@ input:active {
 
 /* A category header */
 .categoryHeader {
-  border-width: 2px;
+  background: var(--category-header-title-background);
+  border: 2px solid var(--category-header-title-border);
   height: 32px;
   word-wrap: break-word;
-  color: var(--categoryHeader-color);
-}
-.extraforselectedcategoryheader {
-  background: var(--categorySelected-background);
-  color: var(--categorySelected-color);
-  border-color: var(--categorySelected-background);
-}
-.notselectedcategoryheader {
-  color: deeppink;
-  border-color: deeppink;
+  color: var(--category-header-title-color);
 }
 
-.arrowLeftRight {
-  color: deeppink;
-  border: 2px solid deeppink; 
+.extraforselectedcategoryheader {
+  background: var(--category-header-title-background-selected);
+  color: var(--category-header-title-color-selected);
+  border-color: var(--category-header-title-border-selected);
+}
+
+.arrowLeftRight,
+.toggle-category,
+.editCategory {
+  color: var(--category-header-buttons-color);
+  border: 2px solid var(--category-header-buttons-background); 
   font-size: 14px;
   padding: 0px 0px 2px 0px;
   width: 20px;
 }
-.arrowLeftRight:hover {
+.arrowLeftRight:hover,
+.toggle-category:hover,
+.editCategory:hover {
   color: white;
-  background: deeppink;
+  background: var(--category-header-buttons-background);
 }
+
+
+
+
+
+
 
 
 /* a task */
