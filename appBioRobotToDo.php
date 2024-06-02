@@ -1567,8 +1567,12 @@ function renderTask(displayContainer, task) {
     case "green-spacious":
       ctx.strokeStyle = task.checked ? 'darkseagreen' : 'indianred';
       break;
+    case "wireframe":
+      ctx.strokeStyle = task.checked ? '#ebdac0' : 'rgb(36,47,39)';
+      break;  
+
     default:
-      ctx.strokeStyle = task.checked ? 'silver' : 'silver';
+    ctx.strokeStyle = task.checked ? 'silver' : 'silver';
   }
 
   ctx.lineWidth = 25;

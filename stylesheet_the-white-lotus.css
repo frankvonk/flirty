@@ -186,12 +186,6 @@
 
 
 
-.body__the-white-lotus .createNewTask_CatDeleteBtn:hover {
-  background: var(--color-primary);
-  color: white;
-}
-
-
 .body__the-white-lotus .newTaskTitleInputParent {
   background-color: var(--color-primary);
 }
@@ -266,12 +260,6 @@
   background-color: var(--lotus-canvas-white);
   opacity: 0.5;
 }
-.body__the-white-lotus .arrowLeftRight:hover,
-.body__the-white-lotus .toggle-category:hover,
-  .body__the-white-lotus .editCategory:hover {
-  color: #ebdac0;
-  background: var(--color-primary);
-}
 
 
 .body__the-white-lotus .taskTable {
@@ -287,20 +275,9 @@
   background-color: var(--lotus-canvas-white);
   opacity: 0.5;
 }
-.body__the-white-lotus .task_delete:hover,
-.body__the-white-lotus .task_down:hover,
-.body__the-white-lotus .task_up:hover,
-.body__the-white-lotus .task_edit:hover {
-  border-color: var(--lotus-canvas-white);
-  color: var(--lotus-canvas-white);
-  background-color: var(--color-secondary);
-}
 
 
 
-.body__the-white-lotus .spanMoveTaskDownBtn:hover,
-.body__the-white-lotus .spanMoveTaskUpBtn:hover {
-}
 .body__the-white-lotus .taskTitle {
   border-color: transparent;
   background-color: var(--color-secondary);
@@ -317,9 +294,6 @@
   border-color: transparent;
   background-color: var(--lotus-canvas-white);
   opacity: 0.5;
-}
-.body__the-white-lotus .task-checkbox-container-unchecked:hover {
-  opacity: 1;
 }
 
 
@@ -377,4 +351,43 @@
   }
 
 }
+
+@media only screen and (min-device-width: 1000px) {
+
+
+
+
+  .body__the-white-lotus .createNewTask_CatDeleteBtn:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .body__the-white-lotus .arrowLeftRight:hover,
+  .body__the-white-lotus .toggle-category:hover,
+    .body__the-white-lotus .editCategory:hover {
+    color: #ebdac0;
+    background: var(--color-primary);
+  }
+  
+  .body__the-white-lotus .task_delete:hover,
+  .body__the-white-lotus .task_down:hover,
+  .body__the-white-lotus .task_up:hover,
+  .body__the-white-lotus .task_edit:hover {
+    border-color: var(--lotus-canvas-white);
+    color: var(--lotus-canvas-white);
+    background-color: var(--color-secondary);
+  }
+  
+
+  .body__the-white-lotus .spanMoveTaskDownBtn:hover,
+  .body__the-white-lotus .spanMoveTaskUpBtn:hover {
+  }
+
+  .body__the-white-lotus .task-checkbox-container-unchecked:hover {
+    opacity: 1;
+  }
+  
+
+}
+
 

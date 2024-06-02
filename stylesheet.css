@@ -248,11 +248,6 @@ input:active {
   border-color: var(--modal_modal-cancel_border-color);
 }
 
-.modal .modal_cancel:hover {
-  background: var(--modal_modal-cancel_background_hover);
-  color: var(--modal_modal-cancel_color_hover);
-  border-color: var(--modal_modal-cancel_border-color_hover);
-}
 
 .modal .modal_accept {
   background: var(--modal_modal-accept_background);
@@ -261,11 +256,6 @@ input:active {
 
   width: 50%;
   height: 3em;
-}
-.modal .modal_accept:hover {
-  background: var(--modal_modal-accept_background_hover);
-  color: var(--modal_modal-accept_color_hover);
-  border-color: var(--modal_modal-accept_border-color_hover);
 }
 
 .model_settings_set-actionbar-location {
@@ -466,9 +456,6 @@ input:active {
   /* border: 2px solid black; */
   background: var(--new-cat_background);
 }
-.new-cat_parent:hover {
-  background: var(--new-cat_hover);
-}
 .new-cat_label {
   color: white;
   padding: 2px 0px 2px 0px;
@@ -533,10 +520,6 @@ input:active {
   word-wrap: break-word;
   color: var(--category-header-title-color);
 }
-.categoryHeader:hover {
-  background: var(--category-header-title-background-selected);
-  color: var(--category-header-title-color-selected);
-}
 
 .extraforselectedcategoryheader {
   background: var(--category-header-title-background-selected);
@@ -553,12 +536,6 @@ input:active {
   font-size: 14px;
   padding: 0px 0px 2px 0px;
   width: 20px;
-}
-.arrowLeftRight:hover,
-.toggle-category:hover,
-.editCategory:hover {
-  color: var(--category-header-buttons-color);
-  background: var(--category-header-buttons-background);
 }
 
 
@@ -691,6 +668,30 @@ footer a {
 
   body {
     font-size: 12px;
+  }
+  .modal .modal_cancel:hover {
+    background: var(--modal_modal-cancel_background_hover);
+    color: var(--modal_modal-cancel_color_hover);
+    border-color: var(--modal_modal-cancel_border-color_hover);
+  }
+  .modal .modal_accept:hover {
+    background: var(--modal_modal-accept_background_hover);
+    color: var(--modal_modal-accept_color_hover);
+    border-color: var(--modal_modal-accept_border-color_hover);
+  }
+  .new-cat_parent:hover {
+    background: var(--new-cat_hover);
+  }
+  
+  .categoryHeader:hover {
+    background: var(--category-header-title-background-selected);
+    color: var(--category-header-title-color-selected);
+  }
+  .arrowLeftRight:hover,
+  .toggle-category:hover,
+  .editCategory:hover {
+    color: var(--category-header-buttons-color);
+    background: var(--category-header-buttons-background);
   }
 }
 

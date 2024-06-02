@@ -95,17 +95,6 @@
 
 
 
-.body__sun-gym .createNewTask_CategoryName:hover {
-  color: white;
-  background: deeppink;
-}
-
-
-.body__sun-gym .createNewTask_CatDeleteBtn:hover {
-  background: deeppink;
-  color: white;
-}
-
 
 .body__sun-gym .defaultOrderNewTask {
   background: cornflowerblue;
@@ -121,12 +110,11 @@
   border-color: lightseagreen;
   border-color: #A0DFD6;
 }
-.body__sun-gym #taskUp:hover,
-.body__sun-gym #taskDown:hover {
-  background: lightseagreen;
-  background: #A0DFD6;
-  color: white;
-}
+
+
+
+
+
 
 .body__sun-gym .spanMoveTaskDownBtn,
 .body__sun-gym .spanMoveTaskUpBtn {
@@ -136,10 +124,6 @@
   
 }
 
-.body__sun-gym .spanMoveTaskDownBtn:hover,
-.body__sun-gym .spanMoveTaskUpBtn:hover {
-  color: white;
-}
 .body__sun-gym .taskTitle {
   color: lightblue;
   color: cornflowerblue;
@@ -229,4 +213,40 @@
 
 .body__sun-gym .css-theme-btn {
   border-color: red;
+}
+
+
+
+
+
+
+@media only screen and (min-device-width: 1000px) {
+  .mobile {display: none;}
+  .tablet {display: none;}
+  .desktop {display: inherit;}
+
+  
+
+
+.body__sun-gym .createNewTask_CategoryName:hover {
+  color: white;
+  background: deeppink;
+}
+.body__sun-gym .createNewTask_CatDeleteBtn:hover {
+  background: deeppink;
+  color: white;
+}
+
+.body__sun-gym #taskUp:hover,
+.body__sun-gym #taskDown:hover {
+  background: lightseagreen;
+  background: #A0DFD6;
+  color: white;
+}
+.body__sun-gym .spanMoveTaskDownBtn:hover,
+.body__sun-gym .spanMoveTaskUpBtn:hover {
+  color: white;
+}
+
+
 }

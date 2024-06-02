@@ -112,12 +112,6 @@
   border-color: deeppink;
   color: deeppink;
 }
-.body__black .arrowLeftRight:hover,
-.body__black .toggle-category:hover,
-.body__black .editCategory:hover {
-  background: deeppink;
-  color: black;
-}
 
 
 
@@ -142,18 +136,6 @@
 }
 
 
-
-
-.body__black .createNewTask_CategoryName:hover {
-  color: black;
-  background: deeppink;
-}
-
-
-.body__black .createNewTask_CatDeleteBtn:hover {
-  background: deeppink;
-  color: white;
-}
 
 .body__black input,
 .body__black textarea,
@@ -184,12 +166,7 @@
   border-color: lightseagreen;
   border-color: #A0DFD6;
 }
-.body__black #taskUp:hover,
-.body__black #taskDown:hover {
-  background: lightseagreen;
-  background: #A0DFD6;
-  color: white;
-}
+
 
 .body__black .spanMoveTaskDownBtn,
 .body__black .spanMoveTaskUpBtn {
@@ -197,10 +174,6 @@
   color: #A0DFD6;
 }
 
-.body__black .spanMoveTaskDownBtn:hover,
-.body__black .spanMoveTaskUpBtn:hover {
-  color: white;
-}
 .body__black .taskTitle {
   color: lightblue;
   color: cornflowerblue;
@@ -298,4 +271,49 @@
 .body__black .css-theme-btn {
   border-color: red;
   color: red;
+}
+
+
+
+
+
+@media only screen and (min-device-width: 1000px) {
+  .mobile {display: none;}
+  .tablet {display: none;}
+  .desktop {display: inherit;}
+
+  
+  .body__black .arrowLeftRight:hover,
+  .body__black .toggle-category:hover,
+  .body__black .editCategory:hover {
+    background: deeppink;
+    color: black;
+  }
+  
+  
+
+.body__black .createNewTask_CategoryName:hover {
+  color: black;
+  background: deeppink;
+}
+
+
+.body__black .createNewTask_CatDeleteBtn:hover {
+  background: deeppink;
+  color: white;
+}
+
+.body__black #taskUp:hover,
+.body__black #taskDown:hover {
+  background: lightseagreen;
+  background: #A0DFD6;
+  color: white;
+}
+
+.body__black .spanMoveTaskDownBtn:hover,
+.body__black .spanMoveTaskUpBtn:hover {
+  color: white;
+}
+
+
 }
