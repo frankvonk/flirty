@@ -2174,10 +2174,7 @@ const executeSettings = (newSettingsForSettingsMenu) => {
     ? body.insertBefore(actionBar, categoryContainer)
     : body.insertBefore(categoryContainer, actionBar)
 
-  const headersDumpster = document.getElementById('headers-dumpster')
-  headersDumpster.style.display = newSettingsForSettingsMenu.showHeader
-    ? headersDumpster.style.display = 'inherit'
-    : headersDumpster.style.display = 'none';
+
 }
 
 // Execute settings on startup
