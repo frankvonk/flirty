@@ -1013,12 +1013,6 @@ function renderCategoryButtons() {
         deleteButton.setAttribute('title', "Delete Category " + category.id);
         deleteButton.className = 'createNewTask_CatDeleteBtn';
 
-        // css = "#" + category.id + 'style' + " { width: 20px; padding:0 0 3px 0; color: hotpink; border: 2px solid hotpink; }" + "#" +
-        //             category.id + 'style' + ":hover { color: white; background: hotpink; }";
-        // style = document.createElement('style');
-        // style.appendChild(document.createTextNode(css));
-        // td.appendChild(style);
-
         tn = document.createTextNode('X');
         deleteButton.appendChild(tn);
 

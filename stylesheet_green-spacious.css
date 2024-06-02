@@ -89,10 +89,6 @@
 }
 
 
-.body__green-spacious .createNewTask_CatDeleteBtn:hover {
-  background: indianred;
-  color: white;
-}
 
 
 
@@ -102,12 +98,6 @@
 .body__green-spacious .editCategory {
   color: indianred;
   border-color: indianred;
-}
-.body__green-spacious .arrowLeftRight:hover,
-.body__green-spacious .toggle-category:hover,
-  .body__green-spacious .editCategory:hover {
-  color: #ebdac0;
-  background: indianred;
 }
 
 
@@ -122,18 +112,9 @@
 .body__green-spacious .task_edit {
   border-color: transparent;
 }
-.body__green-spacious .task_delete:hover,
-.body__green-spacious .task_down:hover,
-.body__green-spacious .task_up:hover,
-.body__green-spacious .task_edit:hover {
-  border-color: black;
-}
 
 
 
-.body__green-spacious .spanMoveTaskDownBtn:hover,
-.body__green-spacious .spanMoveTaskUpBtn:hover {
-}
 .body__green-spacious .taskTitle {
   border-color: transparent;
 }
@@ -159,32 +140,45 @@
 
 
 @media only screen and (min-device-width: 600px) {
-  
-  
-.body__green-spacious .flow {
-  margin: 2em;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
-} 
-.body__green-spacious .categoryHeaderTable {
-  margin: 0;
-}
-
+  .body__green-spacious .flow {
+    margin: 2em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+  } 
+  .body__green-spacious .categoryHeaderTable {
+    margin: 0;
+  }
 
 }
 
 
 
 @media only screen and (min-device-width: 1000px) {
- 
-  
-
   .body__green-spacious .flow {
     margin: 3em;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
   } 
-  
+
+  .body__green-spacious .createNewTask_CatDeleteBtn:hover {
+    background: indianred;
+    color: white;
+  }
+  .body__green-spacious .arrowLeftRight:hover,
+  .body__green-spacious .toggle-category:hover,
+  .body__green-spacious .editCategory:hover {
+    color: #ebdac0;
+    background: indianred;
+  }
+.body__green-spacious .task_delete:hover,
+.body__green-spacious .task_down:hover,
+.body__green-spacious .task_up:hover,
+.body__green-spacious .task_edit:hover {
+  border-color: black;
+}
+
+
+
 
 
 }
