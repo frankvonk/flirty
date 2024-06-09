@@ -803,7 +803,7 @@ function displayListOfTasksInBin() {
     // ROW
     tr = newTr();
     // CELL
-    td = newTd(task.title);
+    td = newTd(task.title || task.linkLabel);
     td.rowSpan = 2;
     td.colSpan = 2;
     td.className = 'bcWhite bgwhite cCornBlue binTaskTitle';
@@ -917,7 +917,7 @@ function displayListOfTasksInHistory() {
     // ROW
     tr = newTr();
     // CELL
-    td = newTd(task.title);
+    td = newTd(task.title || task.linkLabel );
     td.rowSpan = 2;
     td.colSpan = 2;
     td.className = 'bcWhite bgwhite cCornBlue binTaskTitle';
@@ -1148,7 +1148,7 @@ function deleteCategory(categoryToDeleteId) {
     dbBioRobot.tasksToBeExecuted.forEach(task => {
       if (task.category === categoryToDeleteObject.id && task.title !== "empty") {
         tr = newTr();
-        td = newTd(task.title);
+        td = newTd(task.title || task.linkLabel);
         td.className = '';
         td.colSpan = 3;
         tr.appendChild(td);
