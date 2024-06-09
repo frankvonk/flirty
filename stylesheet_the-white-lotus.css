@@ -71,6 +71,7 @@
   --new-cat_hover: var(--color-primary);
 
   --flow-highlight-background: #53141b;
+  --flow-highlight-color: var(--color-text-inverted);
 
 
   --footer-css-theme-btn-background: var(--color-canvas);
@@ -96,47 +97,6 @@
 .body__the-white-lotus .modal input:active {
   background-color: var(--color-canvas);
 }
-
-
-.body__the-white-lotus .model_edit-category_set-cat-first_not-selected {
-  background: var(--color-primary-light);
-  border-color: var(--color-primary);
-}
-
-.body__the-white-lotus .model_edit-category_set-cat-first_selected {
-  background: var(--color-primary);
-  color: var(--color-canvas);
-  border-color: var(--color-primary);
-}
-
-.body__the-white-lotus .model_edit-category_set-cat-last_not-selected {
-  background: var(--color-primary-light);
-  border-color: var(--color-primary);
-}
-
-.body__the-white-lotus .model_edit-category_set-cat-last_selected {
-  background: var(--color-primary);
-  color: var(--color-canvas);
-  border-color: var(--color-primary);
-}
-
-
-
-
-
-.body__the-white-lotus .model_edit-task_set-task-first_not-selected,
-.body__the-white-lotus .model_edit-task_set-task-last_not-selected {
-  background: var(--color-canvas);
-  border-color: var(--color-primary);
-}
-
-.body__the-white-lotus .model_edit-task_set-task-first_selected,
-.body__the-white-lotus .model_edit-task_set-task-last_selected {
-  background: var(--color-primary-light);
-  color: var(--color-canvas);
-  border-color: var(--color-primary);
-}
-
 
 
 

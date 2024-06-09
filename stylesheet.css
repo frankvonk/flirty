@@ -80,6 +80,7 @@ body {
   --new-cat_hover: silver;
 
   --flow-highlight-background: var(--color-primary-light);
+  --flow-highlight-color: var(--color-text);
 
   --category-header-title-background: var(--color-white);
   --category-header-title-border: var(--color-brand);
@@ -370,6 +371,7 @@ input:active {
 
 .flow.highlight1 .categoryHeader {
   background: var(--flow-highlight-background);
+  color: var(--flow-highlight-color);
 }
 
 

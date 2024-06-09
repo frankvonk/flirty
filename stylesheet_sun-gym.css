@@ -150,54 +150,6 @@
 }
 
 
-.body__sun-gym .model_edit-category_set-cat-first_not-selected {
-  background: white;
-  border: 2px solid #AE57FF;
-}
-
-.body__sun-gym .model_edit-category_set-cat-first_selected {
-  background: #AE57FF;
-  color: white;
-  border: 2px solid #AE57FF;
-}
-
-.body__sun-gym .model_edit-category_set-cat-last_not-selected {
-  background: white;
-  border: 2px solid #AE57FF;
-}
-
-.body__sun-gym .model_edit-category_set-cat-last_selected {
-  background: #AE57FF;
-  color: white;
-  border: 2px solid #AE57FF;
-}
-
-
-
-
-
-.body__sun-gym .model_edit-task_set-task-first_not-selected {
-  background: white;
-  border: 2px solid #AE57FF;
-}
-
-.body__sun-gym .model_edit-task_set-task-first_selected {
-  background: #AE57FF;
-  color: white;
-  border: 2px solid #AE57FF;
-}
-
-.body__sun-gym .model_edit-task_set-task-last_not-selected {
-  background: white;
-  border: 2px solid #AE57FF;
-}
-
-.body__sun-gym .model_edit-task_set-task-last_selected {
-  background: #AE57FF;
-  color: white;
-  border: 2px solid #AE57FF;
-}
-
 
 
 .body__sun-gym .modal {
