@@ -626,6 +626,12 @@ input:active {
 .task-table-tr-link td {
   border: none;
 }
+.task-table-tr-link td a.taskLink:visited,
+.task-table-tr-link td a.taskLink:active,
+.task-table-tr-link td a.taskLink:hover,
+.task-table-tr-link td a.taskLink:link {
+  color: var(--color-text);
+}
 
 .taskEditCat {
   max-width: 130px;
