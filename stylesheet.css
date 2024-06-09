@@ -577,6 +577,11 @@ input:active {
   padding: 0px 0px 2px 0px;
   width: 20px;
 }
+.toggle-category,
+.editCategory {
+  width: 35%;
+}
+
 
 
 
