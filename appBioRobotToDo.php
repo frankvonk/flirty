@@ -1660,14 +1660,23 @@ function moveCategoryLeftOrRight(direction, categoryIWantMoved) {
       indexOfCategoryToMove = index;
     }
   })
-  // remove category from old location
-  dbBioRobot.categories.splice(indexOfCategoryToMove, 1);
-  // insert category into new location
-  dbBioRobot.categories.splice((direction === 'left' ? indexOfCategoryToMove - 1 : indexOfCategoryToMove + 1), 0, categoryIWantMoved);
-  renderTasks();
-  renderCategoryButtons();
-  updateLocalStorage(dbBioRobot)
-//  setCategory(resetThisCategoryAfterwards);
+  // Prevent first cat from being bumped to the end by going further left then the first position.
+  if (indexOfCategoryToMove == 0 && direction === 'right') {
+    dbBioRobot.categories.splice(indexOfCategoryToMove, 1);
+    dbBioRobot.categories.splice((indexOfCategoryToMove + 1), 0, categoryIWantMoved);
+    renderTasks();
+    renderCategoryButtons();
+    updateLocalStorage(dbBioRobot)
+  } else if (indexOfCategoryToMove > 0) {
+    // remove category from old location
+    dbBioRobot.categories.splice(indexOfCategoryToMove, 1);
+    // insert category into new location
+    dbBioRobot.categories.splice((direction === 'left' ? indexOfCategoryToMove - 1 : indexOfCategoryToMove + 1), 0, categoryIWantMoved);
+    renderTasks();
+    renderCategoryButtons();
+    updateLocalStorage(dbBioRobot)
+    //  setCategory(resetThisCategoryAfterwards);
+  }
 }
 
 
