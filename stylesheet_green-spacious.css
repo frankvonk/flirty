@@ -1,12 +1,6 @@
 
 
 .body__green-spacious {
-  --lotus-canvas-white: #ebdac0;
-  --lotus-white: #ebdac0;
-
-
-  --body_background: var(--lotus-canvas-white);
-  --body_background: var(--lotus-canvas-white);
 
   --primary-color: indianred;
 
@@ -15,6 +9,7 @@
   --lock-overlay_background: aqua;
   --lock-overlay_opacity: 0.4;
 
+  --color-canvas: #ebdac0;
 
 
   --saving-spinner_background: #AE57FF;
@@ -48,10 +43,10 @@
 }
 
 .body__green-spacious .action-bar_button {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 .counterTasks {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 
 
@@ -63,6 +58,7 @@
 .body__green-spacious .newTaskCategoryGrid {
   background-color: #474b30;
 }
+
 .body__green-spacious .extraforselectedcategoryheader {
   color: #474b30;
 }

@@ -1,14 +1,15 @@
-
-
 .body__sun-gym {
   --color-brand: deeppink;
+  --color-brand-light: pink;
   --color-primary: #4BA6FF;
   --color-primary-light: lightblue;
   --color-secondary: #AE57FF;
-  --color-secondary-light: pink;
+  --color-secondary-light: #d2b8eb;
 
   --color-white: white;
   --color-black: black;
+
+  --color-canvas: white;
 
   --color-text: black;
   --color-text-inverted: white;
@@ -26,6 +27,16 @@
 
   --new-task-category-border: var(--color-brand);
 
+  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_border-color: var(--color-secondary);
+  --modal_set-top-or-bottom_not-selected_color: var(--color-secondary);
+  --modal_set-top-or-bottom_selected_background: var(--color-secondary-light);
+  --modal_set-top-or-bottom_selected_border-color: var(--color-secondary);
+  --modal_set-top-or-bottom_selected_color: var(--color-secondary) ;
+
+  --modal_set-top-or-bottom_background_hover: var(--color-secondary);
+  --modal_set-top-or-bottom_border-color_hover: var(--color-secondary);
+  --modal_set-top-or-bottom_color_hover: var(--color-text-inverted);
 
   --saving-spinner_background: #AE57FF;
   --saving-spinner_background: mediumslateblue;
@@ -139,10 +150,6 @@
 }
 
 
-.body__sun-gym .model_edit-category_set-cat-order,
-.body__sun-gym .model_edit-task_set-task-order  {
-  height: 3em;
-}
 .body__sun-gym .model_edit-category_set-cat-first_not-selected {
   background: white;
   border: 2px solid #AE57FF;

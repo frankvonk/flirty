@@ -17,10 +17,12 @@
   --color-primary: #4BA6FF;
   --color-primary-light: lightblue;
   --color-secondary: #AE57FF;
-  --color-secondary-light: pink;
+  --color-secondary-light: #d2b8eb;
 
   --color-white: white;
   --color-black: black;
+
+  --color-canvas: black;
 
   --color-text: white;
   --color-text-inverted: black;
@@ -31,13 +33,21 @@
   --color-cancel: var(--color-brand);
   --color-cancel-light: black;
 
-  --body_background: black;
-
   --action-bar_button_color: #AE57FF;
 
   --lock-overlay_background: blue;
   --lock-overlay_opacity: 0.4;
 
+  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_border-color: var(--color-primary);
+  --modal_set-top-or-bottom_not-selected_color: var(--color-primary);
+  --modal_set-top-or-bottom_selected_background: var(--color-primary-light);
+  --modal_set-top-or-bottom_selected_border-color: var(--color-primary);
+  --modal_set-top-or-bottom_selected_color: var(--color-text-inverted) ;
+
+  --modal_set-top-or-bottom_background_hover: var(--color-primary);
+  --modal_set-top-or-bottom_border-color_hover: var(--color-primary);
+  --modal_set-top-or-bottom_color_hover: var(--color-text-inverted);
 
 
   --saving-spinner_background: #AE57FF;
@@ -236,19 +246,6 @@
   border: 2px solid #AE57FF;
 }
 
-
-.body__black .model_settings_set-actionbar-on-top_selected,
-.body__black .model_settings_set-actionbar-on-bottom_selected {
-  background: blue;
-  border-color: blue;
-  color: black;
-}
-.body__black .model_settings_set-actionbar-on-top_not-selected,
-.body__black .model_settings_set-actionbar-on-bottom_not-selected {
-  background: black;
-  border-color: blue;
-  color: blue;
-}
 
 
 .body__black .modal {

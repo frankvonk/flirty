@@ -1,16 +1,16 @@
-
-
-/* The White Lotus - Start */
-
 .body__the-white-lotus {
-  --color-brand: rgb(95,33,42);;
+  --color-brand: rgb(95,33,42);
+  --color-brand-light: rgb(117,68,69);
+
   --color-primary: rgb(95,33,42);
   --color-primary-light: rgb(117,68,69);
-  --color-secondary: rgb(36,47,39);;
+  --color-secondary: rgb(36,47,39);
   --color-secondary-light: rgb(108, 131, 108);
 
   --color-white: white;
   --color-black: black;
+
+  --color-canvas: #ebdac0;
 
   --color-text: black;
   --color-text-inverted: #ebdac0;
@@ -21,18 +21,26 @@
   --color-cancel-light: var(--color-primary-light);
 
 
-  --lotus-canvas-white: #ebdac0;
-
-
-  --body_background: var(--lotus-canvas-white);
 
 
 
-  --action-bar_button_color: #AE57FF;
+
+
+  --action-bar_button_color: var(--color-canvas);
 
   --lock-overlay_background: aqua;
   --lock-overlay_opacity: 0.4;
 
+  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_border-color: var(--color-brand);
+  --modal_set-top-or-bottom_not-selected_color: var(--color-brand);
+  --modal_set-top-or-bottom_selected_background: var(--color-brand);
+  --modal_set-top-or-bottom_selected_border-color: var(--color-brand);
+  --modal_set-top-or-bottom_selected_color: var(--color-text-inverted);
+
+  --modal_set-top-or-bottom_background_hover: var(--color-brand-light);
+  --modal_set-top-or-bottom_border-color_hover: var(--color-brand-light);
+  --modal_set-top-or-bottom_color_hover: var(--color-text-inverted);
 
 
   --modal_modal-cancel_background: var(--color-cancel);
@@ -49,7 +57,7 @@
 
   
   --saving-spinner_background: var(--color-secondary);
-  --saving-spinner_color: var(--lotus-canvas-white);
+  --saving-spinner_color: var(--color-canvas);
 
 
   --new-task-category-border: var(--color-primary);
@@ -65,7 +73,7 @@
   --flow-highlight-background: #53141b;
 
 
-  --footer-css-theme-btn-background: var(--lotus-canvas-white);
+  --footer-css-theme-btn-background: var(--color-canvas);
   --footer-css-theme-btn-opacity: 0.5;
 
 
@@ -81,12 +89,12 @@
 
 
 .body__the-white-lotus .modal {
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
 }
 .body__the-white-lotus .modal input,
 .body__the-white-lotus .modal textarea,
 .body__the-white-lotus .modal input:active {
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
 }
 
 
@@ -97,7 +105,7 @@
 
 .body__the-white-lotus .model_edit-category_set-cat-first_selected {
   background: var(--color-primary);
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
   border-color: var(--color-primary);
 }
 
@@ -108,7 +116,7 @@
 
 .body__the-white-lotus .model_edit-category_set-cat-last_selected {
   background: var(--color-primary);
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
   border-color: var(--color-primary);
 }
 
@@ -118,14 +126,14 @@
 
 .body__the-white-lotus .model_edit-task_set-task-first_not-selected,
 .body__the-white-lotus .model_edit-task_set-task-last_not-selected {
-  background: var(--lotus-canvas-white);
+  background: var(--color-canvas);
   border-color: var(--color-primary);
 }
 
 .body__the-white-lotus .model_edit-task_set-task-first_selected,
 .body__the-white-lotus .model_edit-task_set-task-last_selected {
   background: var(--color-primary-light);
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
   border-color: var(--color-primary);
 }
 
@@ -146,10 +154,10 @@
 }
 
 .body__the-white-lotus .action-bar_button {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 .counterTasks {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 
 
@@ -176,12 +184,12 @@
   background-color: var(--color-primary);
 }
 .body__the-white-lotus .notselectedcategoryheader {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
   border-color: var(--color-primary);
 }
 .body__the-white-lotus .extraforselectedcategoryheader {
   color: var(--color-primary);
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
 }
 
 
@@ -190,11 +198,11 @@
   background-color: var(--color-primary);
 }
 .body__the-white-lotus .newTaskTitleInputLabel {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
   opacity: 0.9;
 }
 .body__the-white-lotus .newTaskTitleTextArea {
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
   color: var(--color-primary);
 }
 
@@ -206,7 +214,7 @@
 .body__the-white-lotus .new-task_submit {
   background-color: var(--color-primary);
   opacity: 1;
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 
 .body__the-white-lotus .default-order-new-task_parent button {
@@ -215,13 +223,13 @@
 
 .body__the-white-lotus .default-order-new-task-first,
 .body__the-white-lotus .default-order-new-task.selected {
-  background: var(--lotus-canvas-white);
+  background: var(--color-canvas);
   color: var(--color-primary);
 }
 .body__the-white-lotus .default-order-new-task-last,
 .body__the-white-lotus .default-order-new-task.not-selected {
   background: var(--color-primary);
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 
 .body__the-white-lotus .new-cat_parent {
@@ -232,16 +240,16 @@
 .body__the-white-lotus .new-cat_label {
   background-color: var(--color-primary);
   opacity: 0.9;
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 .body__the-white-lotus .new-cat_input {
   width: calc(100% - 4px);
   margin-bottom: 0;
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
 }
 
 .body__the-white-lotus .new-cat_submit {
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 
 
@@ -256,8 +264,8 @@
 .body__the-white-lotus .toggle-category,
 .body__the-white-lotus .editCategory {
   color: var(--color-primary);
-  border-color: var(--lotus-canvas-white);
-  background-color: var(--lotus-canvas-white);
+  border-color: var(--color-canvas);
+  background-color: var(--color-canvas);
   opacity: 0.5;
 }
 
@@ -272,7 +280,7 @@
 .body__the-white-lotus .task_up,
 .body__the-white-lotus .task_edit {
   border-color: transparent;
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
   opacity: 0.5;
 }
 
@@ -281,7 +289,7 @@
 .body__the-white-lotus .taskTitle {
   border-color: transparent;
   background-color: var(--color-secondary);
-  color: var(--lotus-canvas-white);
+  color: var(--color-canvas);
 }
 .body__the-white-lotus .emptyTaskTitle {
   background: transparent;
@@ -292,7 +300,7 @@
 }
 .body__the-white-lotus .task-checkbox-container-unchecked {
   border-color: transparent;
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
   opacity: 0.5;
 }
 
@@ -301,7 +309,7 @@
   border: none;
 }
 .body__the-white-lotus footer .createdBy {
-  background-color: var(--lotus-canvas-white);
+  background-color: var(--color-canvas);
   opacity: 0.5;
   padding-left: 1em;
   padding-right: 1em;
@@ -373,15 +381,12 @@
   .body__the-white-lotus .task_down:hover,
   .body__the-white-lotus .task_up:hover,
   .body__the-white-lotus .task_edit:hover {
-    border-color: var(--lotus-canvas-white);
-    color: var(--lotus-canvas-white);
+    border-color: var(--color-canvas);
+    color: var(--color-canvas);
     background-color: var(--color-secondary);
   }
   
 
-  .body__the-white-lotus .spanMoveTaskDownBtn:hover,
-  .body__the-white-lotus .spanMoveTaskUpBtn:hover {
-  }
 
   .body__the-white-lotus .task-checkbox-container-unchecked:hover {
     opacity: 1;

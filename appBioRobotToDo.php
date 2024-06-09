@@ -1722,6 +1722,8 @@ function editCategory(category) {
   td.colSpan = 2;
   tr.appendChild(td);
 
+
+
   // CELL
   td = newTd('Set category first');
   td.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-first_not-selected';
@@ -1733,12 +1735,12 @@ function editCategory(category) {
     const btnMoveCategoryToTop = document.getElementById('btnMoveCategoryToTop');
     if (newSettingsForCategory.changeOrder === undefined || newSettingsForCategory.changeOrder === 'bottom') {
       newSettingsForCategory.changeOrder = 'top';
-      btnMoveCategoryToTop.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-first_selected';
-      btnMoveCategoryToBottom.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-last_not-selected';
+      btnMoveCategoryToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
+      btnMoveCategoryToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     } else {
       newSettingsForCategory.changeOrder = undefined;
-      btnMoveCategoryToTop.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-first_not-selected';
-      btnMoveCategoryToBottom.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-last_not-selected';
+      btnMoveCategoryToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      btnMoveCategoryToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     }
   }
   tr.appendChild(td);
@@ -1757,12 +1759,12 @@ function editCategory(category) {
     const btnMoveCategoryToTop = document.getElementById('btnMoveCategoryToTop');
     if (newSettingsForCategory.changeOrder === undefined || newSettingsForCategory.changeOrder === 'top') {
       newSettingsForCategory.changeOrder = 'bottom';
-      btnMoveCategoryToBottom.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-last_selected';
-      btnMoveCategoryToTop.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-first-not-selected';
+      btnMoveCategoryToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
+      btnMoveCategoryToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     } else {
       newSettingsForCategory.changeOrder = undefined;
-      btnMoveCategoryToTop.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-first_not-selected';
-      btnMoveCategoryToBottom.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-last_not-selected';
+      btnMoveCategoryToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      btnMoveCategoryToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     }
   }
   tr.appendChild(td);
@@ -2089,8 +2091,8 @@ const openSettingsMenu = () => {
   // CELL
   td = newTd('On top of page');
   td.className = newSettingsForSettingsMenu.actionBarOnTop
-    ? 'model_settings_set-actionbar-location model_settings_set-actionbar-on-top_selected'
-    : 'model_settings_set-actionbar-location model_settings_set-actionbar-on-top_not-selected'
+    ? 'modal_set-top-or-bottom modal_set-top-or-bottom_selected'
+    : 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected'
   td.id = 'btnShowActionBarOnTop';
   td.colSpan = 2;
   td.onclick = () => {
@@ -2098,8 +2100,8 @@ const openSettingsMenu = () => {
     const btnShowActionBarOnTop = document.getElementById('btnShowActionBarOnTop');
     if (newSettingsForSettingsMenu.actionBarOnTop == false) {
       newSettingsForSettingsMenu.actionBarOnTop = true;
-      btnShowActionBarOnTop.className = 'model_settings_set-actionbar-location model_settings_set-actionbar-on-top_selected';
-      btnShowActionBarOnBottom.className = 'model_settings_set-actionbar-location model_settings_set-actionbar-on-bottom_not-selected';
+      btnShowActionBarOnTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
+      btnShowActionBarOnBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     }
   }
   tr.appendChild(td);
@@ -2110,8 +2112,8 @@ const openSettingsMenu = () => {
   // CELL
   td = newTd('On bottom of page');
   td.className = newSettingsForSettingsMenu.actionBarOnTop
-    ? 'model_settings_set-actionbar-location model_settings_set-actionbar-on-bottom_not-selected'
-    : 'model_settings_set-actionbar-location model_settings_set-actionbar-on-bottom_selected'
+    ? 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected'
+    : 'modal_set-top-or-bottom modal_set-top-or-bottom_selected'
   td.colSpan = 2;
   td.id = 'btnShowActionBarOnBottom';
   td.onclick = () => {
@@ -2119,8 +2121,8 @@ const openSettingsMenu = () => {
     const btnShowActionBarOnTop = document.getElementById('btnShowActionBarOnTop');
     if (newSettingsForSettingsMenu.actionBarOnTop == true) {
       newSettingsForSettingsMenu.actionBarOnTop = false;
-      btnShowActionBarOnTop.className = 'model_settings_set-actionbar-location model_settings_set-actionbar-on-top_not-selected';
-      btnShowActionBarOnBottom.className = 'model_settings_set-actionbar-location model_settings_set-actionbar-on-bottom_selected';
+      btnShowActionBarOnTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      btnShowActionBarOnBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
     } 
   }
   tr.appendChild(td);
@@ -2359,19 +2361,19 @@ function editTask(task) {
   // CELL
   td = newTd('Set task first');
   td.colSpan = 2;
-  td.className = 'model_edit-task_set-task-order model_edit-task_set-task-first_not-selected';
+  td.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
   td.id = 'btnMoveTaskToTop';
   td.onclick = () => {
     const btnMoveTaskToBottom = document.getElementById('btnMoveTaskToBottom');
     const btnMoveTaskToTop = document.getElementById('btnMoveTaskToTop');
     if (newSettingsForTask.changeOrder === undefined || newSettingsForTask.changeOrder === 'bottom') {
       newSettingsForTask.changeOrder = 'top';
-      btnMoveTaskToBottom.className = 'model_edit-task_set-task-order model_edit-task_set-task-last_not-selected';
-      btnMoveTaskToTop.className = 'model_edit-task_set-task-order model_edit-task_set-task-first_selected';
+      btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
     } else {
       newSettingsForTask.changeOrder = undefined;
-      btnMoveTaskToBottom.className = 'model_edit-task_set-task-order model_edit-task_set-task-last_not-selected';
-      btnMoveTaskToTop.className = 'model_edit-task_set-task-order model_edit-task_set-task-first_not-selected';
+      btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     }
   }
   tr.appendChild(td);
@@ -2382,7 +2384,7 @@ function editTask(task) {
   tr = newTr();
   // CELL
   td = newTd('Set task last');
-  td.className = 'model_edit-task_set-task-order model_edit-task_set-task-last_not-selected';
+  td.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
   td.colSpan = 2;
   td.id = 'btnMoveTaskToBottom';
   td.onclick = () => {
@@ -2390,12 +2392,12 @@ function editTask(task) {
     const btnMoveTaskToTop = document.getElementById('btnMoveTaskToTop');
     if (newSettingsForTask.changeOrder === undefined || newSettingsForTask.changeOrder === 'top') {
       newSettingsForTask.changeOrder = 'bottom';
-      btnMoveTaskToBottom.className = 'model_edit-task_set-task-order model_edit-task_set-task-last_selected';
-      btnMoveTaskToTop.className = 'model_edit-task_set-task-order model_edit-task_set-task-first_not-selected';
+      btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
+      btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     } else {
       newSettingsForTask.changeOrder = undefined;
-      btnMoveTaskToBottom.className = 'model_edit-task_set-task-order model_edit-task_set-task-last_not-selected';
-      btnMoveTaskToTop.className = 'model_edit-task_set-task-order model_edit-task_set-task-first_not-selected';
+      btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
     }
   }
   tr.appendChild(td);
