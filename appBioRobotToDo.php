@@ -1726,7 +1726,7 @@ function editCategory(category) {
 
   // CELL
   td = newTd('Set category first');
-  td.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-first_not-selected';
+  td.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
   td.id = 'btnMoveCategoryToTop';
   td.colSpan = 2;
   td.onclick = () => {
@@ -1750,7 +1750,7 @@ function editCategory(category) {
   tr = newTr();
   // CELL
   td = newTd('Set category last');
-  td.className = 'model_edit-category_set-cat-order model_edit-category_set-cat-last_not-selected';
+  td.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
   td.colSpan = 2;
   td.id = 'btnMoveCategoryToBottom';
   td.onclick = () => {
