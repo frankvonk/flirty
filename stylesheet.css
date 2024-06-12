@@ -36,7 +36,7 @@ body {
   --font-weight_body: 500;
 
   --color-link: var(--color-text)
-
+  --opacity-cell: 1;
   --action-bar_button_color: var(--color-text);
 
   --lock-overlay_background: grey;
@@ -641,7 +641,8 @@ input:active {
   padding: 1px 8px 1px;
   /* margin: 1px; */
   /* width: fit-content; */
-  opacity: 0.5;
+
+  opacity: var(--opacity-cell);
   background: var(--color-canvas);
 }
 
