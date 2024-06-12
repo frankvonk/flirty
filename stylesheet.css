@@ -33,7 +33,9 @@ body {
   --color-cancel: var(--color-secondary);
   --color-cancel-light: var(--color-secondary-light);
 
+  --font-weight_body: 500;
 
+  --color-link: var(--color-text)
 
   --action-bar_button_color: var(--color-text);
 
@@ -141,15 +143,18 @@ body {
   cursor: default;
 
   font-size: 10px;
-  /* font-weight: bold; */
-  font-weight: 200;
   letter-spacing: 1px;
   word-wrap: break-word;
   /* zoom: 0.7; */
   background: var(--color-canvas);
-  font-family: allerta, serif;
-  font-weight: lighter;
-  font-weight: bold;
+  /* font-family: allerta, serif; */
+  font-weight: var(--font-weight_body);
+
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: inherit; */
+  font-variation-settings:
+    "wdth" 100;
 }
 
 
@@ -346,7 +351,7 @@ input:active {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2px;
-  margin: 2px 1px 0 2px;
+  margin: 4px 1px 0 2px;
 }
 
 
@@ -630,7 +635,14 @@ input:active {
 .task-table-tr-link td a.taskLink:active,
 .task-table-tr-link td a.taskLink:hover,
 .task-table-tr-link td a.taskLink:link {
-  color: var(--color-text);
+  color: var(--color-link);
+}
+.task-table-tr-link td {
+  padding: 1px 8px 1px;
+  /* margin: 1px; */
+  /* width: fit-content; */
+  opacity: 0.5;
+  background: var(--color-canvas);
 }
 
 .taskEditCat {

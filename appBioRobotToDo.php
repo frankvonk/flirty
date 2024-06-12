@@ -66,6 +66,7 @@ const changeCSSTheme = (theme) => {
     // localStorage['THEME'] = theme;
   }
 
+
   const signature = document.getElementById('signature');
   if (signature) {
     if (typeof fnLogo !== "undefined") {

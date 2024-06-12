@@ -22,7 +22,10 @@ const fnLogo = () => {
 
 
     const bodyElement = document.getElementsByTagName('body')    
-    if (bodyElement[0].classList.contains('body__sun-gym') ) {
+    if (bodyElement[0].classList.contains('body__black') ) {
+      // purple
+      c.strokeStyle = "hotpink";
+    } else if (bodyElement[0].classList.contains('body__sun-gym') ) {
       // purple
       c.strokeStyle = "#AE57FF"
     } else if (bodyElement[0].classList.contains('body__the-visual-dome') ) {

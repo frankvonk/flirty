@@ -15,7 +15,7 @@
   <link href='stylesheet_black.css' rel='stylesheet'>
   <link href='stylesheet_green-spacious.css' rel='stylesheet'>
   <link href='stylesheet_sun-gym.css' rel='stylesheet'>
-  <link href='stylesheet_the-white-lotus.css?ver=3' rel='stylesheet'>
+  <link href='stylesheet_the-white-lotus.css?ver=34' rel='stylesheet'>
   
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -23,6 +23,12 @@
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 </style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 </head>
 
 <!--
