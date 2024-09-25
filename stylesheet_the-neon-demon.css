@@ -1,0 +1,449 @@
+.body__the-neon-demon {
+  --color-brand: white;
+  --color-brand-light: rgb(117,68,69);
+
+  --color-primary: deeppink;
+  --color-primary-light: hotpink;
+  --color-secondary: rgba(253, 210, 224, 0.988);
+  --color-secondary-light: rgb(108, 131, 108);
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-canvas: white;
+
+  --color-text: black;
+  --color-text-inverted: white;
+
+  --color-accept: var(--color-primary);
+  --color-accept-light: var(--color-secondary-light);
+  --color-cancel: var(--color-secondary);
+  --color-cancel-light: var(--color-primary-light);
+
+
+
+  --opacity-cell: 0.5;
+
+
+
+  --action-bar_button_color: var(--color-canvas);
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_border-color: var(--color-brand);
+  --modal_set-top-or-bottom_not-selected_color: var(--color-text);
+  --modal_set-top-or-bottom_selected_background: var(--color-brand);
+  --modal_set-top-or-bottom_selected_border-color: var(--color-brand);
+  --modal_set-top-or-bottom_selected_color: var(--color-text);
+
+  --modal_set-top-or-bottom_background_hover: var(--color-brand-light);
+  --modal_set-top-or-bottom_border-color_hover: var(--color-brand-light);
+  --modal_set-top-or-bottom_color_hover: var(--color-text-inverted);
+
+
+  --modal_modal-cancel_background: var(--color-cancel);
+  --modal_modal-cancel_color: var(--color-text-inverted);
+  --modal_modal-cancel_background_hover: var(--color-cancel-light);
+  --modal_modal-cancel_border-color_hover: var(--color-cancel-light);
+
+  --modal_modal-accept_background: var(--color-accept);
+  --modal_modal-accept_color: var(--color-text-inverted);
+  --modal_modal-accept_background_hover: var(--color-accept-light);
+  --modal_modal-accept_border-color_hover: var(--color-accept-light);
+
+
+
+  
+  --saving-spinner_background: var(--color-primary);
+  --saving-spinner_color: var(--color-canvas);
+
+
+  --new-task-category-border: var(--color-primary);
+
+
+  --categorySelected-background: var(--color-primary);
+  --categorySelected-color: white;
+
+  --new-cat_background: var(--color-primary);
+  --new-cat_color: var(--color-primary);
+  --new-cat_hover: var(--color-primary);
+
+  --flow-highlight-background: #53141b;
+  --flow-highlight-color: var(--color-text-inverted);
+
+
+  --footer-css-theme-btn-background: var(--color-canvas);
+  --footer-css-theme-btn-opacity: 0.5;
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+
+  /* background-image: url("./assets/images/tiger-sleep.png");
+  background-image: url("./_The\ White\ Lotus/74654985_625340951667185_543812883204925355_n.jpg");
+  background-position: 1em 1em;
+  background-size: 100%; */
+  /* --task-title_border-color: green; */
+  /* background-image: url("./_The\ White\ Lotus/Screenshot 2023-05-02 at 13.44.20.png"); */
+
+  /* background-image: url("./_The\ White\ Lotus/main logo in pond/2.9.png");
+  background-position: 0em 42px;
+  background-size: 100%; */
+
+
+  /* EYE */
+  /* background-image: url("./images/Screenshot 2024-08-30 at 21.33.04.png");
+  background-position: -51em -17em;
+  background-size: 144%; */
+
+  /* background-image: url("./images/Screenshot 2024-08-30 at 21.55.44.png");
+  background-position: 0em 42px;
+  background-size: 100%;
+ */
+
+
+
+ /*
+ food ship cat
+  background-image: url("./images/Screenshot 2024-08-30 at 21.07.50.png");
+ background-position: 0em 42px;
+ background-size: 100%;
+ */
+
+
+   /* opening blood neck */
+  background-color: black;
+  background-image: url("./images/Screenshot 2024-08-30 at 21.23.04.png");
+  background-position: -27em -212px;
+  background-size: 2079px;
+
+
+
+  /* /_The White Lotus/main logo in pond/2.9.png */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.body__the-neon-demon:before {
+  /* content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(photos/2452.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+
+
+.body__the-neon-demon .modal {
+  background-color: var(--color-canvas);
+}
+.body__the-neon-demon .modal input,
+.body__the-neon-demon .modal textarea,
+.body__the-neon-demon .modal input:active {
+  background-color: var(--color-canvas);
+}
+
+
+
+
+
+
+
+
+
+.body__the-neon-demon .action-bar {
+  background: deeppink;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  justify-content: center;
+}
+
+.body__the-neon-demon .action-bar_button {
+  color: var(--color-canvas);
+}
+.body__the-neon-demon .counterTasks {
+  color: var(--color-canvas);
+}
+
+
+
+.body__the-neon-demon .flow {
+  background: transparent;
+  border-radius: 8px;
+} 
+
+.body__the-neon-demon .newTaskCategoryGrid {
+  /* background: var(--color-primary-light); */
+  border: none;
+  opacity: 0.9;
+}
+.body__the-neon-demon .createNewTask_CatDeleteBtn {
+  border: none;
+}
+
+
+
+
+
+
+
+/* A category with tasks parent */
+
+/* A category header */
+.body__the-neon-demon .categoryHeader {
+  background-color: var(--color-primary);
+}
+.body__the-neon-demon .notselectedcategoryheader {
+  color: var(--color-canvas);
+  border-color: var(--color-primary);
+}
+.body__the-neon-demon .extraforselectedcategoryheader {
+  color: var(--color-primary);
+  background-color: var(--color-canvas);
+  /* background-color: none; */
+  border-color: deeppink;
+  border-color: white;
+}
+.body__the-neon-demon .createNewTask_CategoryName {
+  text-align: left;
+  padding-left: 4px;
+  border: none;
+}
+
+
+
+.body__the-neon-demon .newTaskTitleInputParent {
+  background-color: var(--color-primary);
+}
+.body__the-neon-demon .newTaskTitleInputLabel {
+  color: var(--color-canvas);
+  opacity: 0.9;
+}
+.body__the-neon-demon .newTaskTitleTextArea {
+  width: 100%;
+  margin-left: -2px;
+  background-color: var(--color-canvas);
+  border-radius: 0px;
+  color: var(--color-primary);
+}
+
+.body__the-neon-demon .newTaskTitleTextArea::placeholder {
+  color: var(--color-primary);
+}
+
+
+.body__the-neon-demon .new-task_submit {
+  background-color: var(--color-primary);
+  opacity: 1;
+  color: var(--color-canvas);
+}
+
+.body__the-neon-demon .default-order-new-task_parent button {
+  /* border-color: var(--color-primary); */
+  /* border-color: blue; */
+}
+.body__the-neon-demon .default-order-new-task {
+  border-color: white;
+}
+
+.body__the-neon-demon .default-order-new-task-first,
+.body__the-neon-demon .default-order-new-task.selected {
+  background: var(--color-canvas);
+  border-color: white;
+  color: var(--color-primary);
+}
+.body__the-neon-demon .default-order-new-task-last,
+.body__the-neon-demon .default-order-new-task.not-selected {
+  background: var(--color-primary);
+  border-color: deeppink;
+  color: var(--color-canvas);
+}
+
+.body__the-neon-demon .new-cat_parent {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+
+}
+.body__the-neon-demon .new-cat_label {
+  background-color: var(--color-primary);
+  opacity: 0.9;
+  color: var(--color-canvas);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.body__the-neon-demon .new-cat_input {
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: -2px;
+  border-radius: 0px;
+  background-color: var(--color-canvas);
+}
+
+.body__the-neon-demon .new-cat_submit {
+  color: var(--color-canvas);
+}
+
+
+
+
+
+
+
+
+
+.body__the-neon-demon .arrowLeftRight,
+.body__the-neon-demon .toggle-category,
+.body__the-neon-demon .editCategory {
+  color: var(--color-primary);
+  border-color: var(--color-canvas);
+  background-color: var(--color-canvas);
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+
+.body__the-neon-demon .taskTable {
+  margin-top: 2em;
+  border-radius: 1em;
+}
+
+.body__the-neon-demon .task_delete,
+.body__the-neon-demon .task_down,
+.body__the-neon-demon .task_up,
+.body__the-neon-demon .task_edit {
+  border-color: transparent;
+  background-color: var(--color-canvas);
+  opacity: 0.5;
+}
+
+
+
+.body__the-neon-demon .taskTitle {
+  border-color: transparent;
+  /* background-color: var(--color-secondary); */
+  color: var(--color-canvas);
+  text-shadow: 0px 0px 2px black;
+}
+.body__the-neon-demon .emptyTaskTitle {
+  background: transparent;
+}
+.body__the-neon-demon .task-checkbox-container-checked {
+  border-color: transparent;
+  background: var(--color-primary);
+}
+.body__the-neon-demon .task-checkbox-container-unchecked {
+  border-color: transparent;
+  background-color: var(--color-canvas);
+  opacity: 0.5;
+}
+
+
+.body__the-neon-demon footer {
+  border: none;
+}
+.body__the-neon-demon footer .createdBy {
+  background-color: var(--color-canvas);
+  opacity: 0.5;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.body__the-neon-demon footer .createdBy a {
+  border: none;
+}
+
+
+
+
+
+
+/* SCROLLBAR */
+
+/* Track */
+.body__the-neon-demon::-webkit-scrollbar-track {
+  background: var(--color-secondary-light);
+}
+
+/* Handle */
+.body__the-neon-demon::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+}
+
+/* Handle on hover */
+.body__the-neon-demon::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+/* End SCROLLBAR */
+
+
+
+
+
+
+
+
+@media only screen and (min-device-width: 600px) {
+  
+  .body__the-neon-demon .flow {
+    margin: 0.8em;
+  } 
+  .body__the-neon-demon .categoryHeaderTable {
+    margin: 0;
+  }
+
+}
+
+@media only screen and (min-device-width: 1000px) {
+
+
+
+
+  .body__the-neon-demon .createNewTask_CatDeleteBtn:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .body__the-neon-demon .arrowLeftRight:hover,
+  .body__the-neon-demon .toggle-category:hover,
+  .body__the-neon-demon .editCategory:hover {
+    color: #ebdac0;
+    background: var(--color-primary);
+  }
+  
+  .body__the-neon-demon .task_delete:hover,
+  .body__the-neon-demon .task_down:hover,
+  .body__the-neon-demon .task_up:hover,
+  .body__the-neon-demon .task_edit:hover {
+    border-color: var(--color-canvas);
+    color: var(--color-canvas);
+    background-color: var(--color-secondary);
+  }
+  
+
+
+  .body__the-neon-demon .task-checkbox-container-unchecked:hover {
+    opacity: 1;
+  }
+  
+  
+  
+  .body__the-neon-demon {
+    background-position: -26em -24em;
+    background-size: 132%; 
+  }
+
+}
+
+

@@ -16,6 +16,7 @@
   <link href='stylesheet_green-spacious.css' rel='stylesheet'>
   <link href='stylesheet_sun-gym.css' rel='stylesheet'>
   <link href='stylesheet_the-white-lotus.css?ver=34' rel='stylesheet'>
+  <link href='stylesheet_the-neon-demon.css?ver=34' rel='stylesheet'>
   
   <meta name="viewport" content="width=device-width">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -98,8 +99,9 @@
         <div class="counterTasks" id="counterTasks">
         </div>
       </div>
-
-      <canvas id="signature" class="signature"></canvas>
+      <a href="https://www.frankvonk.be">
+        <canvas id="signature" class="signature"></canvas>
+      </a>
       <!-- <h4 class="hcBlack">Hide</h4> -->
     </div>
 
@@ -230,6 +232,10 @@
         <button class="css-theme-btn css-theme-btn__the-white-lotus" id="css-theme-btn__the-white-lotus"
           onclick="changeCSSTheme('the-white-lotus')">
           The White Lotus 🪷
+        </button>
+        <button class="css-theme-btn css-theme-btn__the-neon-demon" id="css-theme-btn__the-neon-demon"
+          onclick="changeCSSTheme('the-neon-demon')">
+          The Neon Demon
         </button>
         <!-- <button class="css-theme-btn css-theme-btn__green-spacious" id="css-theme-btn__green-spacious"
           onclick="changeCSSTheme('green-spacious')">
