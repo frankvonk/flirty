@@ -72,6 +72,8 @@
 
   --flow-highlight-background: #53141b;
   --flow-highlight-color: var(--color-text-inverted);
+  --flow-highlight-category-border-color: var(--color-primary);
+  --flow-highlight-task-color: var(--color-text-inverted);
 
 
   --footer-css-theme-btn-background: var(--color-canvas);

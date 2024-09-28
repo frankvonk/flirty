@@ -81,8 +81,6 @@ body {
   --new-cat_color: grey;
   --new-cat_hover: silver;
 
-  --flow-highlight-background: var(--color-primary-light);
-  --flow-highlight-color: var(--color-text);
 
   --category-header-title-background: var(--color-white);
   --category-header-title-border: var(--color-brand);
@@ -97,9 +95,19 @@ body {
 
   --task-title_border-color: black;
 
+  --flow-highlight-background: var(--color-primary-light);
+  --flow-highlight-color: var(--color-text);
+  --flow-highlight-category-border-color: var(--color-primary);
+  --flow-highlight-task-color: var(black);
+
+
+
   --footer-css-theme-btn-background: transparent;
   --footer-css-theme-btn-opacity: 1;
   
+  --task-checkbox-unchecked-background: white;
+  --task-checkbox-checked-background: black;
+
 }
 
 /* Reset default behaviour */
@@ -352,31 +360,6 @@ input:active {
   flex-wrap: wrap;
   margin-top: 2px;
   margin: 4px 1px 0 2px;
-}
-
-
-
-
-
-
-
-
-.flow {
-  border: none;
-  margin: 1em;
-  margin: 0px 2px 2em 1px;
-  text-align: center;
-  /* zoom: 0.8; */
-  /* float: left; */
-}
-
-.flow.highlight1 {
-  background: var(--flow-highlight-background);
-}
-
-.flow.highlight1 .categoryHeader {
-  background: var(--flow-highlight-background);
-  color: var(--flow-highlight-color);
 }
 
 
@@ -650,6 +633,12 @@ input:active {
   max-width: 130px;
 }
 
+.task-checkbox-container-checked {
+  background: var(--task-checkbox-checked-background);
+}
+.task-checkbox-container-unchecked {
+  background: var(--task-checkbox-unchecked-background);
+}
 
 
 
@@ -699,6 +688,44 @@ footer a {
 .css-theme-btn__active {
   font-weight: bold;  
 }
+
+
+
+
+
+.flow {
+  border: none;
+  margin: 1em;
+  margin: 0px 2px 2em 1px;
+  text-align: center;
+  /* zoom: 0.8; */
+  /* float: left; */
+}
+
+.flow.highlight1 {
+  background: var(--flow-highlight-background);
+}
+
+.flow.highlight1 .categoryHeader {
+  background: var(--flow-highlight-background);
+  color: var(--flow-highlight-color);
+  border-color: var(--flow-highlight-category-border-color);
+}
+
+
+.flow.highlight1 .extraforselectedcategoryheader {
+  background: var(--flow-highlight-category-border-color);
+  color: var(--color-text-inverted);
+  border-color: var(--flow-highlight-category-border-color);
+}
+
+.flow.highlight1 .taskTitle {
+  color: var(--flow-highlight-task-color);
+}
+
+
+
+
 
 
 

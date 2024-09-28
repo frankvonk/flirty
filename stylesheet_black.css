@@ -61,7 +61,10 @@
   --categorySelected-color: black;
 
   --flow-highlight-background: #444;
-  --flow-highlight-color: deeppink;
+  --flow-highlight-color: --color-primary;
+
+  --flow-highlight-category-border-color: var(--color-primary);
+  --flow-highlight-task-color: var(black);
 
   --new-cat_background: deeppink;
   --new-cat_color: deeppink;
@@ -69,6 +72,8 @@
 
   --new-task-category-border: var(--color-brand);
 
+  --task-checkbox-unchecked-background: black;
+  --task-checkbox-checked-background: #AE57FF;
 
 
   filter: saturate(1.4);
@@ -190,9 +195,7 @@
   border: none;
 }
 .body__black .task-checkbox-container-checked {
-  background: #AE57FF;
   border-color: #AE57FF;
-  color: white;
 }
 .body__black .task-checkbox-container-unchecked {
   border-color: #AE57FF;

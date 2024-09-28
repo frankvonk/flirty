@@ -50,6 +50,11 @@
   --new-cat_color: deeppink;
   --new-cat_hover: deeppink;
 
+  --flow-highlight-background: var(--color-secondary-light);
+  --flow-highlight-color: var(--color-secondary);
+  --flow-highlight-category-border-color: var(--color-secondary);
+  --flow-highlight-task-color: var(--color-secondary);
+
 
 
 

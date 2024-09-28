@@ -1547,7 +1547,6 @@ function renderTask(displayContainer, task) {
   let c = canvasCheckBox; // document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
 
-  
 
   switch(localStorage['THEME']) {
     case "black":
@@ -1563,11 +1562,10 @@ function renderTask(displayContainer, task) {
       ctx.strokeStyle = task.checked ? 'darkseagreen' : 'indianred';
       break;
     case "wireframe":
-      ctx.strokeStyle = task.checked ? '#ebdac0' : 'rgb(36,47,39)';
+      ctx.strokeStyle = task.checked ? 'white' : 'rgb(36,47,39)';
       break;  
-
     default:
-    ctx.strokeStyle = task.checked ? 'silver' : 'silver';
+      ctx.strokeStyle = task.checked ? 'silver' : 'silver';
   }
 
   ctx.lineWidth = 25;

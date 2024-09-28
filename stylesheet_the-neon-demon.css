@@ -21,9 +21,7 @@
   --color-cancel-light: var(--color-primary-light);
 
 
-
   --opacity-cell: 0.5;
-
 
 
   --action-bar_button_color: var(--color-canvas);
@@ -55,7 +53,6 @@
 
 
 
-  
   --saving-spinner_background: var(--color-primary);
   --saving-spinner_color: var(--color-canvas);
 
@@ -72,6 +69,9 @@
 
   --flow-highlight-background: #53141b;
   --flow-highlight-color: var(--color-text-inverted);
+
+  --flow-highlight-category-border-color: var(--color-primary);
+  --flow-highlight-task-color: white;
 
 
   --footer-css-theme-btn-background: var(--color-canvas);
@@ -126,22 +126,6 @@
   /* /_The White Lotus/main logo in pond/2.9.png */
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-.body__the-neon-demon:before {
-  /* content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url(photos/2452.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
 }
 
 
@@ -250,10 +234,6 @@
   color: var(--color-canvas);
 }
 
-.body__the-neon-demon .default-order-new-task_parent button {
-  /* border-color: var(--color-primary); */
-  /* border-color: blue; */
-}
 .body__the-neon-demon .default-order-new-task {
   border-color: white;
 }
