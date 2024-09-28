@@ -67,8 +67,8 @@
   --new-cat_color: var(--color-primary);
   --new-cat_hover: var(--color-primary);
 
-  --flow-highlight-background: #53141b;
-  --flow-highlight-color: var(--color-text-inverted);
+  --flow-highlight-background: white;
+  --flow-highlight-color: deeppink;
 
   --flow-highlight-category-border-color: var(--color-primary);
   --flow-highlight-task-color: white;
