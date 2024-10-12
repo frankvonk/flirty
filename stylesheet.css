@@ -206,7 +206,6 @@ input:active {
   color: var(--saving-spinner_color);
   padding: 1em;
   z-index: 5;
- 
   display: none;
 }
 
@@ -220,6 +219,7 @@ input:active {
   background: grey;
   margin: 0 auto;
   color: white;
+  font-weight: 700;
   padding: 1em; 
 }
 
@@ -300,6 +300,10 @@ input:active {
 
 
 
+.modal .modal_cancel,
+.modal .modal_accept {
+  font-weight: 700;
+}
 
 .modal .modal_cancel {
   background: var(--modal_modal-cancel_background);
