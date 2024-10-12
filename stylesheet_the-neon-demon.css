@@ -32,9 +32,9 @@
   --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
   --modal_set-top-or-bottom_not-selected_border-color: var(--color-brand);
   --modal_set-top-or-bottom_not-selected_color: var(--color-text);
-  --modal_set-top-or-bottom_selected_background: var(--color-brand);
-  --modal_set-top-or-bottom_selected_border-color: var(--color-brand);
-  --modal_set-top-or-bottom_selected_color: var(--color-text);
+  --modal_set-top-or-bottom_selected_background: var(--color-primary);
+  --modal_set-top-or-bottom_selected_border-color: var(--color-primary);
+  --modal_set-top-or-bottom_selected_color: var(--color-text-inverted);
 
   --modal_set-top-or-bottom_background_hover: var(--color-brand-light);
   --modal_set-top-or-bottom_border-color_hover: var(--color-brand-light);
