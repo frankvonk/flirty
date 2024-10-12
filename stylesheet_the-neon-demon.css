@@ -53,8 +53,8 @@
 
 
 
-  --saving-spinner_background: var(--color-primary);
-  --saving-spinner_color: var(--color-canvas);
+  --saving-spinner_background: var(--color-secondary-light);
+  --saving-spinner_color: var(--color-text-inverted);
 
 
   --new-task-category-border: var(--color-primary);
