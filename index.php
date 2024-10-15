@@ -77,9 +77,6 @@
       <!-- <h3 id="displayBioRobot" class="biorobot-title">
         Биоробот делать / BioRobot ToDo 
       </h3> -->
-      <!-- <div class='btnSubHeader' id="deleteDB" onclick="resetDataBase()">
-        DB RESET
-      </div> -->
       <button class='action-bar_button' id="importDB" onclick=importDataBase()>
         In
       </button>

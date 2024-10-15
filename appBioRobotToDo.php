@@ -19,20 +19,55 @@ document.addEventListener("visibilitychange", () => {
 
 
 
-
-
-
-
-const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-const randomLetter = generateRandomChar(alphabet);
-console.log("char =",randomLetter);
-
 // get random char from string
-function generateRandomChar(string) {
-  return string.charAt(Math.floor(Math.random() * string.length));
+function generateRandomChar() {
+  const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+}
+
+function createThreeCharString() {
+  let str = "";
+  for (let i = 0; i < 3; i++) {
+    str += generateRandomChar();
+  }
+  return str;
+}
+
+function checkIfDBBioRobotAlreadyHastTaskWithId(id) {
+  let hasTask = false;
+  dbBioRobot.tasksToBeExecuted.forEach(task => {
+    if (task.id === id)
+      hasTask = true;
+  })
+  dbBioRobot.tasksDeleted.forEach(task => {
+    if (task.id === id)
+      hasTask = true;
+  })
+  dbBioRobot.tasksHistory.forEach(task => {
+    if (task.id === id)
+      hasTask = true;
+  })
+  return hasTask;
+}
+
+function generateUniqueId() {
+  let id = createThreeCharString();
+  while (checkIfDBBioRobotAlreadyHastTaskWithId(id)) {
+    id = createThreeCharString();
+  }
+  return "id" + id;
 }
 
 
+
+
+// dbBioRobot.tasksToBeExecuted.forEach(task => {
+//     if(Number.isInteger(task.id)) {
+//         console.log(" is integer ", task)
+//         task.id = "id" + task.id;
+//     }
+// })
+// updateLocalStorage(dbBioRobot);
 
 
 
@@ -56,9 +91,7 @@ const newTaskTitleTextArea = document.getElementById('newTaskTitleTextArea');
 const btnSetTaskFirst = document.getElementById('btnSetTaskFirst');
 const btnSetTaskLast = document.getElementById('btnSetTaskLast');
 
-const errSelectTitle = document.getElementById('errSelectTitle');
 
-const deleteDB = document.getElementById('deleteDB');
 const btnBin = document.getElementById('bin');
 const btnImport = document.getElementById('importDB');
 const submit = document.getElementById('submit');
@@ -81,13 +114,6 @@ const changeCSSTheme = (theme) => {
   // TODO remove .css-theme-btn__active from other elements before adding this one
  
   localStorage['THEME'] = theme;
-
-   if (theme == 'wireframe') {
-    // localStorage.removeItem('THEME')
-  } else {
-    // localStorage['THEME'] = theme;
-  }
-
 
   const signature = document.getElementById('signature');
   if (signature) {
@@ -177,27 +203,6 @@ let dbBioRobot = {
 
 /*
 '1111011 100010 1100011 1100001 1110100 1100101 1100111 1101111 1110010 1101001 1100101 1110011 100010 111010 1011011 1111011 100010 1101001 1100100 100010 111010 100010 1000111 1100101 1101110 1100101 1110010 1100001 1101100 100010 101100 100010 1100100 1100101 1110011 1100011 1110010 1101001 1110000 1110100 1101001 1101111 1101110 100010 111010 100010 1000111 1100101 1101110 1100101 1110010 1100001 1101100 100010 101100 100010 1100100 1101001 1110011 1110000 1101100 1100001 1111001 1000011 1101111 1101110 1110100 1100101 1101110 1110100 100010 111010 1110100 1110010 1110101 1100101 101100 100010 1110100 1101001 1101101 1100101 1000010 1101100 1101111 1100011 1101011 1110011 100010 111010 1111011 100010 1110100 1101111 1100111 1100111 1101100 1100101 100010 111010 1100110 1100001 1101100 1110011 1100101 101100 100010 1110011 1110100 1100001 1110010 1110100 1010100 1101001 1101101 1100101 100010 111010 1101110 1110101 1101100 1101100 1111101 1111101 1011101 101100 100010 1110100 1100001 1110011 1101011 1110011 1010100 1101111 1000010 1100101 1000101 1111000 1100101 1100011 1110101 1110100 1100101 1100100 100010 111010 1011011 1111011 100010 1110100 1101001 1110100 1101100 1100101 100010 111010 100010 1110000 1100001 1110011 1110100 1100101 1100100 100010 101100 100010 1110101 1101001 1100100 100010 111010 100010 1110101 1101001 1100100 110001 110110 110001 110000 110111 110010 110010 110101 110100 110010 110101 110111 110010 100010 101100 100010 1100011 1100001 1110100 1100101 1100111 1101111 1110010 1111001 100010 111010 100010 1000111 1100101 1101110 1100101 1110010 1100001 1101100 100010 101100 100010 1100011 1101000 1100101 1100011 1101011 1100101 1100100 100010 111010 1100110 1100001 1101100 1110011 1100101 1111101 1011101 101100 100010 1110100 1100001 1110011 1101011 1110011 1001000 1101001 1110011 1110100 1101111 1110010 1111001 100010 111010 1011011 1011101 101100 100010 1110100 1100001 1110011 1101011 1110011 1000100 1100101 1101100 1100101 1110100 1100101 1100100 100010 111010 1011011 1011101 1111101'
-
-// Single quotations
-{'categories':[{'id':'General','description':'General','tasksToBeExecuted':[{'title':'pasted','id':'id1610722542572','category':'General','checked':true}],'tasksHistory':[],'tasksDeleted':[]}
-
-
-// Double quotations
-{
-	"categories": [{
-		"id": "General",
-		"description": "General"
-	}],
-	"tasksToBeExecuted": [{
-		"title": "pasted",
-		"id": "id1610722542572",
-		"category": "General",
-		"checked": true
-	}],
-	"tasksHistory": [],
-	"tasksDeleted": []
-}
-
 */
 
 
@@ -232,10 +237,8 @@ function getDataBase() {
         // dbBioRobot = 
     <?php
     /*
-
       function getDataBasePHP() {
         
-
         //$sql = "select * from users where userName = 'FrankVonk'";
         $sql = "select * from users where userName = 'TestUser'";
         $dbh = new PDO($DB_CONNSTRING, $DB_USERNAME, $DB_PASSWORD);
@@ -269,27 +272,18 @@ function getDataBase() {
         //   "tasksToBeExecuted": [
         //     { "title": "this is a testcard", "id": "id1608751329sfdgcv598445", "category": "id1609847627878" },
         //   ],
-        // }
-          
-           
+        // }      
         }
-
         // $dbh = null;            
       } // End function
-
       print getDataBasePHP();
 */
 ?>
     //console.log('found db =', dbBioRobot);
     //console.log('decoded db =', JSON.parse(decodeBinary(dbBioRobot))  );
-
-    
-    
-  //  console.log('found db php =', dbBioRobot);
-    
+  //  console.log('found db php =', dbBioRobot); 
     //dbBioRobot = JSON.parse(decodeBinary(dbBioRobot));
    // console.log('found db =', dbBioRobot);
-
 
 
     $.ajax({
@@ -321,12 +315,6 @@ function getDataBase() {
           retrievingDataSpinner.style.display = 'none'
           lockOverlay.style.display = 'none'
 
-
-
-
-
-
-
           // For counting and finding lost tasks
           // dbBioRobot.categories.forEach(category => {
           //   dbBioRobot.tasksToBeExecuted.forEach((task, index) => {
@@ -342,12 +330,6 @@ function getDataBase() {
           //     arr.push(task)
           // })
           // console.log('stray tasks: ', arr)
-
-
-
-
-
-
 
 
         } else {
@@ -381,8 +363,6 @@ function getDataBase() {
 }
 
 
-
-
 /*
 // this could be helpful to converse a db 
 // Convert database to newly added attributes
@@ -401,8 +381,6 @@ updateCategoriesWithNewAttributes()
 */
 
 
-
-
 function setDefaultSettings(defaultCatId) {
   // console.log('called setDefaultSettings', defaultCatId)
   setTimeout(() => {
@@ -416,19 +394,14 @@ if (window.localStorage['taskCategoryId'] && window.localStorage['taskCategoryId
   lastSelectedCategory = window.localStorage['taskCategoryId'];
 }
 let preSelectThisCategory = lastSelectedCategory || defaultCategoryId;
-// console.log('defaultCategoryId = ', defaultCategoryId)
 
-// console.log('set this as initial cat == ', preSelectThisCategory)
-// console.log('set this as initial cat == ', JSON.stringify( preSelectThisCategory))
-// console.log('set this as initial cat3  == ', typeof(preSelectThisCategory))
 setDefaultSettings(preSelectThisCategory);
 
 if (window.localStorage['userName'] && window.localStorage['password']) {
   //Call SQL
   getDataBase();
 } else {
-  //alert('gimme<p>dsfg</p>')
- 
+  // alert('gimme<p>dsfg</p>')
   const content = [];
   let tr = newTr();
   let td = newTd('Please enter credentials to acces your database'); 
@@ -466,7 +439,6 @@ if (window.localStorage['userName'] && window.localStorage['password']) {
   tr.append(td);
   content.push(tr)
 
-      
   renderGeneralModal({
     label: "Say the magic word!",
     content,
@@ -493,25 +465,11 @@ if (window.localStorage['userName'] && window.localStorage['password']) {
     canClickEscapeKey: true,
     className: "modal_enterCredentials"
   })
-
-
-  
- 
- 
 }
 
 renderCategoryButtons();
 renderTasks();
 
-
-function convert(dataToConvert) {
-  let newBinaryString = "";
-  
-  for (var i = 0; i < dataToConvert.length; i++) {
-    newBinaryString += dataToConvert[i].charCodeAt(0).toString(2) + " - ";
-  }
-  return newBinaryString;
-}
 
 function text2Binary(string) {
     return string.split('').map(function (char) {
@@ -524,10 +482,9 @@ function updateLocalStorage(dbBioRobot) {
   if (savingSpinner)
     savingSpinner.style.display = 'inherit'
   
-    // console.log('saving db ', dbBioRobot)
+  // console.log('saving db ', dbBioRobot)
   dbBioRobot = text2Binary(JSON.stringify(dbBioRobot));
   // window.localStorage['BIOROBOT'] = JSON.stringify(dbBioRobot);
-
 
   let dbString = '"';
   dbString += JSON.stringify(dbBioRobot).replaceAll('"', "'");
@@ -554,54 +511,24 @@ function updateLocalStorage(dbBioRobot) {
     }
   });
 
-
-// create backup-offline version using localStorage
+  // create backup-offline version using localStorage
   if (navigator.onLine) {
-
 
   } else {
 
   }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 // Currently selected category for new task
 function setCategory(categoryId) {
-  // console.log('called setCategory for id: ', categoryId)
-
   window.localStorage['taskCategoryId'] = categoryId
-  // console.log('setcategory = ', category)
   // Reset css for all other categories
   dbBioRobot.categories.forEach(category => {
     const categoryElement = document.getElementById(category.id);
     if (categoryElement) {
       // reset the css on the createnewtast menu list of categories
-      // categoryElement.style.background = 'white';
-      // categoryElement.style.color = 'hotpink';
       categoryElement.classList.remove('extraforselectedcategoryheader');
       categoryElement.classList.add('notselectedcategoryheader');
     }
@@ -609,16 +536,11 @@ function setCategory(categoryId) {
 
   const categoryBtn = document.getElementById(categoryId);
   if (categoryBtn) {
-    // categoryBtn.style.background = 'hotpink';
-    // categoryBtn.style.color = 'white';
     categoryBtn.classList.remove('notselectedcategoryheader');
     categoryBtn.classList.add('extraforselectedcategoryheader');
   }
   newTaskCategory = categoryId;
   const category = dbBioRobot.categories.find(category => category.id == categoryId)
-  // if (category)
-    // console.log('found cat = ', category)
-  
   renderTasks();
   
   // Auto focus on new task creation
@@ -630,20 +552,6 @@ function setCategory(categoryId) {
 
   SubmitNewCategoryOnEnter();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -736,14 +644,10 @@ function importDataBase() {
             mergeDatabases(JSON.parse(data.value));
 
           } else {
-            console.log('replacing db')
-            console.log('fa = ', data)
-            console.log('val = ', data.value)
+            console.log('replacing db: ', data.value)
             dbBioRobot = JSON.parse(data.value);
-            //dbBioRobot = (data.value);
           }
           updateLocalStorage(dbBioRobot);
-          // updateLocalStorage() window.localStorage['BIOROBOT'] = JSON.stringify(dbBioRobot);
           renderTasks()
           renderCategoryButtons();    
           hideGeneralModal();
@@ -758,7 +662,6 @@ function importDataBase() {
   })
 }
 
-//console.log("huh?", isValidJsonString('{ "Id": 1, "Name": "Coke" }'))
 
 function isValidJsonString(str) {
   try {
@@ -770,27 +673,22 @@ function isValidJsonString(str) {
 }
 
 
-
-
 // Store tasks from localhost in downloadable JSON
 function exportDataBase() {
   let data = encodeURIComponent(JSON.stringify(dbBioRobot));
   var dataStr = "data:application/json;charset=utf-8," + data;
   var dlAnchorElem = document.createElement('a');
   dlAnchorElem.setAttribute("href", dataStr);
-  // dlAnchorElem.setAttribute("download", "dbBioRobot.js");
   dlAnchorElem.setAttribute("download", "dbBioRobot.json");
   dlAnchorElem.click();
 }
-
-
 
 
 function renderTasksInBin() {
   setOverlayHeightToFull()
 
   const binIsEmpty = dbBioRobot.tasksDeleted.length === 0;
-  // Reset is needed as this screen refreshes after undoing a deletion
+  // Reset is needed so this screen refreshes after undoing a deletion
   modal.innerHTML = "";
    renderGeneralModal({
     label: "Deleted Tasks",
@@ -891,7 +789,6 @@ function setOverlayHeightToFull() {
   html.clientHeight, html.scrollHeight, html.offsetHeight);
   lockOverlay.style.height = height+'px';
   savingSpinnerParent.style.height = height+'px';
-  
 }
 
 
@@ -900,7 +797,7 @@ function setOverlayHeightToFull() {
 
 function renderTasksInHistory() {
   setOverlayHeightToFull()
-  // Reset is needed as this screen refreshes after undoing a deletion
+  // Reset is needed as this screen refreshes after undoing a marking as done
   modal.innerHTML = "";
   const taskHistoryIsEmpty = dbBioRobot.tasksHistory.length === 0;
   renderGeneralModal({
@@ -933,7 +830,7 @@ function renderTasksInHistory() {
 
 
 
-// Open popup with bin to permanently erase OR undo deleted tasks
+// Open popup with bin to permanently erase OR undo tasks marked as done
 function displayListOfTasksInHistory() {
   const arrTasksInHistory = [];
   dbBioRobot.tasksHistory.forEach(task => {
@@ -1055,7 +952,6 @@ function SubmitNewCategoryOnEnter() {
 
     if (e.key === 'Enter' && newCategoryInput.value.length > 4) {
       createNewCategory()
-      console.log('hi there keypress deeper')
     }
   });
 }
@@ -1064,9 +960,8 @@ SubmitNewCategoryOnEnter();
 
 // Create new category
 function createNewCategory() {
-  console.log('hi there')
   if (newCategoryInput.value !== '' && categoryDoesNotExistYet(newCategoryInput.value)) {
-    const id = new Date().getTime();
+    const id = generateUniqueId()
     const newCategory = {
       id,
       description: newCategoryInput.value,
@@ -1078,11 +973,8 @@ function createNewCategory() {
     setCategory(id)
     updateLocalStorage(dbBioRobot);
 
-
     newCategoryInput.value = "";
     newTaskTitleTextArea.focus()
-
-
 
   } else if (!categoryDoesNotExistYet(newCategoryInput.value)) {
  
@@ -1113,7 +1005,6 @@ function createNewCategory() {
 function categoryDoesNotExistYet(categoryTitle) {
   let notFound = true;
   dbBioRobot.categories.forEach(cat => {
-    //    console.log(cat)
     if (cat.description === categoryTitle) {
       notFound = false;
     }
@@ -1145,7 +1036,7 @@ function deleteCategory(categoryToDeleteId) {
     dbBioRobot.categories.splice(indexOfCategory, 1);
     addDeletedCategoryToCategoriesDeleted(categoryToDeleteObject);
 
-    // Reset the defaultCategory in case that you have deleted it
+    // Reset the defaultCategory as the current selected category is deleted
     if (window.localStorage['taskCategoryId'] === categoryToDeleteId) {
       window.localStorage['taskCategoryId'] = defaultCategoryId;
     }
@@ -1261,7 +1152,7 @@ function submitTask() {
   if (newTaskCategory !== "") {
     const newTask = {
       title: newTaskTitleTextArea.value,
-      id: "id" + new Date().getTime(),
+      id: generateUniqueId(),
       category: newTaskCategory,
     }
 
@@ -1274,11 +1165,6 @@ function submitTask() {
       dbBioRobot.tasksToBeExecuted.push(newTask);
     }
     updateLocalStorage(dbBioRobot);
-    // l('submitted tasks no it\'s', JSON.parse(window.localStorage['BIOROBOT']))
-    // console.log('local = ', JSON.parse(window.localStorage['BIOROBOT']));
-    renderTasks();
-    // newTaskTitleTextArea.value = "";
-    // newTaskCategory = "";
   }
   renderTasks();
   newTaskTitleTextArea.focus();
@@ -1293,11 +1179,8 @@ function SubmitNewTaskOnEnter() {
       e.preventDefault();
       submit.click();
       newTaskTitleTextArea.focus();
-      // newTaskTitleTextArea.innerHTML = "";
-      // newTaskTitleTextArea.value = "";
     }
   });
-  // console.log('SubmitNewTaskOnEnter')
 }
 SubmitNewTaskOnEnter();
 
@@ -1325,9 +1208,11 @@ function renderTasks() {
 
   // Update the counter in the header with the current amount of tasks to be executed
   const counterTasks =document.getElementById('counterTasks')
-  if (counterTasks)
+  if (counterTasks) {
     counterTasks.innerHTML = dbBioRobot.tasksToBeExecuted.length;
-    counterthing = 0;
+    // For counting and finding lost tasks
+    // counterthing = 0;
+  }
 
   dbBioRobot.categories.forEach(category => {
     // console.log('renderTasks  cat =', category )
@@ -1357,10 +1242,8 @@ function renderTasks() {
       tableHeader.classList += ' extraforselectedcategoryheader';
     } else {
       tableHeader.classList += ' notselectedcategoryheader';
-
     }
 
-    tableHeader.setAttribute('id', 'categoryTitleUidIs' + category.id);
     tableHeader.setAttribute('rowspan', '1');
     tableHeader.setAttribute('colspan', '4');
     tableHeader.onclick = () => {
@@ -1371,8 +1254,6 @@ function renderTasks() {
       toggleDisplayCategoryTasks(category.id)
     });
 
-
-
     tableRow.appendChild(tableHeader)
     table.appendChild(tableRow);
     
@@ -1381,7 +1262,6 @@ function renderTasks() {
     // Move category left button
     tableHeader = document.createElement('th')
     text = document.createTextNode('<');
-    //    text = document.createTextNode('\\u00D3\\u00CB &#215;....');
 
     tableHeader.appendChild(text);
     tableHeader.addEventListener('click', () => moveCategoryLeftOrRight('left', category));
@@ -1390,9 +1270,7 @@ function renderTasks() {
     tableRow.appendChild(tableHeader)
     table.appendChild(tableRow);
 
- 
-
-    // Edit category title button
+    // Toggle category button
     const stringLabelToggleCategory = category.displayContent
       ? "Fold"
       : "Show"
@@ -1402,7 +1280,7 @@ function renderTasks() {
     tableRow.appendChild(td)
     table.appendChild(tableRow);
 
-    // Edit category title button
+    // Edit category button
     tableHeader = document.createElement('th')
     text = document.createTextNode('Edit');
     tableHeader.appendChild(text);
@@ -1412,11 +1290,9 @@ function renderTasks() {
     tableRow.appendChild(tableHeader)
     table.appendChild(tableRow);
 
-
     // Move category right button
     tableHeader = document.createElement('th')
     text = document.createTextNode('>');
-    // text = document.createTextNode('►');
     tableHeader.appendChild(text);
     tableHeader.addEventListener('click', () => moveCategoryLeftOrRight('right', category));
     tableHeader.className = 'arrowLeftRight';
@@ -1427,7 +1303,7 @@ function renderTasks() {
     displayContainer.appendChild(table)
 
     if (category.displayContent == undefined || category.displayContent == true) {
-      // Gather the tasks with this category
+      // Gather the tasks belonging to this category
       let arrTasksWithThisCategory = [];
       dbBioRobot.tasksToBeExecuted.forEach(task => {
         if (task && task.category === category.id)
@@ -1439,7 +1315,7 @@ function renderTasks() {
       if (arrTasksWithThisCategory.length > 0) {
         for (i = 0; i < arrCatLength; i++) {
           
-          // Render all titles of a cat in a list to copy them
+          // Render all titles of a cat in a list to copy them to Apple Notes
           // let place = document.getElementById("listtitles");
           // let par =document.createElement('p')
           // par.innerHTML = arrTasksWithThisCategory[i].title;
@@ -1447,13 +1323,10 @@ function renderTasks() {
           // This is in index, uncomment to see the list
           //<!-- <div id=listtitles>put titles here</div> -->
 
-
-
           renderTask(displayContainer, arrTasksWithThisCategory[i]);
 
           // For counting and finding lost tasks
-          //  counterthing ++;
-
+          // counterthing ++;
         }
       }
     }  
@@ -1463,17 +1336,15 @@ function renderTasks() {
   })
   // For counting and finding lost tasks
   // console.log("rendertask total = ", counterthing)
-  //  counterthing = 0;
+  // counterthing = 0;
 
   // Update height of page to overlay items
   setOverlayHeightToFull()
-
 }
 
 // Render single task in the element of it's category
 function renderTask(displayContainer, task) {
-
-  //   console.log('renderTask krijgt dit = ', task)
+  // l('renderTask ', task)
   const taskTable = document.createElement('table');
   taskTable.className = 'taskTable';
   taskTable.setAttribute('id', task.id);
@@ -1490,13 +1361,12 @@ function renderTask(displayContainer, task) {
   const taskTableTn1 = document.createTextNode(task.title.replace('&nbsp', ' '))
   taskTableTd1.appendChild(taskTableTn1);
   if (task.title == "") {
-    // taskTableTd1.style.visibility = 'hidden'
     taskTableTd1.classList.add('emptyTaskTitle');
   }
   taskTableTr1.appendChild(taskTableTd1);
   taskTable.appendChild(taskTableTr1);
 
-  // Link of task
+  // Link in a task
   if (task.linkLabel && task.linkURL) {
 
     let trLink = document.createElement('tr');
@@ -1529,14 +1399,11 @@ function renderTask(displayContainer, task) {
   taskTableTr2.className = "task-table-tr2";
   taskTable.appendChild(taskTableTr2);
 
-
   let td;
-
   const taskTableTd5 = document.createElement('td');
   taskTableTd5.className = 'task_delete';
   const taskTableTn5 = document.createTextNode('Delete');
   taskTableTd5.appendChild(taskTableTn5);
-
 
 
   taskTableTd5.addEventListener('click', () => deleteTask(task.id, false));
@@ -1558,16 +1425,13 @@ function renderTask(displayContainer, task) {
     ? 'task-checkbox-container-checked'
     : 'task-checkbox-container-unchecked'
 
-
   const canvasCheckBox = document.createElement('canvas');
   canvasCheckBox.setAttribute('id', 'myCanvas');
   canvasCheckBox.style.height = '20px';
-  // canvasCheckBox.style.width = '18px';
   canvasCheckBox.style.width = '28px';
 
-  let c = canvasCheckBox; // document.getElementById("myCanvas");
+  let c = canvasCheckBox;
   var ctx = c.getContext("2d");
-
 
   switch(localStorage['THEME']) {
     case "black":
@@ -1601,15 +1465,16 @@ function renderTask(displayContainer, task) {
   taskTableTd8.setAttribute('onclick', 'markCheckBox(' + task.id + ')');
   taskTableTd8.setAttribute('rowspan', '2');
 
-  if (task.title == "empty")
+  if (task.title == "empty") {
     taskTableTd8.style.visibility = 'hidden'
+  }
   taskTableTr2.appendChild(taskTableTd8);
-
 
 
   // Move Task Up
   const taskTableTd6 = document.createElement('td');
   taskTableTd6.className = 'task_up';
+  // TODO remove this and replace with css class instead of id
   taskTableTd6.setAttribute('id', 'taskUp');
 
   let spanMoveTaskUpBtn = document.createElement('span');
@@ -1805,11 +1670,6 @@ function editCategory(category) {
   // This can be removed when changing default cat behaviour. possibility to set default in general settings menu.
   if (category.description !== defaultCategoryId) {
    
-
-
-
-
-
     // ROW
     tr = newTr();
     // CELL
@@ -1832,12 +1692,7 @@ function editCategory(category) {
     tr.appendChild(td);
     content.push(tr);
 
-
-  
-
-
   }
-
 
   // ROW
   tr = newTr();
@@ -1867,10 +1722,6 @@ function editCategory(category) {
   content.push(tr)
   
 
-
-
-
-
   // ROW
   tr = newTr();
   // CELL
@@ -1891,14 +1742,11 @@ function editCategory(category) {
     tdForCheckboxHighlight.className = 'task-checkbox-container-unchecked';
   }
 
-
   const canvasCheckBox = document.createElement('canvas');
   canvasCheckBox.setAttribute('id', 'myCanvas');
   canvasCheckBox.style.height = '20px';
   canvasCheckBox.style.width = '28px';
   canvasCheckBox.addEventListener('click', () => {
-    console.log('click!!!')
-
     const spanForCheckboxHighlight = document.getElementById('spanForCheckboxHighlight')
     if (category.highlight && category.highlight == true) {
       category.highlight = false;
@@ -2040,7 +1888,7 @@ function executeEditCategory(category) {
       }
     });
     tasksCopiedToCategory.forEach((taskToCopy, index) => {
-      taskToCopy.id = 'id' + new Date().getTime() + index;
+      taskToCopy.id = generateUniqueId()
       taskToCopy.category = category.id;
       dbBioRobot.tasksToBeExecuted.push(taskToCopy)
     })
@@ -2078,14 +1926,10 @@ function executeEditCategory(category) {
     dbBioRobot.categories[indexOfCategory].highlight = newSettingsForCategory.highlight;
   }
 
-
-
-  // console.log('sla deze op = ', dbBioRobot)
   updateLocalStorage(dbBioRobot);
   renderTasks();
   renderCategoryButtons();
   setCategory(window.localStorage['taskCategoryId'])
-
 }
 
 
@@ -2097,8 +1941,6 @@ const openSettingsMenu = () => {
         actionBarOnTop: true,
         showHeader: true  
       };
-
-
 
   const content = [];
 
@@ -2152,9 +1994,6 @@ const openSettingsMenu = () => {
   tr.appendChild(td);
   content.push(tr)
   
-
-
-
   const onCancel = () => {
   }
 
@@ -2193,8 +2032,6 @@ const executeSettings = (newSettingsForSettingsMenu) => {
   newSettingsForSettingsMenu.actionBarOnTop
     ? body.insertBefore(actionBar, categoryContainer)
     : body.insertBefore(categoryContainer, actionBar)
-
-
 }
 
 // Execute settings on startup
@@ -2202,16 +2039,9 @@ const executeSettingsOnStartUp = () => {
   if(window.localStorage['settings_menu']) {
     const newSettingsForSettingsMenu = JSON.parse(window.localStorage['settings_menu'])
     executeSettings(newSettingsForSettingsMenu)
-  } else {
-    console.log(2222222)
-
   }
 }
 executeSettingsOnStartUp()
-
-
-
-
 
 
 
@@ -2285,56 +2115,68 @@ function deleteTask(id, erase = false) {
 
 
 // Change order of tasks in DB
-function moveTaskUpOrDown(direction, id) {
-  // get task to move
-  let taskToMove = {};
-  let indexOfTaskToMove = 0;
+function moveTaskUpOrDown(direction, taskToMoveAsParam) {
+  let id = taskToMoveAsParam.id;
+
+  // Get task to move
+  let taskToMove = null;
+  let indexOfTaskToMove = -1;
+  
   dbBioRobot.tasksToBeExecuted.forEach((task, index) => {
     if (task && task.id === id) {
-      taskToMove = dbBioRobot.tasksToBeExecuted[index];
+      taskToMove = task;
       indexOfTaskToMove = index;
     }
-  })
-  // console.log('Move this task = ', taskToMove)
-  // console.log('it has index = ', indexOfTaskToMove)
+  });
+
+  if (taskToMove === null) {
+    console.error('Task not found');
+    return;
+  }
 
   if (direction === 'up') {
-    // loop backwards trough db.tasksToBeExecuted to find closest downstream sibling
-    // (task same cat. & lower index then current)
-    let indexOfNewPlace = 0;
+    // Loop backwards through db.tasksToBeExecuted to find closest downstream sibling
+    // (task same category & lower index than current)
+    let indexOfNewPlace = -1;
 
-    for (i = 0; i < indexOfTaskToMove; i++) {
+    for (let i = 0; i < indexOfTaskToMove; i++) {
       if (dbBioRobot.tasksToBeExecuted[i] && dbBioRobot.tasksToBeExecuted[i].category === taskToMove.category) {
         indexOfNewPlace = i;
       }
     }
-    // switch places
-    dbBioRobot.tasksToBeExecuted.splice(indexOfNewPlace, 0, taskToMove);
-    // Remove task to move from old location
-    dbBioRobot.tasksToBeExecuted.splice((indexOfTaskToMove + 1), 1);
-    // store db & update screen
-    updateLocalStorage(dbBioRobot);
-    renderTasks();
-  }
-  else {
-    // loop forward trough db.tasksToBeExecuted to find closest upstream sibling
-    // (task same cat. & higher index then current)
-    let indexOfNewPlace = 0;
-    for (i = indexOfTaskToMove + 1; i < dbBioRobot.tasksToBeExecuted.length; i++) {
+
+    if (indexOfNewPlace !== -1) {
+      // Switch places
+      dbBioRobot.tasksToBeExecuted.splice(indexOfNewPlace, 0, taskToMove);
+      // Remove task to move from old location
+      dbBioRobot.tasksToBeExecuted.splice(indexOfTaskToMove + 1, 1);
+      // Store db & update screen
+      updateLocalStorage(dbBioRobot);
+      renderTasks();
+    }
+  } else {
+    // Loop forward through db.tasksToBeExecuted to find closest upstream sibling
+    // (task same category & higher index than current)
+    let indexOfNewPlace = -1;
+
+    for (let i = indexOfTaskToMove + 1; i < dbBioRobot.tasksToBeExecuted.length; i++) {
       if (dbBioRobot.tasksToBeExecuted[i].category === taskToMove.category) {
         indexOfNewPlace = i;
-        // switch places
-        dbBioRobot.tasksToBeExecuted.splice((indexOfNewPlace + 1), 0, taskToMove);
-        // Remove task to move from old location
-        dbBioRobot.tasksToBeExecuted.splice(indexOfTaskToMove, 1);
-        // store & update screen
-        updateLocalStorage(dbBioRobot);
-        renderTasks();
         break;
-      };
-    };
-  };
-};
+      }
+    }
+
+    if (indexOfNewPlace !== -1) {
+      // Switch places
+      dbBioRobot.tasksToBeExecuted.splice(indexOfNewPlace + 1, 0, taskToMove);
+      // Remove task to move from old location
+      dbBioRobot.tasksToBeExecuted.splice(indexOfTaskToMove, 1);
+      // Store & update screen
+      updateLocalStorage(dbBioRobot);
+      renderTasks();
+    }
+  }
+}
 
 
 
@@ -2353,19 +2195,8 @@ function taskIsFirstWithinItsCategory(taskToCheck) {
 let newSettingsForTask = {};
 
 
-// editTask({
-//   category: "id1659347236218",
-//   title: "\nadd varnish over glitters to prevent glitter colours mixin",
-//   id: "id1659347259283"
-// })
-
-
 function editTask(task) {
   // console.log('Edit task = ', task);
-
- 
-
-  
   newSettingsForTask = {};
 
   const currentCategory = dbBioRobot.categories.find(cat => cat.id === task.category);
@@ -2376,8 +2207,6 @@ function editTask(task) {
  
   const content = [];
 
-
- 
   // ROW for editing order of task
   tr = newTr();
   // CELL
@@ -2799,7 +2628,6 @@ function hideGeneralModal() {
 // Clicking on lockoverlay makes modals disappear
 lockOverlay.onclick = () => {
   // this is used to keep the pressed btn highlighted / hover mode while model is open
-  // document.getElementById('deleteDB').className = 'btnactionbar-renamedcheckthis ';
   lockOverlay.style.display = 'none';
 }
 
