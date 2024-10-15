@@ -17,6 +17,58 @@ document.addEventListener("visibilitychange", () => {
 });
 
 
+// dbBioRobot.tasksToBeExecuted.forEach(task => {
+//     if(Number.isInteger(task.id)) {
+//         console.log(" is integer ", task)
+//         task.id = generateUniqueId();
+//     }
+//     updateLocalStorage(dbBioRobot);
+// })
+// dbBioRobot.tasksDeleted.forEach(task => {
+//     if(Number.isInteger(task.id)) {
+//         console.log(" is integer ", task)
+//         task.id = generateUniqueId();
+//     }
+//     updateLocalStorage(dbBioRobot);
+// })
+// dbBioRobot.tasksHistory.forEach(task => {
+//     if(Number.isInteger(task.id)) {
+//         console.log(" is integer ", task)
+//         task.id = generateUniqueId();
+//     }
+//     updateLocalStorage(dbBioRobot);
+// })
+// dbBioRobot.categories.forEach(cat => {
+//     if(Number.isInteger(cat.id)) {
+//         console.log(" is integer ", cat)
+//         cat.id = generateUniqueId();
+//     }
+//     updateLocalStorage(dbBioRobot);
+// })
+
+// dbBioRobot.tasksToBeExecuted.forEach(task => {
+//     if(task.id.length < 1) {
+//         console.log(" is short ", task)
+//         task.id = generateUniqueId();
+//     }
+//     // updateLocalStorage(dbBioRobot);
+// })
+
+// dbBioRobot.tasksToBeExecuted.forEach(task => {
+//     if (task.id.length < 1) {
+//         console.log("ID is short: ", task);
+//         task.id = generateUniqueId();
+//     }
+// });
+
+// dbBioRobot.tasksToBeExecuted.forEach(task => {
+//     if(Number.isInteger(task.id)) {
+//         console.log(" is integer ", task)
+//         task.id = generateUniqueId();
+//     }
+//     updateLocalStorage(dbBioRobot);
+// })
+
 
 
 // get random char from string
@@ -1356,7 +1408,6 @@ function renderTask(displayContainer, task) {
 
   const taskTableTd1 = document.createElement('td');
   taskTableTd1.className = 'taskTitle';
-  taskTableTd1.setAttribute('id', 'taskTitleUidIs' + task.id);
   taskTableTd1.setAttribute('colspan', '6');
   const taskTableTn1 = document.createTextNode(task.title.replace('&nbsp', ' '))
   taskTableTd1.appendChild(taskTableTn1);
@@ -2049,6 +2100,7 @@ executeSettingsOnStartUp()
 
 // Mark checkbox of a task (does nothing besides this)
 function markCheckBox(idOfTaskToToggle) {
+  // l('idOfTaskToToggle = ', idOfTaskToToggle)
   
   let id = null;
   if (typeof(idOfTaskToToggle) === 'number') {
