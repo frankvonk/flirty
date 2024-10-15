@@ -22,37 +22,40 @@ document.addEventListener("visibilitychange", () => {
 //         console.log(" is integer ", task)
 //         task.id = generateUniqueId();
 //     }
-//     updateLocalStorage(dbBioRobot);
 // })
+// updateLocalStorage(dbBioRobot);
+
 // dbBioRobot.tasksDeleted.forEach(task => {
 //     if(Number.isInteger(task.id)) {
 //         console.log(" is integer ", task)
 //         task.id = generateUniqueId();
 //     }
-//     updateLocalStorage(dbBioRobot);
 // })
+// updateLocalStorage(dbBioRobot);
+
 // dbBioRobot.tasksHistory.forEach(task => {
 //     if(Number.isInteger(task.id)) {
 //         console.log(" is integer ", task)
 //         task.id = generateUniqueId();
 //     }
-//     updateLocalStorage(dbBioRobot);
 // })
+// updateLocalStorage(dbBioRobot);
+
 // dbBioRobot.categories.forEach(cat => {
 //     if(Number.isInteger(cat.id)) {
 //         console.log(" is integer ", cat)
 //         cat.id = generateUniqueId();
 //     }
-//     updateLocalStorage(dbBioRobot);
 // })
+// updateLocalStorage(dbBioRobot);
 
 // dbBioRobot.tasksToBeExecuted.forEach(task => {
 //     if(task.id.length < 1) {
 //         console.log(" is short ", task)
 //         task.id = generateUniqueId();
 //     }
-//     // updateLocalStorage(dbBioRobot);
 // })
+// updateLocalStorage(dbBioRobot);
 
 // dbBioRobot.tasksToBeExecuted.forEach(task => {
 //     if (task.id.length < 1) {
@@ -66,8 +69,8 @@ document.addEventListener("visibilitychange", () => {
 //         console.log(" is integer ", task)
 //         task.id = generateUniqueId();
 //     }
-//     updateLocalStorage(dbBioRobot);
 // })
+//     updateLocalStorage(dbBioRobot);
 
 
 
