@@ -1261,7 +1261,7 @@ function submitTask() {
   if (newTaskCategory !== "") {
     const newTask = {
       title: newTaskTitleTextArea.value,
-      id: new Date().getTime(),
+      id: "id" + new Date().getTime(),
       category: newTaskCategory,
     }
 
@@ -2255,7 +2255,6 @@ function markTaskAsDone(id) {
   dbBioRobot.tasksHistory.push(taskForHistory);
 
   const transaction = {
-    timeStamp: new Date(),
     category: dbBioRobot.tasksToBeExecuted[indexToDelete].category,
   }
   dbBioRobot.tasksToBeExecuted.splice(indexToDelete, 1)
@@ -2959,7 +2958,7 @@ const mergeDatabases = (newDatabase) => {
       dbBioRobot.categories.push(newCategoryToBeInserted);
     } else if (identicalCategoryIDFound && !identicalCategoryTitleFound) {
         // If the category id was found, but the titles are not the same, just change id and add category
-        newCategoryToBeInserted.id = getRandomInt(100000000000000000000000);
+        newCategoryToBeInserted.id = "id" + getRandomInt(100000000000000000000000);
         dbBioRobot.categories.push(newCategoryToBeInserted);
     }
   })
@@ -2981,7 +2980,7 @@ const mergeDatabases = (newDatabase) => {
       dbBioRobot.tasksToBeExecuted.push(newTaskToBeInserted);
     } else if (identicalTaskIDFound && !identicalTaskTitleFound) {
         // If the task id was found, but the titles are not the same, just change id and add task
-        newTaskToBeInserted.id = getRandomInt(100000000000000000000000);
+        newTaskToBeInserted.id = "id" + getRandomInt(100000000000000000000000);
         dbBioRobot.tasksToBeExecuted.push(newTaskToBeInserted);
     }
   })
