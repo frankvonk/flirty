@@ -1,0 +1,405 @@
+.body__irina-rimes {
+  --color-brand: white;
+  --color-brand-light: rgb(117,68,69);
+
+  --color-primary: var(--color-secondary-light);
+  --color-primary-light: hotpink;
+  --color-secondary: rgba(253, 210, 224, 0.988);
+  --color-secondary-light: rgb(108, 131, 108);
+
+  --color-white: white;
+  --color-black: black;
+
+  --color-canvas: white;
+
+  --color-text: black;
+  --color-text-inverted: white;
+
+  --color-accept: var(--color-primary);
+  --color-accept-light: var(--color-secondary-light);
+  --color-cancel: var(--color-secondary);
+  --color-cancel-light: var(--color-primary-light);
+
+
+  --opacity-cell: 0.5;
+
+
+  --action-bar_button_color: var(--color-canvas);
+
+  --lock-overlay_background: aqua;
+  --lock-overlay_opacity: 0.4;
+
+  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_border-color: var(--color-brand);
+  --modal_set-top-or-bottom_not-selected_color: var(--color-text);
+  --modal_set-top-or-bottom_selected_background: var(--color-primary);
+  --modal_set-top-or-bottom_selected_border-color: var(--color-primary);
+  --modal_set-top-or-bottom_selected_color: var(--color-text-inverted);
+
+  --modal_set-top-or-bottom_background_hover: var(--color-brand-light);
+  --modal_set-top-or-bottom_border-color_hover: var(--color-brand-light);
+  --modal_set-top-or-bottom_color_hover: var(--color-text-inverted);
+
+
+  --modal_modal-cancel_background: var(--color-cancel);
+  --modal_modal-cancel_color: var(--color-text-inverted);
+  --modal_modal-cancel_background_hover: var(--color-cancel-light);
+  --modal_modal-cancel_border-color_hover: var(--color-cancel-light);
+
+  --modal_modal-accept_background: var(--color-accept);
+  --modal_modal-accept_color: var(--color-text-inverted);
+  --modal_modal-accept_background_hover: var(--color-accept-light);
+  --modal_modal-accept_border-color_hover: var(--color-accept-light);
+
+
+
+  --saving-spinner_background: var(--color-secondary-light);
+  --saving-spinner_color: var(--color-text-inverted);
+
+
+  --new-task-category-border: var(--color-primary);
+
+
+  --categorySelected-background: var(--color-primary);
+  --categorySelected-color: white;
+
+  --new-cat_background: var(--color-primary);
+  --new-cat_color: var(--color-primary);
+  --new-cat_hover: var(--color-primary);
+
+  --flow-highlight-background: white;
+  --flow-highlight-color: deeppink;
+
+  --flow-highlight-category-border-color: var(--color-primary);
+  --flow-highlight-task-color: white;
+
+
+  --footer-css-theme-btn-background: var(--color-canvas);
+  --footer-css-theme-btn-opacity: 0.5;
+
+
+
+  filter: saturate(1.4);
+  /* background: white; */
+  --categoryHeader-color: blue;
+
+ 
+
+  background-color: black;
+  background-image: url("./images/irina/2.png");
+  background-position: -72em 4em;
+  background-size: 179em;
+
+
+
+  /* /_The White Lotus/main logo in pond/2.9.png */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.body__irina-rimes .modal {
+  background-color: var(--color-canvas);
+}
+.body__irina-rimes .modal input,
+.body__irina-rimes .modal textarea,
+.body__irina-rimes .modal input:active {
+  background-color: var(--color-canvas);
+}
+
+
+
+
+
+
+
+
+
+.body__irina-rimes .action-bar {
+  background: var(--color-secondary-light);
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 4px;
+  justify-content: center;
+}
+
+.body__irina-rimes .action-bar_button {
+  color: var(--color-canvas);
+}
+.body__irina-rimes .counterTasks {
+  color: var(--color-canvas);
+}
+
+
+
+.body__irina-rimes .flow {
+  background: transparent;
+  border-radius: 8px;
+} 
+
+.body__irina-rimes .newTaskCategoryGrid {
+  /* background: var(--color-primary-light); */
+  border: none;
+  opacity: 0.9;
+}
+.body__irina-rimes .createNewTask_CatDeleteBtn {
+  border: none;
+}
+
+
+
+
+
+
+
+/* A category with tasks parent */
+
+/* A category header */
+.body__irina-rimes .categoryHeader {
+  background-color: var(--color-primary);
+}
+.body__irina-rimes .notselectedcategoryheader {
+  color: var(--color-canvas);
+  border-color: var(--color-primary);
+}
+.body__irina-rimes .extraforselectedcategoryheader {
+  color: var(--color-primary);
+  background-color: var(--color-canvas);
+  /* background-color: none; */
+  border-color: deeppink;
+  border-color: white;
+}
+.body__irina-rimes .createNewTask_CategoryName {
+  text-align: left;
+  padding-left: 4px;
+  border: none;
+}
+
+
+
+.body__irina-rimes .newTaskTitleInputParent {
+  background-color: var(--color-primary);
+}
+.body__irina-rimes .newTaskTitleInputLabel {
+  color: var(--color-canvas);
+  opacity: 0.9;
+}
+.body__irina-rimes .newTaskTitleTextArea {
+  width: 100%;
+  margin-left: -2px;
+  background-color: var(--color-canvas);
+  border-radius: 0px;
+  color: var(--color-primary);
+}
+
+.body__irina-rimes .newTaskTitleTextArea::placeholder {
+  color: var(--color-primary);
+}
+
+
+.body__irina-rimes .new-task_submit {
+  background-color: var(--color-primary);
+  opacity: 1;
+  color: var(--color-canvas);
+}
+
+.body__irina-rimes .default-order-new-task {
+  border-color: white;
+}
+
+.body__irina-rimes .default-order-new-task-first,
+.body__irina-rimes .default-order-new-task.selected {
+  background: var(--color-canvas);
+  border-color: white;
+  color: var(--color-primary);
+}
+.body__irina-rimes .default-order-new-task-last,
+.body__irina-rimes .default-order-new-task.not-selected {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-canvas);
+}
+
+.body__irina-rimes .new-cat_parent {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+
+}
+.body__irina-rimes .new-cat_label {
+  background-color: var(--color-primary);
+  opacity: 0.9;
+  color: var(--color-canvas);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.body__irina-rimes .new-cat_input {
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: -2px;
+  border-radius: 0px;
+  background-color: var(--color-canvas);
+}
+
+.body__irina-rimes .new-cat_submit {
+  color: var(--color-canvas);
+}
+
+
+
+
+
+
+
+
+
+.body__irina-rimes .arrowLeftRight,
+.body__irina-rimes .toggle-category,
+.body__irina-rimes .editCategory {
+  color: var(--color-primary);
+  border-color: var(--color-canvas);
+  background-color: var(--color-canvas);
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+
+.body__irina-rimes .taskTable {
+  margin-top: 2em;
+  border-radius: 1em;
+}
+
+.body__irina-rimes .task_delete,
+.body__irina-rimes .task_down,
+.body__irina-rimes .task_up,
+.body__irina-rimes .task_edit {
+  border-color: transparent;
+  background-color: var(--color-canvas);
+  opacity: 0.5;
+}
+
+
+
+.body__irina-rimes .taskTitle {
+  border-color: transparent;
+  /* background-color: var(--color-secondary); */
+  color: var(--color-canvas);
+  text-shadow: 0px 0px 2px black;
+}
+.body__irina-rimes .emptyTaskTitle {
+  background: transparent;
+}
+.body__irina-rimes .task-checkbox-container-checked {
+  border-color: transparent;
+  background: var(--color-primary);
+}
+.body__irina-rimes .task-checkbox-container-unchecked {
+  border-color: transparent;
+  background-color: var(--color-canvas);
+  opacity: 0.5;
+}
+
+
+.body__irina-rimes footer {
+  border: none;
+}
+.body__irina-rimes footer .createdBy {
+  background-color: var(--color-canvas);
+  opacity: 0.5;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.body__irina-rimes footer .createdBy a {
+  border: none;
+}
+
+
+
+
+
+
+/* SCROLLBAR */
+
+/* Track */
+.body__irina-rimes::-webkit-scrollbar-track {
+  background: var(--color-secondary-light);
+}
+
+/* Handle */
+.body__irina-rimes::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+}
+
+/* Handle on hover */
+.body__irina-rimes::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+/* End SCROLLBAR */
+
+
+
+
+
+
+
+/* IPAD IPAD IPAD IPAD IPAD IPAD IPAD IPAD IPAD IPAD */
+@media only screen and (min-device-width: 600px) {
+  
+  .body__irina-rimes .flow {
+    margin: 0.8em;
+  } 
+  .body__irina-rimes .categoryHeaderTable {
+    margin: 0;
+  }
+
+  .body__irina-rimes {
+    background-position: -12em 45px;
+    background-size: 198em; 
+  } 
+
+
+}
+
+
+/* Desktop Desktop Desktop Desktop Desktop Desktop Desktop */
+@media only screen and (min-device-width: 2000px) {
+  .body__irina-rimes .createNewTask_CatDeleteBtn:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .body__irina-rimes .arrowLeftRight:hover,
+  .body__irina-rimes .toggle-category:hover,
+  .body__irina-rimes .editCategory:hover {
+    color: #ebdac0;
+    background: var(--color-primary);
+  }
+  
+  .body__irina-rimes .task_delete:hover,
+  .body__irina-rimes .task_down:hover,
+  .body__irina-rimes .task_up:hover,
+  .body__irina-rimes .task_edit:hover {
+    border-color: var(--color-canvas);
+    color: var(--color-canvas);
+    background-color: var(--color-secondary);
+  }
+  
+  .body__irina-rimes .task-checkbox-container-unchecked:hover {
+    opacity: 1;
+  }
+  
+  .body__irina-rimes {
+    background-position: 0 40px;
+    background-size: 213em; 
+  }
+}
+
+
+
+/* 4KDesktop 4KDesktop 4KDesktop 4KDesktop 4KDesktop 4KDesktop */
+@media only screen and (min-device-width: 2400px) {
+  .body__irina-rimes {
+    background-position: 0 40px;
+    background-size: 240em; 
+  }
+}

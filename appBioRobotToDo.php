@@ -1,5 +1,95 @@
 <script>
 
+
+// hide css button for regular users
+if (window.localStorage['userName'] && window.localStorage['userName'] !== 'TestUser') {
+  if (document.getElementById('cssPlay')) {
+    document.getElementById('cssPlay').style.display = 'none';
+  }
+}
+
+const modalForCSSPlay = () => {
+  modal.innerHTML = "";
+  let element = document.getElementsByTagName("body")
+
+  const signature = document.getElementById('counterTasks');
+  if (signature) {
+    console.log('signature = ', signature)  
+
+   signature.innerHTML = "window.innerwidth = " + window.innerWidth;
+  }
+  const content = [];
+ 
+  let tr = newTr();
+  let td = newTd(); 
+  const inputImageHeight = document.createElement('input');
+  inputImageHeight.placeholder = "Enter height in px";
+  // TODO fix this prefil doesnt work
+  inputImageHeight.value = element[0].style.backgroundPosition;
+  td.appendChild(inputImageHeight);
+  tr.append(td);
+
+  td = newTd(); 
+  const btnImageHeight = document.createElement('div');
+  let tn = document.createTextNode("Set height");
+  btnImageHeight.appendChild(tn);
+
+  btnImageHeight.onclick = () => {
+    element[0].style.backgroundPosition = inputImageHeight.value;
+  }
+  td.appendChild(btnImageHeight);
+  tr.append(td);
+  content.push(tr)
+
+
+
+
+  tr = newTr();
+  td = newTd(); 
+  const inputImageSize = document.createElement('input');
+  inputImageSize.placeholder = "Enter size in px";
+  // TODO fix this prefil doesnt work
+  inputImageSize.value = element[0].style.backgroundSize;
+  td.appendChild(inputImageSize);
+  tr.append(td);
+
+  td = newTd(); 
+  const btnImageSize = document.createElement('div');
+  tn = document.createTextNode("Set size");
+  btnImageSize.appendChild(tn);
+
+  btnImageSize.onclick = () => {
+    element[0].style.backgroundSize = inputImageSize.value;
+  }
+  td.appendChild(btnImageSize);
+  tr.append(td);
+  content.push(tr)
+
+
+  
+  renderGeneralModal({
+    label: "CSS Play",
+    content,
+    onCancel: {
+      render: true,
+      label: "Close",
+      method: () => {},
+    },
+    onAccept: {
+      render: true,
+      label: "Accept",
+      method: () => {
+        hideGeneralModal();
+      }
+    },
+    canClickOutside: true,
+    canClickEscapeKey: true,
+    className: "modal_cssPlay"
+  })
+}
+
+
+
 const l = (one, two, three) => {
   if (three) {
     console.log(one, two, three)

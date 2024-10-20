@@ -30,6 +30,8 @@ const fnLogo = () => {
       c.strokeStyle = "#AE57FF"
     } else if (bodyElement[0].classList.contains('body__the-visual-dome') ) {
       c.strokeStyle = "hotpink";
+    } else if (bodyElement[0].classList.contains('body__irina-rimes') ) {
+      c.strokeStyle = "white";
     } else if (bodyElement[0].classList.contains('body__the-neon-demon') ) {
       c.strokeStyle = "white";
     } else if (bodyElement[0].classList.contains('body__the-white-lotus') ) {
