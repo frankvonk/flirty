@@ -246,6 +246,11 @@ input:active {
   font-family: allerta, serif;
 }
 
+.action-bar_item {
+  padding: 4px 6px 6px 6px;
+  margin: 11px 0.5em 0.5em;
+}
+
 
 .signature {
   /* image-rendering: pixelated; */

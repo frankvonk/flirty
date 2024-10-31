@@ -93,9 +93,7 @@
       <button class='action-bar_button' onclick=toggleDisplayOfAllCategoryTasks()>
         Toggle
       </button> 
-      <div class='action-bar_item'>
-        <div class="counterTasks" id="counterTasks">
-        </div>
+      <div class='action-bar_item counterTasks' id="counterTasks">
       </div>
       <a href="https://www.frankvonk.be">
         <canvas id="signature" class="signature"></canvas>
