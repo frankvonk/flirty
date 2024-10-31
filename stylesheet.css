@@ -612,7 +612,7 @@ input:active {
 .emptyTaskTitle {
   /* some height to make it stand out more */
   background: transparent;
-  height: 3em;
+  height: 12em;
 }
 
 .task-table-tr-link td {
