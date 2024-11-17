@@ -411,4 +411,8 @@
 
 /* 4KDesktop 4KDesktop 4KDesktop 4KDesktop 4KDesktop 4KDesktop */
 @media only screen and (min-device-width: 2400px) {
+  .body__irina-rimes .categoryContainer {
+    background-position: 0 -4px;
+    background-size: 250em; 
+  }
 }

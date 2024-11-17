@@ -417,3 +417,9 @@
 }
 
 
+@media only screen and (min-device-width: 2400px) {
+  .body__the-neon-demon .categoryContainer {
+    background-position: -26em -31em;
+    background-size: 250em;
+  }
+}
