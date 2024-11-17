@@ -234,15 +234,10 @@ input:active {
   display: flex;
   font-size: 8px;
   height: 40px;
-  width: fit-content;
+  width: 100%;
+  justify-content: center;
+
   margin: 0 auto 5px;
-
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .action-bar_button,

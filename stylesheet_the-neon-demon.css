@@ -133,10 +133,15 @@
 
 .body__the-neon-demon .action-bar {
   background: deeppink;
-  width: 100%;
-  margin: 0 auto;
   padding-bottom: 4px;
-  justify-content: center;
+  margin-bottom: 0;
+
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .body__the-neon-demon .action-bar_button {
