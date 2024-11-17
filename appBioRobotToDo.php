@@ -1466,7 +1466,7 @@ function renderTasks() {
           // par.innerHTML = arrTasksWithThisCategory[i].title;
           // place.appendChild(par)
           // This is in index, uncomment to see the list
-          //<!-- <div id=listtitles>put titles here</div> -->
+          //  <div id="listtitles"></div>
 
           renderTask(displayContainer, arrTasksWithThisCategory[i]);
 
@@ -2428,6 +2428,12 @@ function editTask(task) {
   input.id = 'inputForChangingTaskTitle';
   input.className = 'inputForChangingTaskTitle';
   input.value = task.title;
+  input.addEventListener('input', () => {
+    const inputForChangingTaskTitle = document.getElementById('inputForChangingTaskTitle');
+    inputForChangingTaskTitle.style.height = '5em';
+    inputForChangingTaskTitle.style.height = inputForChangingTaskTitle.scrollHeight + 'px'; // Set the height to the scroll height
+  });
+
 
   td.appendChild(input)
   tr.appendChild(td);
@@ -3026,6 +3032,20 @@ setTimeout(() => {
 
 */
 
+
+
+
+
+
+
+
+function adjustTextareaHeight(textarea) {
+  textarea.style.height = 'auto'; // Reset the height
+  textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to the scroll height
+}
+
+const textarea = document.getElementById('newTaskTitleTextArea');
+textarea.addEventListener('input', () => adjustTextareaHeight(textarea));
 
 
 
