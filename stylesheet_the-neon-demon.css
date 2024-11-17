@@ -119,9 +119,8 @@
    /* opening blood neck */
    background-color: black;
    background-image: url("./images/Screenshot 2024-08-30 at 21.23.04.png");
-   background-position: -86em -20.3em;
-   background-size: 164em;
- 
+   background-position: -89em -20.8em;
+   background-size: 168em; 
    background-repeat: no-repeat;
  }
 
@@ -375,7 +374,7 @@
     margin: 0;
   }
   .body__the-neon-demon .categoryContainer {
-    background-position: -52em -23em;
+    background-position: -27em -23em;
     background-size: 185em;
 
     

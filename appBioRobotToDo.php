@@ -41,9 +41,6 @@ const modalForCSSPlay = () => {
   tr.append(td);
   content.push(tr)
 
-
-
-
   tr = newTr();
   td = newTd(); 
   const inputImageSize = document.createElement('input');
