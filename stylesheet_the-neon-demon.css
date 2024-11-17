@@ -10,7 +10,7 @@
   --color-white: white;
   --color-black: black;
 
-  --color-canvas: white;
+  --color-canvas: black;
 
   --color-text: black;
   --color-text-inverted: white;
@@ -24,12 +24,12 @@
   --opacity-cell: 0.5;
 
 
-  --action-bar_button_color: var(--color-canvas);
+  --action-bar_button_color: var(--color-white);
 
   --lock-overlay_background: aqua;
   --lock-overlay_opacity: 0.4;
 
-  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_background: var(--color-white);
   --modal_set-top-or-bottom_not-selected_border-color: var(--color-brand);
   --modal_set-top-or-bottom_not-selected_color: var(--color-text);
   --modal_set-top-or-bottom_selected_background: var(--color-primary);
@@ -74,7 +74,7 @@
   --flow-highlight-task-color: white;
 
 
-  --footer-css-theme-btn-background: var(--color-canvas);
+  --footer-css-theme-btn-background: var(--color-white);
   --footer-css-theme-btn-opacity: 0.5;
 
 
@@ -82,18 +82,6 @@
   filter: saturate(1.4);
   /* background: white; */
   --categoryHeader-color: blue;
-
-  /* background-image: url("./assets/images/tiger-sleep.png");
-  background-image: url("./_The\ White\ Lotus/74654985_625340951667185_543812883204925355_n.jpg");
-  background-position: 1em 1em;
-  background-size: 100%; */
-  /* --task-title_border-color: green; */
-  /* background-image: url("./_The\ White\ Lotus/Screenshot 2023-05-02 at 13.44.20.png"); */
-
-  /* background-image: url("./_The\ White\ Lotus/main logo in pond/2.9.png");
-  background-position: 0em 42px;
-  background-size: 100%; */
-
 
   /* EYE */
   /* background-image: url("./images/Screenshot 2024-08-30 at 21.33.04.png");
@@ -115,29 +103,27 @@
  */
 
 
-   /* opening blood neck */
-  background-color: black;
-  background-image: url("./images/Screenshot 2024-08-30 at 21.23.04.png");
-  background-position: -27em -212px;
-  background-size: 2079px;
-
-
-
-  /* /_The White Lotus/main logo in pond/2.9.png */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 
 .body__the-neon-demon .modal {
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
 }
 .body__the-neon-demon .modal input,
 .body__the-neon-demon .modal textarea,
 .body__the-neon-demon .modal input:active {
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
 }
 
+.body__the-neon-demon .categoryContainer {
+   /* opening blood neck */
+   background-color: black;
+   background-image: url("./images/Screenshot 2024-08-30 at 21.23.04.png");
+   background-position: -86em -20.3em;
+   background-size: 164em;
+ 
+   background-repeat: no-repeat;
+ }
 
 
 
@@ -155,10 +141,10 @@
 }
 
 .body__the-neon-demon .action-bar_button {
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 .body__the-neon-demon .counterTasks {
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 
@@ -190,12 +176,12 @@
   background-color: var(--color-primary);
 }
 .body__the-neon-demon .notselectedcategoryheader {
-  color: var(--color-canvas);
+  color: var(--color-white);
   border-color: var(--color-primary);
 }
 .body__the-neon-demon .extraforselectedcategoryheader {
   color: var(--color-primary);
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   /* background-color: none; */
   border-color: deeppink;
   border-color: white;
@@ -205,6 +191,9 @@
   padding-left: 4px;
   border: none;
   text-shadow: 0px 0px 2px black;
+}
+.body__the-neon-demon .createNewTask_CategoryName.extraforselectedcategoryheader{
+  text-shadow: none;
 }
 .body__the-neon-demon .createNewTask_CatDeleteBtn {
   text-shadow: 0px 0px 2px black;
@@ -216,13 +205,13 @@
   background-color: var(--color-primary);
 }
 .body__the-neon-demon .newTaskTitleInputLabel {
-  color: var(--color-canvas);
+  color: var(--color-white);
   opacity: 0.9;
 }
 .body__the-neon-demon .newTaskTitleTextArea {
   width: 100%;
   margin-left: -2px;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   border-radius: 0px;
   color: var(--color-primary);
 }
@@ -235,7 +224,7 @@
 .body__the-neon-demon .new-task_submit {
   background-color: var(--color-primary);
   opacity: 1;
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 .body__the-neon-demon .default-order-new-task {
@@ -244,7 +233,7 @@
 
 .body__the-neon-demon .default-order-new-task-first,
 .body__the-neon-demon .default-order-new-task.selected {
-  background: var(--color-canvas);
+  background: var(--color-white);
   border-color: white;
   color: var(--color-primary);
 }
@@ -252,7 +241,7 @@
 .body__the-neon-demon .default-order-new-task.not-selected {
   background: var(--color-primary);
   border-color: deeppink;
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 .body__the-neon-demon .new-cat_parent {
@@ -263,7 +252,7 @@
 .body__the-neon-demon .new-cat_label {
   background-color: var(--color-primary);
   opacity: 0.9;
-  color: var(--color-canvas);
+  color: var(--color-white);
   font-size: 1.1em;
   font-weight: bold;
 }
@@ -272,11 +261,11 @@
   margin-bottom: 0;
   margin-left: -2px;
   border-radius: 0px;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
 }
 
 .body__the-neon-demon .new-cat_submit {
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 
@@ -291,8 +280,8 @@
 .body__the-neon-demon .toggle-category,
 .body__the-neon-demon .editCategory {
   color: var(--color-primary);
-  border-color: var(--color-canvas);
-  background-color: var(--color-canvas);
+  border-color: var(--color-white);
+  background-color: var(--color-white);
   font-weight: 500;
   opacity: 0.5;
 }
@@ -308,7 +297,7 @@
 .body__the-neon-demon .task_up,
 .body__the-neon-demon .task_edit {
   border-color: transparent;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   opacity: 0.5;
 }
 
@@ -317,7 +306,7 @@
 .body__the-neon-demon .taskTitle {
   border-color: transparent;
   /* background-color: var(--color-secondary); */
-  color: var(--color-canvas);
+  color: var(--color-white);
   text-shadow: 0px 0px 2px black;
 }
 .body__the-neon-demon .emptyTaskTitle {
@@ -329,7 +318,7 @@
 }
 .body__the-neon-demon .task-checkbox-container-unchecked {
   border-color: transparent;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   opacity: 0.5;
 }
 
@@ -338,7 +327,7 @@
   border: none;
 }
 .body__the-neon-demon footer .createdBy {
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   opacity: 0.5;
   padding-left: 1em;
   padding-right: 1em;
@@ -379,21 +368,21 @@
 
 
 @media only screen and (min-device-width: 600px) {
-  
   .body__the-neon-demon .flow {
     margin: 0.8em;
   } 
   .body__the-neon-demon .categoryHeaderTable {
     margin: 0;
   }
+  .body__the-neon-demon .categoryContainer {
+    background-position: -52em -23em;
+    background-size: 185em;
 
+    
+  }
 }
 
 @media only screen and (min-device-width: 1000px) {
-
-
-
-
   .body__the-neon-demon .createNewTask_CatDeleteBtn:hover {
     background: var(--color-primary);
     color: white;
@@ -410,24 +399,26 @@
   .body__the-neon-demon .task_down:hover,
   .body__the-neon-demon .task_up:hover,
   .body__the-neon-demon .task_edit:hover {
-    border-color: var(--color-canvas);
-    color: var(--color-canvas);
+    border-color: var(--color-white);
+    color: var(--color-white);
     background-color: var(--color-secondary);
   }
   
-
-
   .body__the-neon-demon .task-checkbox-container-unchecked:hover {
     opacity: 1;
   }
   
-  
-  
-  .body__the-neon-demon {
-    background-position: -26em -24em;
-    background-size: 132%; 
-  }
+  .body__the-neon-demon .categoryContainer {
+    background-position: -23em -21em;
+    background-size: 170em;  }
+}
 
+/* Macbook - Desktop Desktop Desktop Desktop Desktop Desktop Desktop */
+@media only screen and (min-device-width: 2000px) {
+  .body__the-neon-demon .categoryContainer {
+    background-position: -26em -27em;
+    background-size: 216em;
+  }
 }
 
 

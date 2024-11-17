@@ -10,7 +10,7 @@
   --color-white: white;
   --color-black: black;
 
-  --color-canvas: white;
+  --color-canvas: black;
 
   --color-text: black;
   --color-text-inverted: white;
@@ -24,12 +24,12 @@
   --opacity-cell: 0.5;
 
 
-  --action-bar_button_color: var(--color-canvas);
+  --action-bar_button_color: var(--color-white);
 
   --lock-overlay_background: aqua;
   --lock-overlay_opacity: 0.4;
 
-  --modal_set-top-or-bottom_not-selected_background: var(--color-canvas);
+  --modal_set-top-or-bottom_not-selected_background: var(--color-white);
   --modal_set-top-or-bottom_not-selected_border-color: var(--color-brand);
   --modal_set-top-or-bottom_not-selected_color: var(--color-text);
   --modal_set-top-or-bottom_selected_background: var(--color-primary);
@@ -74,7 +74,7 @@
   --flow-highlight-task-color: white;
 
 
-  --footer-css-theme-btn-background: var(--color-canvas);
+  --footer-css-theme-btn-background: var(--color-white);
   --footer-css-theme-btn-opacity: 0.5;
 
 
@@ -85,27 +85,29 @@
 
  
 
-  background-color: black;
-  background-image: url("./images/irina/2.png");
-  background-position: -72em 4em;
-  background-size: 179em;
-
-
-
-  /* /_The White Lotus/main logo in pond/2.9.png */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 
 .body__irina-rimes .modal {
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
 }
 .body__irina-rimes .modal input,
 .body__irina-rimes .modal textarea,
 .body__irina-rimes .modal input:active {
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
 }
+
+
+.body__irina-rimes .categoryContainer {
+  background-image: url("./images/irina/2.png");
+  background-position: -72em -4px;
+  /* background-position: -72em 0px; */
+  background-size: 179em;
+
+  background-repeat: no-repeat;
+  padding-top: 4px;
+}
+
 
 
 
@@ -119,15 +121,14 @@
   background: var(--color-secondary-light);
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 4px;
   justify-content: center;
 }
 
 .body__irina-rimes .action-bar_button {
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 .body__irina-rimes .counterTasks {
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 
@@ -159,12 +160,12 @@
   background-color: var(--color-primary);
 }
 .body__irina-rimes .notselectedcategoryheader {
-  color: var(--color-canvas);
+  color: var(--color-white);
   border-color: var(--color-primary);
 }
 .body__irina-rimes .extraforselectedcategoryheader {
   color: var(--color-primary);
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   /* background-color: none; */
   border-color: deeppink;
   border-color: white;
@@ -175,6 +176,11 @@
   border: none;
   text-shadow: 0px 0px 2px black;
 }
+
+.body__irina-rimes .createNewTask_CategoryName.extraforselectedcategoryheader{
+  text-shadow: none;
+}
+
 .body__irina-rimes .createNewTask_CatDeleteBtn {
   text-shadow: 0px 0px 2px black;
 }
@@ -185,13 +191,13 @@
   background-color: var(--color-primary);
 }
 .body__irina-rimes .newTaskTitleInputLabel {
-  color: var(--color-canvas);
+  color: var(--color-white);
   opacity: 0.9;
 }
 .body__irina-rimes .newTaskTitleTextArea {
   width: 100%;
   margin-left: -2px;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   border-radius: 0px;
   color: var(--color-primary);
 }
@@ -204,7 +210,7 @@
 .body__irina-rimes .new-task_submit {
   background-color: var(--color-primary);
   opacity: 1;
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 .body__irina-rimes .default-order-new-task {
@@ -213,7 +219,7 @@
 
 .body__irina-rimes .default-order-new-task-first,
 .body__irina-rimes .default-order-new-task.selected {
-  background: var(--color-canvas);
+  background: var(--color-white);
   border-color: white;
   color: var(--color-primary);
 }
@@ -221,7 +227,7 @@
 .body__irina-rimes .default-order-new-task.not-selected {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 .body__irina-rimes .new-cat_parent {
@@ -232,7 +238,7 @@
 .body__irina-rimes .new-cat_label {
   background-color: var(--color-primary);
   opacity: 0.9;
-  color: var(--color-canvas);
+  color: var(--color-white);
   font-size: 1.1em;
   font-weight: bold;
 }
@@ -241,11 +247,11 @@
   margin-bottom: 0;
   margin-left: -2px;
   border-radius: 0px;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
 }
 
 .body__irina-rimes .new-cat_submit {
-  color: var(--color-canvas);
+  color: var(--color-white);
 }
 
 
@@ -260,8 +266,8 @@
 .body__irina-rimes .toggle-category,
 .body__irina-rimes .editCategory {
   color: var(--color-primary);
-  border-color: var(--color-canvas);
-  background-color: var(--color-canvas);
+  border-color: var(--color-white);
+  background-color: var(--color-white);
   font-weight: 500;
   opacity: 0.5;
 }
@@ -277,7 +283,7 @@
 .body__irina-rimes .task_up,
 .body__irina-rimes .task_edit {
   border-color: transparent;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   opacity: 0.5;
 }
 
@@ -286,7 +292,7 @@
 .body__irina-rimes .taskTitle {
   border-color: transparent;
   /* background-color: var(--color-secondary); */
-  color: var(--color-canvas);
+  color: var(--color-white);
   text-shadow: 0px 0px 2px black;
 }
 .body__irina-rimes .emptyTaskTitle {
@@ -298,7 +304,7 @@
 }
 .body__irina-rimes .task-checkbox-container-unchecked {
   border-color: transparent;
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   opacity: 0.5;
 }
 
@@ -307,7 +313,7 @@
   border: none;
 }
 .body__irina-rimes footer .createdBy {
-  background-color: var(--color-canvas);
+  background-color: var(--color-white);
   opacity: 0.5;
   padding-left: 1em;
   padding-right: 1em;
@@ -356,16 +362,22 @@
     margin: 0;
   }
 
-  .body__irina-rimes {
-    background-position: -12em 45px;
-    background-size: 198em; 
+  .body__irina-rimes .categoryContainer {
+    background-position: -46em -4px;
+    background-size: 200em; 
   } 
-
-
 }
 
 
-/* Desktop Desktop Desktop Desktop Desktop Desktop Desktop */
+
+@media only screen and (min-device-width: 1000px) {
+  .body__irina-rimes .categoryContainer {
+    background-position: -7em -4px;
+    background-size: 166em; 
+  } 
+}
+
+/* Macbook - Desktop Desktop Desktop Desktop Desktop Desktop Desktop */
 @media only screen and (min-device-width: 2000px) {
   .body__irina-rimes .createNewTask_CatDeleteBtn:hover {
     background: var(--color-primary);
@@ -383,8 +395,8 @@
   .body__irina-rimes .task_down:hover,
   .body__irina-rimes .task_up:hover,
   .body__irina-rimes .task_edit:hover {
-    border-color: var(--color-canvas);
-    color: var(--color-canvas);
+    border-color: var(--color-white);
+    color: var(--color-white);
     background-color: var(--color-secondary);
   }
   
@@ -392,9 +404,9 @@
     opacity: 1;
   }
   
-  .body__irina-rimes {
-    background-position: 0 40px;
-    background-size: 213em; 
+  .body__irina-rimes .categoryContainer {
+    background-position: 0 -4px;
+    background-size: 219em; 
   }
 }
 
@@ -402,8 +414,4 @@
 
 /* 4KDesktop 4KDesktop 4KDesktop 4KDesktop 4KDesktop 4KDesktop */
 @media only screen and (min-device-width: 2400px) {
-  .body__irina-rimes {
-    background-position: 0 40px;
-    background-size: 240em; 
-  }
 }

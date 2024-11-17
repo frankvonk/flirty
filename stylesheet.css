@@ -233,8 +233,16 @@ input:active {
 .action-bar {
   display: flex;
   font-size: 8px;
+  height: 40px;
   width: fit-content;
   margin: 0 auto 5px;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .action-bar_button,
@@ -367,8 +375,8 @@ input:active {
 .categoryContainer {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2px;
-  margin: 4px 1px 0 2px;
+  padding-top: 4px;
+  margin: 0px 1px 0 2px;
 }
 
 
