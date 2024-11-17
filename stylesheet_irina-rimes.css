@@ -280,7 +280,6 @@
 
 
 .body__irina-rimes .taskTable {
-  margin-top: 2em;
   border-radius: 1em;
 }
 
@@ -360,14 +359,6 @@
 
 /* IPAD IPAD IPAD IPAD IPAD IPAD IPAD IPAD IPAD IPAD */
 @media only screen and (min-device-width: 600px) {
-  
-  .body__irina-rimes .flow {
-    margin: 0.8em;
-  } 
-  .body__irina-rimes .categoryHeaderTable {
-    margin: 0;
-  }
-
   .body__irina-rimes .categoryContainer {
     background-position: -9em -4px;
     background-size: 184em; 

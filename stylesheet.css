@@ -593,7 +593,7 @@ input:active {
 /* a task */
 .taskTable {
   border-spacing: 2px;
-  margin: 10px auto;
+  margin-top: 2em;
 }
 
 /* Used for up&down btn's on tasks */
@@ -755,6 +755,14 @@ footer a {
   body {
     font-size: 10px;
   }
+  body .flow {
+    margin: 0.8em;
+  } 
+  body .categoryHeaderTable {
+    margin: 0;
+  }
+
+
   
   footer {
     display: inherit;

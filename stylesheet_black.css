@@ -187,8 +187,7 @@
 }
 
 .body__black .taskTitle {
-  color: lightblue;
-  color: cornflowerblue;
+  color: lightgrey;
   border: none;
 }
 .body__black .task-checkbox-container-checked {
