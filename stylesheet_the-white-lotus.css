@@ -62,6 +62,9 @@
 
   --new-task-category-border: var(--color-primary);
 
+  --task-link_background: var(--color-canvas);
+  --task-link_background-opacity: 0.5;
+
 
   --categorySelected-background: var(--color-primary);
   --categorySelected-color: white;

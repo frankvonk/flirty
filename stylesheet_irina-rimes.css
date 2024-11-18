@@ -20,7 +20,7 @@
   --color-cancel: var(--color-secondary);
   --color-cancel-light: var(--color-primary-light);
 
-
+  --color-link: var(--color-text-inverted);
   --opacity-cell: 0.5;
 
 
@@ -56,6 +56,7 @@
   --saving-spinner_background: var(--color-secondary-light);
   --saving-spinner_color: var(--color-text-inverted);
 
+  --task-link_text-shadow: 0px 0px 2px black;
 
   --new-task-category-border: var(--color-primary);
 

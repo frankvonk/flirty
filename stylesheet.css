@@ -95,6 +95,10 @@ body {
 
   --task-title_border-color: black;
 
+  --task-link_text-shadow: none;
+  --task-link_background: none;
+  --task-link_background-opacity: 1;
+
   --flow-highlight-background: var(--color-primary-light);
   --flow-highlight-color: var(--color-text);
   --flow-highlight-category-border-color: var(--color-primary);
@@ -634,11 +638,9 @@ input:active {
 }
 .task-table-tr-link td {
   padding: 1px 8px 1px;
-  /* margin: 1px; */
-  /* width: fit-content; */
-
-  opacity: var(--opacity-cell);
-  background: var(--color-canvas);
+  text-shadow: var(--task-link_text-shadow);
+  background: var(--task-link_background);
+  opacity: var(--task-link_background-opacity);
 }
 
 .taskEditCat {
