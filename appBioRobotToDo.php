@@ -2385,10 +2385,14 @@ function editTask(task) {
       newSettingsForTask.changeOrder = 'top';
       btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
       btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
+      inputForChangingTaskTitle?.focus()
+
     } else {
       newSettingsForTask.changeOrder = undefined;
       btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
       btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      inputForChangingTaskTitle?.focus()
+
     }
   }
   tr.appendChild(td);
@@ -2409,10 +2413,12 @@ function editTask(task) {
       newSettingsForTask.changeOrder = 'bottom';
       btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_selected';
       btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      inputForChangingTaskTitle?.focus()
     } else {
       newSettingsForTask.changeOrder = undefined;
       btnMoveTaskToBottom.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
       btnMoveTaskToTop.className = 'modal_set-top-or-bottom modal_set-top-or-bottom_not-selected';
+      inputForChangingTaskTitle?.focus()
     }
   }
   tr.appendChild(td);
@@ -2440,6 +2446,7 @@ function editTask(task) {
   input.id = 'inputForChangingTaskTitle';
   input.className = 'inputForChangingTaskTitle';
   input.value = task.title;
+
   input.addEventListener('input', () => {
     const inputForChangingTaskTitle = document.getElementById('inputForChangingTaskTitle');
     inputForChangingTaskTitle.style.height = '5em';
