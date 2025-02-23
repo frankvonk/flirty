@@ -1661,7 +1661,10 @@ function renderTask(displayContainer, task) {
   td = newTd('Edit')
   td.classList = 'task_edit'
   td.id = 'taskEditUidIs' + task.id;
-  td.onclick = () => editTask(task);
+  td.onclick = () => {
+    editTask(task)
+    fixHeightOfInputForChangingTaskTitle();
+  };
   tr.appendChild(td);
 
 
@@ -2447,16 +2450,20 @@ function editTask(task) {
   input.className = 'inputForChangingTaskTitle';
   input.value = task.title;
 
+  
+
+
   input.addEventListener('input', () => {
-    const inputForChangingTaskTitle = document.getElementById('inputForChangingTaskTitle');
-    inputForChangingTaskTitle.style.height = '5em';
-    inputForChangingTaskTitle.style.height = inputForChangingTaskTitle.scrollHeight + 'px'; // Set the height to the scroll height
+    fixHeightOfInputForChangingTaskTitle()
   });
+
 
 
   td.appendChild(input)
   tr.appendChild(td);
   content.push(tr);
+
+ 
 
 
   // Add link in task
@@ -2577,6 +2584,15 @@ function editTask(task) {
     className: "modal_edit-task"
   })
 };
+
+// Fix height of inputForChangingTaskTitle
+function fixHeightOfInputForChangingTaskTitle() {
+  const inputForChangingTaskTitle = document.getElementById('inputForChangingTaskTitle');
+  if (inputForChangingTaskTitle) { 
+    inputForChangingTaskTitle.style.height = '5em';
+    inputForChangingTaskTitle.style.height = inputForChangingTaskTitle.scrollHeight + 'px'; // Set the height to the scroll height
+  }
+}
 
 
 
