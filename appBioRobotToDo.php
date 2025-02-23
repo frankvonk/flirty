@@ -1265,12 +1265,18 @@ btnSetTaskFirst.onclick = () => {
 
   btnSetTaskFirst.classList = "default-order-new-task selected"
   btnSetTaskLast.classList = "default-order-new-task not-selected"
+  newTaskTitleTextArea.focus()
+  // Scroll to the previous location
+  window.scrollTo(x, y);
 }
 btnSetTaskLast.onclick = () => {
   newTaskIsFirstOrLast = "last";
 
   btnSetTaskLast.classList = "default-order-new-task selected"
   btnSetTaskFirst.classList = "default-order-new-task not-selected"
+  newTaskTitleTextArea.focus()
+  // Scroll to the previous location
+  window.scrollTo(x, y);
 }
 
 
