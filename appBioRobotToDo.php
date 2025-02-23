@@ -1,6 +1,7 @@
 <script>
 
 
+
 // hide css button for regular users
 if (window.localStorage['userName'] && window.localStorage['userName'] !== 'TestUser') {
   if (document.getElementById('cssPlay')) {
@@ -164,38 +165,28 @@ document.addEventListener("visibilitychange", () => {
 // get random char from string
 function generateRandomChar() {
   const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  console.log('alphabet = ', alphabet.charAt(Math.floor(Math.random() * alphabet.length)))
   return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
 }
 
-function createThreeCharString() {
+function createFiveCharString() {
   let str = "";
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
     str += generateRandomChar();
   }
   return str;
 }
 
 function checkIfDBBioRobotAlreadyHastTaskWithId(id) {
-  let hasTask = false;
-  dbBioRobot.tasksToBeExecuted.forEach(task => {
-    if (task.id === id)
-      hasTask = true;
-  })
-  dbBioRobot.tasksDeleted.forEach(task => {
-    if (task.id === id)
-      hasTask = true;
-  })
-  dbBioRobot.tasksHistory.forEach(task => {
-    if (task.id === id)
-      hasTask = true;
-  })
-  return hasTask;
+  return dbBioRobot.tasksToBeExecuted.some(task => task.id === id) ||
+         dbBioRobot.tasksDeleted.some(task => task.id === id) ||
+         dbBioRobot.tasksHistory.some(task => task.id === id);
 }
 
 function generateUniqueId() {
-  let id = createThreeCharString();
+  let id = createFiveCharString();
   while (checkIfDBBioRobotAlreadyHastTaskWithId(id)) {
-    id = createThreeCharString();
+    id = createFiveCharString();
   }
   return "id" + id;
 }
@@ -389,7 +380,7 @@ function getDataBase() {
         $rij = $stmt->fetch(PDO::FETCH_ASSOC);
         $dbh = null;
 
-        // if($rij && $rij['jsonTasks'] && ($rij['jsonTasks'] !== "")) {
+    // if($rij && $rij['jsonTasks'] && ($rij['jsonTasks'] !== "")) {
         if ($rij) {
           return $rij['jsonTasks'];
         } else {
@@ -1086,8 +1077,6 @@ function renderCategoryButtons() {
 
 
 // Listener for inputfield of new category
-
-// SubmitNewCategoryOnEnter
 function SubmitNewCategoryOnEnter() {
   newCategoryInput.addEventListener('keypress', (e) => {
   console.log('hi there keypress')
@@ -1100,7 +1089,6 @@ function SubmitNewCategoryOnEnter() {
 SubmitNewCategoryOnEnter();
 
 
-// Create new category
 function createNewCategory() {
   if (newCategoryInput.value !== '' && categoryDoesNotExistYet(newCategoryInput.value)) {
     const id = generateUniqueId()
@@ -1290,6 +1278,27 @@ btnSetTaskLast.onclick = () => {
 
 // Add new task to DB
 function submitTask() {
+
+
+  // // check if db has tasks that have the same id
+  // const checkIfDBHasTasksWithSameId = () => {
+  //   // const tasksWithSameId = tasks.tasksToBeExecuted.filter(task => tasks.some(t => t.id === task.id && t !== task));
+  //   // return tasksWithSameId.length > 0;
+  //   const listOfIds = [];
+  //   dbBioRobot.tasksToBeExecuted.forEach(task => {
+  //     if (!listOfIds.includes(task.id)) {
+  //       listOfIds.push(task.id);
+  //     } else {
+  //       console.warn('task with same id = ', task.id)
+  //     }
+  //   });
+  //   // const idThatHappensMultipleTimes = dbBioRobot.tasksToBeExecuted.filter(task => dbBioRobot.tasksToBeExecuted.filter(t => t.id === task.id).length > 1);
+  //   // return idThatHappensMultipleTimes.length > 0;
+  // }
+  // checkIfDBHasTasksWithSameId();
+  // // console.warn('checkIfDBHasTasksWithSameId = ', checkIfDBHasTasksWithSameId())
+
+
   l('cat = ', newTaskCategory)
   if (newTaskCategory !== "") {
     const newTask = {
