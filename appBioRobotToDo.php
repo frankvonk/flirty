@@ -448,6 +448,16 @@ function getDataBase() {
           retrievingDataSpinner.style.display = 'none'
           lockOverlay.style.display = 'none'
 
+
+
+          // Set the currently selected category above the new task creation          
+          const category = dbBioRobot.categories.find(category => category.id == window.localStorage['taskCategoryId'])
+          const currentlySelectedCategory_name = document.getElementById('currentlySelectedCategory_name');
+          currentlySelectedCategory_name.innerHTML = category?.description;
+
+
+
+
           // For counting and finding lost tasks
           // dbBioRobot.categories.forEach(category => {
           //   dbBioRobot.tasksToBeExecuted.forEach((task, index) => {
@@ -673,7 +683,6 @@ function setCategory(categoryId) {
     categoryBtn.classList.add('extraforselectedcategoryheader');
   }
   newTaskCategory = categoryId;
-  const category = dbBioRobot.categories.find(category => category.id == categoryId)
   renderTasks();
   
   // Auto focus on new task creation
@@ -682,6 +691,14 @@ function setCategory(categoryId) {
   newTaskTitleTextArea.focus()
   // Scroll to the previous location
   window.scrollTo(x, y);
+
+  // Set the currently selected category above the new task creation    
+  const category = dbBioRobot.categories.find(categoryItem => categoryItem.id == categoryId)
+  if (category) {
+    const currentlySelectedCategory_name = document.getElementById('currentlySelectedCategory_name');
+    currentlySelectedCategory_name.innerHTML = category?.description;  
+  }
+
 
   SubmitNewCategoryOnEnter();
 }
@@ -1267,7 +1284,7 @@ btnSetTaskFirst.onclick = () => {
   btnSetTaskLast.classList = "default-order-new-task not-selected"
   newTaskTitleTextArea.focus()
   // Scroll to the previous location
-  window.scrollTo(x, y);
+  // window.scrollTo(x, y);
 }
 btnSetTaskLast.onclick = () => {
   newTaskIsFirstOrLast = "last";
@@ -1276,7 +1293,7 @@ btnSetTaskLast.onclick = () => {
   btnSetTaskFirst.classList = "default-order-new-task not-selected"
   newTaskTitleTextArea.focus()
   // Scroll to the previous location
-  window.scrollTo(x, y);
+  // window.scrollTo(x, y);
 }
 
 
@@ -1725,7 +1742,6 @@ function moveCategoryLeftOrRight(direction, categoryIWantMoved) {
     renderTasks();
     renderCategoryButtons();
     updateLocalStorage(dbBioRobot)
-    //  setCategory(resetThisCategoryAfterwards);
   }
 }
 

@@ -439,6 +439,17 @@ input:active {
 }
 
 
+.currentlySelectedCategory {
+  margin-top: 1em;
+  color: var(--color-brand);
+}
+.currentlySelectedCategory_label {
+
+}
+.currentlySelectedCategory_name {
+
+}
+  
 
 .newTaskTitleInputParent {
   margin: 16px 0px 16px 0px;
@@ -812,6 +823,10 @@ footer a {
     background: var(--modal_set-top-or-bottom_background_hover);
     border-color: var(--modal_set-top-or-bottom_border-color_hover);
     color: var(--modal_set-top-or-bottom_color_hover);
+  }
+
+  .currentlySelectedCategory {
+    display: none;
   }
 
 }

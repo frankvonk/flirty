@@ -120,6 +120,10 @@
       <div id="newTaskCategoryGrid" class="newTaskCategoryGrid">
       </div>
 
+      <div class="currentlySelectedCategory">
+        <div class="currentlySelectedCategory_label">Currently selected category:</div>
+        <div class="currentlySelectedCategory_name" id="currentlySelectedCategory_name"></div>
+      </div>
 
       <div class="newTaskTitleInputParent">
         <div class="newTaskTitleInputLabel">Title:</div>
