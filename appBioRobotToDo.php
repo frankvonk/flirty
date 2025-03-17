@@ -537,7 +537,7 @@ if (window.localStorage['userName'] && window.localStorage['password']) {
   // alert('gimme<p>dsfg</p>')
   const content = [];
   let tr = newTr();
-  let td = newTd('Please enter credentials to acces your database'); 
+  let td = newTd('Please enter credentials to access your database'); 
   td.colSpan = 4;
   td.class = ""
   tr.append(td);
@@ -1391,8 +1391,14 @@ function renderTasks() {
 
     // Header title
     let tableHeader = document.createElement('th')
-    let text = document.createTextNode(category.description.replaceAll('&nbsp;', ' '));
-    tableHeader.appendChild(text);
+    let text = category.description.replaceAll('&nbsp;', ' ')
+    if (category.highlight) {
+      // count all tasks in dbBioRobot.tasksToBeExecuted with this category
+      const count = dbBioRobot.tasksToBeExecuted.filter(task => task.category === category.id).length;
+      text += " " + count;
+    }
+    let textNode = document.createTextNode(text);
+    tableHeader.appendChild(textNode);
     tableHeader.className = 'categoryHeader';
     
     if (category.id == window.localStorage['taskCategoryId']) {
